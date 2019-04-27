@@ -22,7 +22,6 @@
 		3D93ABEA21E83BA000E2C367 /* XLBlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE021E83BA000E2C367 /* XLBlockAlertView.m */; };
 		3D93ABEB21E83BA000E2C367 /* XLHyperLinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE121E83BA000E2C367 /* XLHyperLinkButton.m */; };
 		3D93ABEC21E83BA000E2C367 /* XLColorTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE321E83BA000E2C367 /* XLColorTool.m */; };
-		6CF5687A221BEB6500DF2328 /* XPYNetworkingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF56879221BEB6500DF2328 /* XPYNetworkingHelper.m */; };
 		7BF0602AEAF96F5BAA474F33 /* libPods-XPYToolsAndCategories.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB74C9F3137D9DCC05C220D /* libPods-XPYToolsAndCategories.a */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +56,6 @@
 		3D93ABE121E83BA000E2C367 /* XLHyperLinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLHyperLinkButton.m; sourceTree = "<group>"; };
 		3D93ABE221E83BA000E2C367 /* XLNoticeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLNoticeHelper.h; sourceTree = "<group>"; };
 		3D93ABE321E83BA000E2C367 /* XLColorTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLColorTool.m; sourceTree = "<group>"; };
-		6CF56878221BEB6500DF2328 /* XPYNetworkingHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYNetworkingHelper.h; sourceTree = "<group>"; };
-		6CF56879221BEB6500DF2328 /* XPYNetworkingHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYNetworkingHelper.m; sourceTree = "<group>"; };
 		FCB74C9F3137D9DCC05C220D /* libPods-XPYToolsAndCategories.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XPYToolsAndCategories.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,8 +144,6 @@
 				3D93ABE121E83BA000E2C367 /* XLHyperLinkButton.m */,
 				3D93ABDE21E83BA000E2C367 /* XLColorTool.h */,
 				3D93ABE321E83BA000E2C367 /* XLColorTool.m */,
-				6CF56878221BEB6500DF2328 /* XPYNetworkingHelper.h */,
-				6CF56879221BEB6500DF2328 /* XPYNetworkingHelper.m */,
 			);
 			path = Tools;
 			sourceTree = SOURCE_ROOT;
@@ -188,6 +183,7 @@
 		3D93ABAF21E83B2A00E2C367 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XPY;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = xpy;
 				TargetAttributes = {
@@ -262,7 +258,6 @@
 				3D93ABBF21E83B2A00E2C367 /* ViewController.m in Sources */,
 				3D93ABCA21E83B2C00E2C367 /* main.m in Sources */,
 				3D93ABE721E83BA000E2C367 /* NSDate+gyh.m in Sources */,
-				6CF5687A221BEB6500DF2328 /* XPYNetworkingHelper.m in Sources */,
 				3D93ABE621E83BA000E2C367 /* UIImage+ImageEffects.m in Sources */,
 				3D93ABE521E83BA000E2C367 /* UIControl+Blocks.m in Sources */,
 				3D93ABE821E83BA000E2C367 /* XLBlockActionSheet.m in Sources */,
