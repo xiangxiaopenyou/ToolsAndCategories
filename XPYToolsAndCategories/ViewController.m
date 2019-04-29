@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "XPYDrawingView.h"
 
 @interface ViewController ()
 
@@ -17,5 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
+    XPYDrawingView *drawingView = [[XPYDrawingView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:drawingView];
 }
 @end
