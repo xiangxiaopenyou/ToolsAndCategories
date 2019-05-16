@@ -6,4 +6,5 @@ target 'XPYToolsAndCategories' do
   pod 'XPYNetworkingLib', :git => 'https://github.com/xiangxiaopenyou/XPYNetworkingLib.git'
   pod 'YYWebImage'
   pod 'HYBImageCliped'
+  pod 'RSKImageCropper'
 end

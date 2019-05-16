@@ -172,6 +172,7 @@
 				3D93ABB321E83B2A00E2C367 /* Sources */,
 				3D93ABB421E83B2A00E2C367 /* Frameworks */,
 				3D93ABB521E83B2A00E2C367 /* Resources */,
+				33C09ADF7DAEEB3F3DF6BC4F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,6 +230,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		33C09ADF7DAEEB3F3DF6BC4F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XPYToolsAndCategories/Pods-XPYToolsAndCategories-resources.sh",
+				"${PODS_ROOT}/RSKImageCropper/RSKImageCropper/RSKImageCropperStrings.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RSKImageCropperStrings.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XPYToolsAndCategories/Pods-XPYToolsAndCategories-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5DA1D5B0A2069C99A828A852 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,7 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B4258LX29S;
+				DEVELOPMENT_TEAM = RLWJB4A9U9;
 				INFOPLIST_FILE = XPYToolsAndCategories/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -432,7 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B4258LX29S;
+				DEVELOPMENT_TEAM = RLWJB4A9U9;
 				INFOPLIST_FILE = XPYToolsAndCategories/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
