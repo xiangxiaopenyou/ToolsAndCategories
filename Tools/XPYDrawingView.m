@@ -7,6 +7,7 @@
 //
 
 #import "XPYDrawingView.h"
+#define UIColorFromRGBA(rgbValue, alp) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:alp]
 
 @implementation XPYDrawingView
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -60,7 +61,6 @@
     [self.layer addSublayer:layer];
     CGPathRelease(path2);
     
-    
     //画三点曲线
     CGContextSetStrokeColorWithColor(context, [UIColor yellowColor].CGColor);
     CGContextMoveToPoint(context, 10, 250);
@@ -90,10 +90,18 @@
     //贝塞尔曲线画圆
     UIBezierPath *circlePath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(200, 400, 100, 100) cornerRadius:50];
     circlePath.lineWidth = 10;
+    circlePath.lineCapStyle = kCGLineCapButt;
+    CGFloat lineDash[] = {20.0, 20.0};
+    [circlePath setLineDash:lineDash count:2 phase:0];  //虚线
     CGContextSetFillColorWithColor(context, [UIColor greenColor].CGColor);
     CGContextSetStrokeColorWithColor(context, [UIColor grayColor].CGColor);
     [circlePath stroke];
     [circlePath fill];
+    
+    UIBezierPath *path3 = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(100, 100, 200, 100) cornerRadius:5];
+    path3.lineWidth = 0.5;
+    CGContextSetStrokeColorWithColor(context, UIColorFromRGBA(0xe2e2e2, 1).CGColor);
+    [path3 stroke];
 }
 
 @end

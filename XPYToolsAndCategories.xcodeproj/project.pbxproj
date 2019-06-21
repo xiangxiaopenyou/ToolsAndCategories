@@ -22,7 +22,9 @@
 		3D93ABEA21E83BA000E2C367 /* XLBlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE021E83BA000E2C367 /* XLBlockAlertView.m */; };
 		3D93ABEB21E83BA000E2C367 /* XLHyperLinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE121E83BA000E2C367 /* XLHyperLinkButton.m */; };
 		3D93ABEC21E83BA000E2C367 /* XLColorTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE321E83BA000E2C367 /* XLColorTool.m */; };
+		6C0214A022BC790E004726D7 /* XPYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C02149F22BC790E004726D7 /* XPYAlertController.m */; };
 		6C0C1B4822743C9E0055BAB4 /* XPYDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */; };
+		6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */; };
 		7BF0602AEAF96F5BAA474F33 /* libPods-XPYToolsAndCategories.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB74C9F3137D9DCC05C220D /* libPods-XPYToolsAndCategories.a */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +59,12 @@
 		3D93ABE121E83BA000E2C367 /* XLHyperLinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLHyperLinkButton.m; sourceTree = "<group>"; };
 		3D93ABE221E83BA000E2C367 /* XLNoticeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLNoticeHelper.h; sourceTree = "<group>"; };
 		3D93ABE321E83BA000E2C367 /* XLColorTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLColorTool.m; sourceTree = "<group>"; };
+		6C02149E22BC790E004726D7 /* XPYAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYAlertController.h; sourceTree = "<group>"; };
+		6C02149F22BC790E004726D7 /* XPYAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYAlertController.m; sourceTree = "<group>"; };
 		6C0C1B4622743C9E0055BAB4 /* XPYDrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYDrawingView.h; sourceTree = "<group>"; };
 		6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYDrawingView.m; sourceTree = "<group>"; };
+		6C9FD3DB229FB8E5003297B5 /* XPYPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYPerson.h; sourceTree = "<group>"; };
+		6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYPerson.m; sourceTree = "<group>"; };
 		FCB74C9F3137D9DCC05C220D /* libPods-XPYToolsAndCategories.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XPYToolsAndCategories.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,6 +110,7 @@
 		3D93ABB921E83B2A00E2C367 /* XPYToolsAndCategories */ = {
 			isa = PBXGroup;
 			children = (
+				6C9FD3DA229FB8C4003297B5 /* Tests */,
 				3D93ABD021E83BA000E2C367 /* Categories */,
 				3D93ABD921E83BA000E2C367 /* Tools */,
 				3D93ABBA21E83B2A00E2C367 /* AppDelegate.h */,
@@ -149,9 +156,20 @@
 				3D93ABE321E83BA000E2C367 /* XLColorTool.m */,
 				6C0C1B4622743C9E0055BAB4 /* XPYDrawingView.h */,
 				6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */,
+				6C02149E22BC790E004726D7 /* XPYAlertController.h */,
+				6C02149F22BC790E004726D7 /* XPYAlertController.m */,
 			);
 			path = Tools;
 			sourceTree = SOURCE_ROOT;
+		};
+		6C9FD3DA229FB8C4003297B5 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6C9FD3DB229FB8E5003297B5 /* XPYPerson.h */,
+				6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
 		};
 		D9AE0B1BE10D27BFC7402828 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -283,6 +301,7 @@
 			files = (
 				3D93ABEB21E83BA000E2C367 /* XLHyperLinkButton.m in Sources */,
 				3D93ABE921E83BA000E2C367 /* XLNoticeHelper.m in Sources */,
+				6C0214A022BC790E004726D7 /* XPYAlertController.m in Sources */,
 				3D93ABBF21E83B2A00E2C367 /* ViewController.m in Sources */,
 				3D93ABCA21E83B2C00E2C367 /* main.m in Sources */,
 				3D93ABE721E83BA000E2C367 /* NSDate+gyh.m in Sources */,
@@ -291,6 +310,7 @@
 				6C0C1B4822743C9E0055BAB4 /* XPYDrawingView.m in Sources */,
 				3D93ABE821E83BA000E2C367 /* XLBlockActionSheet.m in Sources */,
 				3D93ABBC21E83B2A00E2C367 /* AppDelegate.m in Sources */,
+				6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */,
 				3D93ABEC21E83BA000E2C367 /* XLColorTool.m in Sources */,
 				3D93ABE421E83BA000E2C367 /* UIImage+ResizeMagick.m in Sources */,
 				3D93ABEA21E83BA000E2C367 /* XLBlockAlertView.m in Sources */,
