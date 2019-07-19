@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "XPYDrawingView.h"
 #import <RSKImageCropper.h>
 #import "XPYPerson.h"
 #import "XPYAlertController.h"
 
-@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, copy) NSArray *itemsArray;
 
 @end
 
@@ -20,22 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-//    XPYDrawingView *drawingView = [[XPYDrawingView alloc] initWithFrame:self.view.bounds];
-//    [self.view addSubview:drawingView];
-    
-//    UIView *animationView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
-//    animationView.backgroundColor = [UIColor redColor];
-//    [self.view addSubview:animationView];
-//    [self addAnimationsWithView:animationView];
-    
-//    XPYPerson *person = [[XPYPerson alloc] init];
-//    person.up().down();
-//    person.left(@"xianglinping").right(@"hahahaha");
+    self.title = @"首页";
+    //连式编程测试
+    XPYPerson *person = [[XPYPerson alloc] init];
+    person.up().down();
+    person.left(@"xianglinping").right(@"hahahaha");
 }
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)showAlert {
     XPYAlertModel *alertModel = [[XPYAlertModel alloc] initWithTitle:@"提示" message:@"请注意xxxxxxxxxx" style:UIAlertControllerStyleActionSheet];
     [XPYAlertController makeAlert:^(XPYAlertController * _Nonnull alert) {
         UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -66,6 +58,34 @@
     }
 }
 
+#pragma mark - Table view data source
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.itemsArray.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XPYHomepageItemCell" forIndexPath:indexPath];
+    cell.textLabel.text = self.itemsArray[indexPath.row];
+    return cell;
+}
+
+#pragma mark - Table view delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case 0:
+            [self assertAction:nil];
+            break;
+        case 1:
+            [self jumpAction:nil];
+            break;
+        case 2:
+            [self showAlert];
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - Image picker controller delegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
     UIImage *resultImage = (UIImage *)info[@"UIImagePickerControllerOriginalImage"];
@@ -74,26 +94,11 @@
     [self presentViewController:imageCropController animated:YES completion:nil];
 }
 
-- (void)addAnimationsWithView:(UIView *)view {
-    CABasicAnimation *moveAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-    moveAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(200, 200)];
-    moveAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(300, 300)];
-    moveAnimation.duration = 2.f;
-    moveAnimation.removedOnCompletion = NO;
-    moveAnimation.fillMode = kCAFillModeForwards;
-    moveAnimation.autoreverses = YES;
-    moveAnimation.repeatCount = MAXFLOAT;
-    moveAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    [view.layer addAnimation:moveAnimation forKey:@"position"];
-    
-//    CABasicAnimation *rotationYAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
-//    rotationYAnimation.fromValue = [NSNumber numberWithFloat:0];
-//    rotationYAnimation.toValue = [NSNumber numberWithFloat:M_PI];
-//    rotationYAnimation.duration = 2.f;
-//    rotationYAnimation.removedOnCompletion = NO;
-//    rotationYAnimation.fillMode = kCAFillModeForwards;
-//    rotationYAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-//    rotationYAnimation.repeatCount = 10;
-//    [view.layer addAnimation:rotationYAnimation forKey:nil];
+#pragma mark - Getters
+- (NSArray *)itemsArray {
+    if (!_itemsArray) {
+        _itemsArray = @[@"相册图片裁剪", @"跳转到TestApp", @"XPYAlertController"];
+    }
+    return _itemsArray;
 }
 @end

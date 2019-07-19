@@ -25,6 +25,13 @@
 		6C0214A022BC790E004726D7 /* XPYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C02149F22BC790E004726D7 /* XPYAlertController.m */; };
 		6C0C1B4822743C9E0055BAB4 /* XPYDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */; };
 		6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */; };
+		6CE85CE322C491DC009C5D20 /* XPYBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE85CE222C491DC009C5D20 /* XPYBaseNavigationController.m */; };
+		6CE85CE622C4999D009C5D20 /* XPYThumbUpAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE85CE522C4999D009C5D20 /* XPYThumbUpAnimationViewController.m */; };
+		6CE85CFE22C734C3009C5D20 /* XPYAnimationsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE85CFD22C734C3009C5D20 /* XPYAnimationsView.m */; };
+		6CE85D0122C7380B009C5D20 /* XPYAnimationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE85D0022C7380B009C5D20 /* XPYAnimationsViewController.m */; };
+		6CFC595022E1973E0001928F /* XPYDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC594F22E1973E0001928F /* XPYDrawingViewController.m */; };
+		6CFC595322E197BA0001928F /* XPYTransformAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC595222E197BA0001928F /* XPYTransformAnimationViewController.m */; };
+		6CFC595622E198A80001928F /* XPYAnimationGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC595522E198A80001928F /* XPYAnimationGroupsViewController.m */; };
 		7BF0602AEAF96F5BAA474F33 /* libPods-XPYToolsAndCategories.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB74C9F3137D9DCC05C220D /* libPods-XPYToolsAndCategories.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +72,20 @@
 		6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYDrawingView.m; sourceTree = "<group>"; };
 		6C9FD3DB229FB8E5003297B5 /* XPYPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYPerson.h; sourceTree = "<group>"; };
 		6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYPerson.m; sourceTree = "<group>"; };
+		6CE85CE122C491DC009C5D20 /* XPYBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYBaseNavigationController.h; sourceTree = "<group>"; };
+		6CE85CE222C491DC009C5D20 /* XPYBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYBaseNavigationController.m; sourceTree = "<group>"; };
+		6CE85CE422C4999D009C5D20 /* XPYThumbUpAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYThumbUpAnimationViewController.h; sourceTree = "<group>"; };
+		6CE85CE522C4999D009C5D20 /* XPYThumbUpAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYThumbUpAnimationViewController.m; sourceTree = "<group>"; };
+		6CE85CFC22C734C3009C5D20 /* XPYAnimationsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYAnimationsView.h; sourceTree = "<group>"; };
+		6CE85CFD22C734C3009C5D20 /* XPYAnimationsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYAnimationsView.m; sourceTree = "<group>"; };
+		6CE85CFF22C7380B009C5D20 /* XPYAnimationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYAnimationsViewController.h; sourceTree = "<group>"; };
+		6CE85D0022C7380B009C5D20 /* XPYAnimationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYAnimationsViewController.m; sourceTree = "<group>"; };
+		6CFC594E22E1973E0001928F /* XPYDrawingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYDrawingViewController.h; sourceTree = "<group>"; };
+		6CFC594F22E1973E0001928F /* XPYDrawingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYDrawingViewController.m; sourceTree = "<group>"; };
+		6CFC595122E197BA0001928F /* XPYTransformAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYTransformAnimationViewController.h; sourceTree = "<group>"; };
+		6CFC595222E197BA0001928F /* XPYTransformAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYTransformAnimationViewController.m; sourceTree = "<group>"; };
+		6CFC595422E198A80001928F /* XPYAnimationGroupsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYAnimationGroupsViewController.h; sourceTree = "<group>"; };
+		6CFC595522E198A80001928F /* XPYAnimationGroupsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYAnimationGroupsViewController.m; sourceTree = "<group>"; };
 		FCB74C9F3137D9DCC05C220D /* libPods-XPYToolsAndCategories.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XPYToolsAndCategories.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,10 +134,11 @@
 				6C9FD3DA229FB8C4003297B5 /* Tests */,
 				3D93ABD021E83BA000E2C367 /* Categories */,
 				3D93ABD921E83BA000E2C367 /* Tools */,
+				6CFC594A22E196480001928F /* Features */,
 				3D93ABBA21E83B2A00E2C367 /* AppDelegate.h */,
 				3D93ABBB21E83B2A00E2C367 /* AppDelegate.m */,
-				3D93ABBD21E83B2A00E2C367 /* ViewController.h */,
-				3D93ABBE21E83B2A00E2C367 /* ViewController.m */,
+				6CE85CE122C491DC009C5D20 /* XPYBaseNavigationController.h */,
+				6CE85CE222C491DC009C5D20 /* XPYBaseNavigationController.m */,
 				3D93ABC021E83B2A00E2C367 /* Main.storyboard */,
 				3D93ABC321E83B2C00E2C367 /* Assets.xcassets */,
 				3D93ABC521E83B2C00E2C367 /* LaunchScreen.storyboard */,
@@ -154,8 +176,6 @@
 				3D93ABE121E83BA000E2C367 /* XLHyperLinkButton.m */,
 				3D93ABDE21E83BA000E2C367 /* XLColorTool.h */,
 				3D93ABE321E83BA000E2C367 /* XLColorTool.m */,
-				6C0C1B4622743C9E0055BAB4 /* XPYDrawingView.h */,
-				6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */,
 				6C02149E22BC790E004726D7 /* XPYAlertController.h */,
 				6C02149F22BC790E004726D7 /* XPYAlertController.m */,
 			);
@@ -169,6 +189,53 @@
 				6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		6CFC594A22E196480001928F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				6CFC594B22E1968C0001928F /* Homepage */,
+				6CFC594C22E196A90001928F /* Animations */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		6CFC594B22E1968C0001928F /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				3D93ABBD21E83B2A00E2C367 /* ViewController.h */,
+				3D93ABBE21E83B2A00E2C367 /* ViewController.m */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		6CFC594C22E196A90001928F /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				6CFC594D22E196BD0001928F /* Views */,
+				6CE85CFF22C7380B009C5D20 /* XPYAnimationsViewController.h */,
+				6CE85D0022C7380B009C5D20 /* XPYAnimationsViewController.m */,
+				6CFC594E22E1973E0001928F /* XPYDrawingViewController.h */,
+				6CFC594F22E1973E0001928F /* XPYDrawingViewController.m */,
+				6CFC595122E197BA0001928F /* XPYTransformAnimationViewController.h */,
+				6CFC595222E197BA0001928F /* XPYTransformAnimationViewController.m */,
+				6CE85CE422C4999D009C5D20 /* XPYThumbUpAnimationViewController.h */,
+				6CE85CE522C4999D009C5D20 /* XPYThumbUpAnimationViewController.m */,
+				6CFC595422E198A80001928F /* XPYAnimationGroupsViewController.h */,
+				6CFC595522E198A80001928F /* XPYAnimationGroupsViewController.m */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		6CFC594D22E196BD0001928F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C0C1B4622743C9E0055BAB4 /* XPYDrawingView.h */,
+				6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */,
+				6CE85CFC22C734C3009C5D20 /* XPYAnimationsView.h */,
+				6CE85CFD22C734C3009C5D20 /* XPYAnimationsView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D9AE0B1BE10D27BFC7402828 /* Frameworks */ = {
@@ -305,12 +372,19 @@
 				3D93ABBF21E83B2A00E2C367 /* ViewController.m in Sources */,
 				3D93ABCA21E83B2C00E2C367 /* main.m in Sources */,
 				3D93ABE721E83BA000E2C367 /* NSDate+gyh.m in Sources */,
+				6CE85D0122C7380B009C5D20 /* XPYAnimationsViewController.m in Sources */,
+				6CFC595322E197BA0001928F /* XPYTransformAnimationViewController.m in Sources */,
 				3D93ABE621E83BA000E2C367 /* UIImage+ImageEffects.m in Sources */,
+				6CE85CFE22C734C3009C5D20 /* XPYAnimationsView.m in Sources */,
 				3D93ABE521E83BA000E2C367 /* UIControl+Blocks.m in Sources */,
+				6CFC595622E198A80001928F /* XPYAnimationGroupsViewController.m in Sources */,
+				6CE85CE322C491DC009C5D20 /* XPYBaseNavigationController.m in Sources */,
 				6C0C1B4822743C9E0055BAB4 /* XPYDrawingView.m in Sources */,
 				3D93ABE821E83BA000E2C367 /* XLBlockActionSheet.m in Sources */,
+				6CFC595022E1973E0001928F /* XPYDrawingViewController.m in Sources */,
 				3D93ABBC21E83B2A00E2C367 /* AppDelegate.m in Sources */,
 				6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */,
+				6CE85CE622C4999D009C5D20 /* XPYThumbUpAnimationViewController.m in Sources */,
 				3D93ABEC21E83BA000E2C367 /* XLColorTool.m in Sources */,
 				3D93ABE421E83BA000E2C367 /* UIImage+ResizeMagick.m in Sources */,
 				3D93ABEA21E83BA000E2C367 /* XLBlockAlertView.m in Sources */,
