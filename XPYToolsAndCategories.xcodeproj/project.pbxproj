@@ -24,6 +24,7 @@
 		3D93ABEC21E83BA000E2C367 /* XLColorTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE321E83BA000E2C367 /* XLColorTool.m */; };
 		6C0214A022BC790E004726D7 /* XPYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C02149F22BC790E004726D7 /* XPYAlertController.m */; };
 		6C0C1B4822743C9E0055BAB4 /* XPYDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */; };
+		6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43B21022F40FCF0062D233 /* XPYTableViewController.m */; };
 		6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */; };
 		6CE85CE322C491DC009C5D20 /* XPYBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE85CE222C491DC009C5D20 /* XPYBaseNavigationController.m */; };
 		6CE85CE622C4999D009C5D20 /* XPYThumbUpAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE85CE522C4999D009C5D20 /* XPYThumbUpAnimationViewController.m */; };
@@ -70,6 +71,8 @@
 		6C02149F22BC790E004726D7 /* XPYAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYAlertController.m; sourceTree = "<group>"; };
 		6C0C1B4622743C9E0055BAB4 /* XPYDrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYDrawingView.h; sourceTree = "<group>"; };
 		6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYDrawingView.m; sourceTree = "<group>"; };
+		6C43B20F22F40FCF0062D233 /* XPYTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYTableViewController.h; sourceTree = "<group>"; };
+		6C43B21022F40FCF0062D233 /* XPYTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYTableViewController.m; sourceTree = "<group>"; };
 		6C9FD3DB229FB8E5003297B5 /* XPYPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYPerson.h; sourceTree = "<group>"; };
 		6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYPerson.m; sourceTree = "<group>"; };
 		6CE85CE122C491DC009C5D20 /* XPYBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYBaseNavigationController.h; sourceTree = "<group>"; };
@@ -205,6 +208,8 @@
 			children = (
 				3D93ABBD21E83B2A00E2C367 /* ViewController.h */,
 				3D93ABBE21E83B2A00E2C367 /* ViewController.m */,
+				6C43B20F22F40FCF0062D233 /* XPYTableViewController.h */,
+				6C43B21022F40FCF0062D233 /* XPYTableViewController.m */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 			files = (
 				3D93ABEB21E83BA000E2C367 /* XLHyperLinkButton.m in Sources */,
 				3D93ABE921E83BA000E2C367 /* XLNoticeHelper.m in Sources */,
+				6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */,
 				6C0214A022BC790E004726D7 /* XPYAlertController.m in Sources */,
 				3D93ABBF21E83B2A00E2C367 /* ViewController.m in Sources */,
 				3D93ABCA21E83B2C00E2C367 /* main.m in Sources */,

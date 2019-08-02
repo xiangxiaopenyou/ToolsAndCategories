@@ -10,6 +10,7 @@
 #import <RSKImageCropper.h>
 #import "XPYPerson.h"
 #import "XPYAlertController.h"
+#import "XPYTableViewController.h"
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -80,6 +81,11 @@
         case 2:
             [self showAlert];
             break;
+        case 3: {
+            XPYTableViewController *tableViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"XPYTableView"];
+            [self.navigationController pushViewController:tableViewController animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -97,7 +103,7 @@
 #pragma mark - Getters
 - (NSArray *)itemsArray {
     if (!_itemsArray) {
-        _itemsArray = @[@"相册图片裁剪", @"跳转到TestApp", @"XPYAlertController"];
+        _itemsArray = @[@"相册图片裁剪", @"跳转到TestApp", @"XPYAlertController", @"TableView"];
     }
     return _itemsArray;
 }
