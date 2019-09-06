@@ -11,6 +11,7 @@
 #import "XPYPerson.h"
 #import "XPYAlertController.h"
 #import "XPYTableViewController.h"
+#import "XPYCategoryViewController.h"
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -86,6 +87,11 @@
             [self.navigationController pushViewController:tableViewController animated:YES];
         }
             break;
+        case 4: {
+            XPYCategoryViewController *categoryController = [[XPYCategoryViewController alloc] init];
+            [self.navigationController pushViewController:categoryController animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -103,7 +109,7 @@
 #pragma mark - Getters
 - (NSArray *)itemsArray {
     if (!_itemsArray) {
-        _itemsArray = @[@"相册图片裁剪", @"跳转到TestApp", @"XPYAlertController", @"TableView"];
+        _itemsArray = @[@"相册图片裁剪", @"跳转到TestApp", @"XPYAlertController", @"TableView", @"XPYCategoryView"];
     }
     return _itemsArray;
 }

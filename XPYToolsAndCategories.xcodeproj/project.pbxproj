@@ -26,6 +26,9 @@
 		6C0C1B4822743C9E0055BAB4 /* XPYDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */; };
 		6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43B21022F40FCF0062D233 /* XPYTableViewController.m */; };
 		6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */; };
+		6CE787222321F92300831516 /* XPYCategoryTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE787212321F92300831516 /* XPYCategoryTitleView.m */; };
+		6CE787262321F9BF00831516 /* XPYCategoryContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE787252321F9BF00831516 /* XPYCategoryContentView.m */; };
+		6CE787292322013700831516 /* XPYCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE787282322013700831516 /* XPYCategoryViewController.m */; };
 		6CE85CE322C491DC009C5D20 /* XPYBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE85CE222C491DC009C5D20 /* XPYBaseNavigationController.m */; };
 		6CE85CE622C4999D009C5D20 /* XPYThumbUpAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE85CE522C4999D009C5D20 /* XPYThumbUpAnimationViewController.m */; };
 		6CE85CFE22C734C3009C5D20 /* XPYAnimationsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE85CFD22C734C3009C5D20 /* XPYAnimationsView.m */; };
@@ -75,6 +78,12 @@
 		6C43B21022F40FCF0062D233 /* XPYTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYTableViewController.m; sourceTree = "<group>"; };
 		6C9FD3DB229FB8E5003297B5 /* XPYPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYPerson.h; sourceTree = "<group>"; };
 		6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYPerson.m; sourceTree = "<group>"; };
+		6CE787202321F92300831516 /* XPYCategoryTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYCategoryTitleView.h; sourceTree = "<group>"; };
+		6CE787212321F92300831516 /* XPYCategoryTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYCategoryTitleView.m; sourceTree = "<group>"; };
+		6CE787242321F9BF00831516 /* XPYCategoryContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYCategoryContentView.h; sourceTree = "<group>"; };
+		6CE787252321F9BF00831516 /* XPYCategoryContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYCategoryContentView.m; sourceTree = "<group>"; };
+		6CE787272322013700831516 /* XPYCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYCategoryViewController.h; sourceTree = "<group>"; };
+		6CE787282322013700831516 /* XPYCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYCategoryViewController.m; sourceTree = "<group>"; };
 		6CE85CE122C491DC009C5D20 /* XPYBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYBaseNavigationController.h; sourceTree = "<group>"; };
 		6CE85CE222C491DC009C5D20 /* XPYBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYBaseNavigationController.m; sourceTree = "<group>"; };
 		6CE85CE422C4999D009C5D20 /* XPYThumbUpAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYThumbUpAnimationViewController.h; sourceTree = "<group>"; };
@@ -169,6 +178,7 @@
 		3D93ABD921E83BA000E2C367 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				6CE787232321F93F00831516 /* XPYCategoryView */,
 				3D93ABDA21E83BA000E2C367 /* XLBlockAlertView.h */,
 				3D93ABE021E83BA000E2C367 /* XLBlockAlertView.m */,
 				3D93ABDF21E83BA000E2C367 /* XLBlockActionSheet.h */,
@@ -194,6 +204,17 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		6CE787232321F93F00831516 /* XPYCategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				6CE787202321F92300831516 /* XPYCategoryTitleView.h */,
+				6CE787212321F92300831516 /* XPYCategoryTitleView.m */,
+				6CE787242321F9BF00831516 /* XPYCategoryContentView.h */,
+				6CE787252321F9BF00831516 /* XPYCategoryContentView.m */,
+			);
+			path = XPYCategoryView;
+			sourceTree = "<group>";
+		};
 		6CFC594A22E196480001928F /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +231,8 @@
 				3D93ABBE21E83B2A00E2C367 /* ViewController.m */,
 				6C43B20F22F40FCF0062D233 /* XPYTableViewController.h */,
 				6C43B21022F40FCF0062D233 /* XPYTableViewController.m */,
+				6CE787272322013700831516 /* XPYCategoryViewController.h */,
+				6CE787282322013700831516 /* XPYCategoryViewController.m */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -376,6 +399,7 @@
 				6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */,
 				6C0214A022BC790E004726D7 /* XPYAlertController.m in Sources */,
 				3D93ABBF21E83B2A00E2C367 /* ViewController.m in Sources */,
+				6CE787262321F9BF00831516 /* XPYCategoryContentView.m in Sources */,
 				3D93ABCA21E83B2C00E2C367 /* main.m in Sources */,
 				3D93ABE721E83BA000E2C367 /* NSDate+gyh.m in Sources */,
 				6CE85D0122C7380B009C5D20 /* XPYAnimationsViewController.m in Sources */,
@@ -384,6 +408,8 @@
 				6CE85CFE22C734C3009C5D20 /* XPYAnimationsView.m in Sources */,
 				3D93ABE521E83BA000E2C367 /* UIControl+Blocks.m in Sources */,
 				6CFC595622E198A80001928F /* XPYAnimationGroupsViewController.m in Sources */,
+				6CE787292322013700831516 /* XPYCategoryViewController.m in Sources */,
+				6CE787222321F92300831516 /* XPYCategoryTitleView.m in Sources */,
 				6CE85CE322C491DC009C5D20 /* XPYBaseNavigationController.m in Sources */,
 				6C0C1B4822743C9E0055BAB4 /* XPYDrawingView.m in Sources */,
 				3D93ABE821E83BA000E2C367 /* XLBlockActionSheet.m in Sources */,
