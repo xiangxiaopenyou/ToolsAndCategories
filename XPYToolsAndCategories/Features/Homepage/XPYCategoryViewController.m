@@ -9,6 +9,7 @@
 #import "XPYCategoryViewController.h"
 #import "XPYCategoryTitleView.h"
 #import "XPYCategoryContentView.h"
+#import "XPYUtilities.h"
 
 @interface XPYCategoryViewController () <XPYCategoryTitleViewDelegate, XPYCategoryContentViewDelegate>
 
@@ -27,12 +28,14 @@
     configurations.enableScale = YES;
     configurations.normalColor = [UIColor grayColor];
     configurations.selectedColor = [UIColor blueColor];
+    configurations.extraWidth = 30.f;
     configurations.titleFont = [UIFont systemFontOfSize:17];
     configurations.selectedTitleFont = [UIFont boldSystemFontOfSize:19];
     configurations.indicatorBottomSpacing = 10;
-    self.categoryTitleView = [[XPYCategoryTitleView alloc] initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.view.bounds), 50) titles:@[@"视图一", @"视图二", @"视图三", @"视图四"] configuration:configurations];
+    self.categoryTitleView = [[XPYCategoryTitleView alloc] initWithFrame:CGRectMake(0, [XPYUtilities isIphoneX] ? 88 : 64, CGRectGetWidth(self.view.bounds), 50) titles:@[@"视图一", @"视图二", @"视图三", @"视图四"] configuration:configurations];
     self.categoryTitleView.delegate = self;
     [self.view addSubview:self.categoryTitleView];
+    
     
     UIViewController *controller1 = [[UIViewController alloc] init];
     controller1.view.backgroundColor = [UIColor redColor];
@@ -42,7 +45,9 @@
     controller3.view.backgroundColor = [UIColor greenColor];
     UIViewController *controller4 = [[UIViewController alloc] init];
     controller4.view.backgroundColor = [UIColor yellowColor];
-    self.categoryContentView = [[XPYCategoryContentView alloc] initWithFrame:CGRectMake(0, 50 + 64, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - 50 - 64) parentController:self controllers:@[controller1, controller2, controller3, controller4]];
+    
+    CGFloat contentOffsetY = ([XPYUtilities isIphoneX] ? 88 : 64) + 50;
+    self.categoryContentView = [[XPYCategoryContentView alloc] initWithFrame:CGRectMake(0, contentOffsetY, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - contentOffsetY) parentController:self controllers:@[controller1, controller2, controller3, controller4]];
     self.categoryContentView.delegate = self;
     [self.view addSubview:self.categoryContentView];
 }

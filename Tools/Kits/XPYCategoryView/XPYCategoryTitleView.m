@@ -47,8 +47,8 @@
     CGFloat frameHeight = CGRectGetHeight(self.frame);
     _contentWidth = 0;
     for (NSString *title in self.titlesArray) {
-        CGFloat titleWidth = [title sizeWithAttributes:@{NSFontAttributeName : self.configurations.titleFont}].width;
-        _contentWidth += titleWidth + 30;
+        CGFloat titleWidth = [title sizeWithAttributes:@{NSFontAttributeName : self.configurations.selectedTitleFont}].width;
+        _contentWidth += titleWidth + self.configurations.extraWidth;
     }
     if (self.configurations.itemSpacing > 0) {
         _contentWidth += self.configurations.itemSpacing * (self.titlesArray.count - 1);
@@ -64,24 +64,24 @@
     
     __block CGFloat positionX = 0;
     [self.titlesArray enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        CGFloat titleWidth = [obj sizeWithAttributes:@{NSFontAttributeName : self.configurations.titleFont}].width;
+        CGFloat titleWidth = [obj sizeWithAttributes:@{NSFontAttributeName : self.configurations.selectedTitleFont}].width;
         UIButton *titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
         titleButton.tag = 1000 + idx;
-        titleButton.frame = CGRectMake(positionX, 0, titleWidth + 30, frameHeight - self.configurations.indicatorHeight);
+        titleButton.frame = CGRectMake(positionX, 0, titleWidth + self.configurations.extraWidth, frameHeight - self.configurations.indicatorHeight);
         [titleButton setTitle:obj forState:UIControlStateNormal];
         [titleButton addTarget:self action:@selector(titleButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         if (idx == 0) {
             [titleButton setTitleColor:self.configurations.selectedColor forState:UIControlStateNormal];
             titleButton.titleLabel.font = self.configurations.selectedTitleFont;
             self.selectedButton = titleButton;
-            self.indicatorView.frame = CGRectMake((titleWidth + 30) / 2.0 - self.configurations.indicatorWidth / 2.0, frameHeight - self.configurations.indicatorBottomSpacing - self.configurations.indicatorHeight, self.configurations.indicatorWidth, self.configurations.indicatorHeight);
+            self.indicatorView.frame = CGRectMake((titleWidth + self.configurations.extraWidth) / 2.0 - self.configurations.indicatorWidth / 2.0, frameHeight - self.configurations.indicatorBottomSpacing - self.configurations.indicatorHeight, self.configurations.indicatorWidth, self.configurations.indicatorHeight);
         } else {
             [titleButton setTitleColor:self.configurations.normalColor forState:UIControlStateNormal];
             titleButton.titleLabel.font = self.configurations.titleFont;
         }
         [self.titleButtons addObject:titleButton];
         [self.scrollView addSubview:titleButton];
-        positionX += titleWidth + 30 + self.configurations.itemSpacing;
+        positionX += titleWidth + self.configurations.extraWidth + self.configurations.itemSpacing;
     }];
     [self.scrollView addSubview:self.indicatorView];
     self.indicatorView.backgroundColor = self.configurations.selectedColor;
@@ -130,6 +130,9 @@
     }
     if (configuration.itemSpacing != self.configurations.itemSpacing) {
         self.configurations.itemSpacing = configuration.itemSpacing;
+    }
+    if (configuration.extraWidth != self.configurations.extraWidth) {
+        self.configurations.extraWidth = configuration.extraWidth;
     }
     if (configuration.indicatorWidth > 0 && configuration.indicatorWidth != self.configurations.indicatorWidth) {
         self.configurations.indicatorWidth = configuration.indicatorWidth;
@@ -252,6 +255,7 @@
         _configurations.normalColor = [UIColor blackColor];
         _configurations.selectedColor = [UIColor redColor];
         _configurations.itemSpacing = 0;
+        _configurations.extraWidth = 0;
         _configurations.indicatorWidth = 20;
         _configurations.indicatorHeight = 2;
         _configurations.indicatorBottomSpacing = 0;

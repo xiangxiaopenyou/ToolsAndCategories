@@ -16,6 +16,7 @@
 @property (nonatomic, strong) UIColor *normalColor;             //普通颜色
 @property (nonatomic, strong) UIColor *selectedColor;           //选中颜色
 @property (nonatomic, assign) CGFloat itemSpacing;              //额外间隔
+@property (nonatomic, assign) CGFloat extraWidth;               //额外宽度
 @property (nonatomic, assign) CGFloat indicatorWidth;           //指示器宽度
 @property (nonatomic, assign) CGFloat indicatorHeight;          //指示器高度
 @property (nonatomic, assign) CGFloat indicatorBottomSpacing;   //指示器到底部距离

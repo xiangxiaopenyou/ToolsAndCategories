@@ -14,6 +14,9 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - HYBImageCliped (2.2.4)
   - RSKImageCropper (2.2.1)
   - XPYNetworkingLib (0.1.0):
@@ -27,6 +30,7 @@ PODS:
     - YYImage
 
 DEPENDENCIES:
+  - FMDB
   - HYBImageCliped
   - RSKImageCropper
   - XPYNetworkingLib (from `https://github.com/xiangxiaopenyou/XPYNetworkingLib.git`)
@@ -35,6 +39,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - FMDB
     - HYBImageCliped
     - RSKImageCropper
     - YYCache
@@ -52,6 +57,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   HYBImageCliped: 22d14431324bc9d056353d6f1490a3bd03fc7dff
   RSKImageCropper: 98296ad26b41753f796b6898d015509598f13d97
   XPYNetworkingLib: 5d0d4924901cbfdb7efc1614bb57b50651d0fe36
@@ -59,6 +65,6 @@ SPEC CHECKSUMS:
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 3b468b7a35fae82136c068066ab02e6e6d425c36
+PODFILE CHECKSUM: a5f3c5b8708fd1496c6e78cce3548a47d69c47f5
 
 COCOAPODS: 1.6.0

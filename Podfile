@@ -7,4 +7,5 @@ target 'XPYToolsAndCategories' do
   pod 'YYWebImage'
   pod 'HYBImageCliped'
   pod 'RSKImageCropper'
+  pod 'FMDB'
 end
