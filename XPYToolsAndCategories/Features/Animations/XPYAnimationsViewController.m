@@ -11,12 +11,14 @@
 #import "XPYThumbUpAnimationViewController.h"
 #import "XPYTransformAnimationViewController.h"
 #import "XPYAnimationGroupsViewController.h"
+#import "XPYCommonTransitionAnimationViewController.h"
 
 #import "XPYAnimationsView.h"
 
 @interface XPYAnimationsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, copy) NSArray *itemsArray;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -25,10 +27,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"动画";
-}
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
 }
 
 #pragma mark - Table view data source
@@ -68,7 +66,12 @@
             [self.navigationController pushViewController:animationGroupsController animated:YES];
         }
             break;
-            
+        case 4: {
+            XPYCommonTransitionAnimationViewController *commonTransitionController = [[XPYCommonTransitionAnimationViewController alloc] init];
+            commonTransitionController.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:commonTransitionController animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -78,7 +81,7 @@
 #pragma mark - Getters
 - (NSArray *)itemsArray {
     if (!_itemsArray) {
-        _itemsArray = @[@"XPYDrawingView", @"TransformAnimation", @"ThumbUpAnimation", @"XPYAnimationsView"];
+        _itemsArray = @[@"XPYDrawingView", @"TransformAnimation", @"ThumbUpAnimation", @"XPYAnimationsView", @"普通转场动画"];
     }
     return _itemsArray;
 }

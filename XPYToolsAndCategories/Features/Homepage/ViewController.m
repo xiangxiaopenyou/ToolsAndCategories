@@ -17,6 +17,7 @@
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, copy) NSArray *itemsArray;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -25,7 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"首页";
-    //连式编程测试
+    
+    //链式编程测试
     XPYPerson *person = [[XPYPerson alloc] init];
     person.up().down();
     person.left(@"xianglinping").right(@"hahahaha");
@@ -55,7 +57,11 @@
     NSURL *jumpURL = [NSURL URLWithString:@"TestApp://"];
     
     if ([[UIApplication sharedApplication] canOpenURL:jumpURL]) {
-        [[UIApplication sharedApplication] openURL:jumpURL options:@{} completionHandler:nil];
+        if (@available(iOS 10.0, *)) {
+            [[UIApplication sharedApplication] openURL:jumpURL options:@{} completionHandler:nil];
+        } else {
+            [[UIApplication sharedApplication] openURL:jumpURL];
+        }
     } else {
         NSLog(@"没有安装TestApp");
     }
