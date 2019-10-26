@@ -16,3 +16,7 @@ XLBlockActionSheet：UIActionSheet实现Block
 XLNoticeHelper：简单提示控件
 
 XLColorTool：单一颜色图片
+
+增加一些简单动画效果
+
+增加一些runtime相关功能
