@@ -23,6 +23,7 @@
 		3D93ABEB21E83BA000E2C367 /* XLHyperLinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE121E83BA000E2C367 /* XLHyperLinkButton.m */; };
 		3D93ABEC21E83BA000E2C367 /* XLColorTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE321E83BA000E2C367 /* XLColorTool.m */; };
 		6C0214A022BC790E004726D7 /* XPYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C02149F22BC790E004726D7 /* XPYAlertController.m */; };
+		6C094E3B23682B8C008EDA86 /* XPYBaseTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C094E3A23682B8C008EDA86 /* XPYBaseTransitionViewController.m */; };
 		6C0C1B4822743C9E0055BAB4 /* XPYDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */; };
 		6C1440FD2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1440FC2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.m */; };
 		6C144100236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1440FF236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.m */; };
@@ -30,7 +31,6 @@
 		6C1E3B8D2341AA5400915662 /* XPYUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E3B8C2341AA5400915662 /* XPYUtilities.m */; };
 		6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43B21022F40FCF0062D233 /* XPYTableViewController.m */; };
 		6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */; };
-		6CAEFE832351B08200C22FB4 /* XPYTransitionAnimationNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEFE822351B08200C22FB4 /* XPYTransitionAnimationNavigationController.m */; };
 		6CAEFE862351B70300C22FB4 /* XPYCommonTransitionAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEFE852351B70300C22FB4 /* XPYCommonTransitionAnimationViewController.m */; };
 		6CAEFE8A2351B82900C22FB4 /* XPYPushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEFE892351B82900C22FB4 /* XPYPushAnimation.m */; };
 		6CAEFE8D2351B83400C22FB4 /* XPYPopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEFE8C2351B83400C22FB4 /* XPYPopAnimation.m */; };
@@ -80,6 +80,8 @@
 		3D93ABE321E83BA000E2C367 /* XLColorTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLColorTool.m; sourceTree = "<group>"; };
 		6C02149E22BC790E004726D7 /* XPYAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYAlertController.h; sourceTree = "<group>"; };
 		6C02149F22BC790E004726D7 /* XPYAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYAlertController.m; sourceTree = "<group>"; };
+		6C094E3923682B8C008EDA86 /* XPYBaseTransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYBaseTransitionViewController.h; sourceTree = "<group>"; };
+		6C094E3A23682B8C008EDA86 /* XPYBaseTransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYBaseTransitionViewController.m; sourceTree = "<group>"; };
 		6C0C1B4622743C9E0055BAB4 /* XPYDrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYDrawingView.h; sourceTree = "<group>"; };
 		6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYDrawingView.m; sourceTree = "<group>"; };
 		6C1440FB2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XPYScrollViewInsets.h"; sourceTree = "<group>"; };
@@ -95,8 +97,6 @@
 		6C43B21022F40FCF0062D233 /* XPYTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYTableViewController.m; sourceTree = "<group>"; };
 		6C9FD3DB229FB8E5003297B5 /* XPYPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYPerson.h; sourceTree = "<group>"; };
 		6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYPerson.m; sourceTree = "<group>"; };
-		6CAEFE812351B08200C22FB4 /* XPYTransitionAnimationNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYTransitionAnimationNavigationController.h; sourceTree = "<group>"; };
-		6CAEFE822351B08200C22FB4 /* XPYTransitionAnimationNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYTransitionAnimationNavigationController.m; sourceTree = "<group>"; };
 		6CAEFE842351B70300C22FB4 /* XPYCommonTransitionAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYCommonTransitionAnimationViewController.h; sourceTree = "<group>"; };
 		6CAEFE852351B70300C22FB4 /* XPYCommonTransitionAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYCommonTransitionAnimationViewController.m; sourceTree = "<group>"; };
 		6CAEFE882351B82900C22FB4 /* XPYPushAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYPushAnimation.h; sourceTree = "<group>"; };
@@ -176,8 +176,6 @@
 				3D93ABBB21E83B2A00E2C367 /* AppDelegate.m */,
 				6CE85CE122C491DC009C5D20 /* XPYBaseNavigationController.h */,
 				6CE85CE222C491DC009C5D20 /* XPYBaseNavigationController.m */,
-				6CAEFE812351B08200C22FB4 /* XPYTransitionAnimationNavigationController.h */,
-				6CAEFE822351B08200C22FB4 /* XPYTransitionAnimationNavigationController.m */,
 				3D93ABC021E83B2A00E2C367 /* Main.storyboard */,
 				3D93ABC321E83B2C00E2C367 /* Assets.xcassets */,
 				3D93ABC521E83B2C00E2C367 /* LaunchScreen.storyboard */,
@@ -266,6 +264,8 @@
 		6CAEFE872351B7C800C22FB4 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
+				6C094E3923682B8C008EDA86 /* XPYBaseTransitionViewController.h */,
+				6C094E3A23682B8C008EDA86 /* XPYBaseTransitionViewController.m */,
 				6CAEFE882351B82900C22FB4 /* XPYPushAnimation.h */,
 				6CAEFE892351B82900C22FB4 /* XPYPushAnimation.m */,
 				6CAEFE8B2351B83400C22FB4 /* XPYPopAnimation.h */,
@@ -484,8 +484,8 @@
 				6CFC595322E197BA0001928F /* XPYTransformAnimationViewController.m in Sources */,
 				3D93ABE621E83BA000E2C367 /* UIImage+ImageEffects.m in Sources */,
 				6CE85CFE22C734C3009C5D20 /* XPYAnimationsView.m in Sources */,
-				6CAEFE832351B08200C22FB4 /* XPYTransitionAnimationNavigationController.m in Sources */,
 				3D93ABE521E83BA000E2C367 /* UIControl+Blocks.m in Sources */,
+				6C094E3B23682B8C008EDA86 /* XPYBaseTransitionViewController.m in Sources */,
 				6CFC595622E198A80001928F /* XPYAnimationGroupsViewController.m in Sources */,
 				6CE787292322013700831516 /* XPYCategoryViewController.m in Sources */,
 				6CE787222321F92300831516 /* XPYCategoryTitleView.m in Sources */,

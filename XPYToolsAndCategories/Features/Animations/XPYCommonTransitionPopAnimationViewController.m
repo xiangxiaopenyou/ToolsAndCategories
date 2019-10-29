@@ -7,9 +7,8 @@
 //
 
 #import "XPYCommonTransitionPopAnimationViewController.h"
-#import "XPYPopAnimation.h"
 
-@interface XPYCommonTransitionPopAnimationViewController () <UINavigationControllerDelegate>
+@interface XPYCommonTransitionPopAnimationViewController ()
 
 @end
 
@@ -19,18 +18,6 @@
     [super viewDidLoad];
     self.title = @"普通Pop动画";
     self.view.backgroundColor = [UIColor greenColor];
-}
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.navigationController.delegate = self;
-}
-
-#pragma mark - Navigation controller delegate
-- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
-    if (operation == UINavigationControllerOperationPop) {
-        return [[XPYPopAnimation alloc] init];
-    }
-    return nil;
 }
 
 /*

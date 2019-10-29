@@ -11,7 +11,7 @@
 @implementation XPYPushAnimation
 //动画时间
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return 2;
+    return 1;
 }
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     UIViewController *fromController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -31,13 +31,17 @@
     [transitionContext.containerView addSubview:toView];
     
     CGFloat width = CGRectGetWidth([UIScreen mainScreen].bounds);
-    CGFloat height = CGRectGetHeight([UIScreen mainScreen].bounds);
+    //CGFloat height = CGRectGetHeight([UIScreen mainScreen].bounds);
     
-    toView.frame = CGRectMake(width, 0, width, height);
+    //toView.frame = CGRectMake(width, 0, width, height);
+    toView.transform = CGAffineTransformMakeTranslation(width, 0);
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-        toView.frame = CGRectMake(0, 0, width, height);
+        //toView.frame = CGRectMake(0, 0, width, height);
+        fromView.transform = CGAffineTransformMakeScale(0.8, 0.8);
+        toView.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
-        [transitionContext completeTransition:YES];
+        fromView.transform = CGAffineTransformIdentity;
+        [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];
 }
 

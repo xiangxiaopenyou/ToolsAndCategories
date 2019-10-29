@@ -11,7 +11,7 @@
 @implementation XPYPopAnimation
 //动画时间
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return 1;
+    return 0.5;
 }
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     UIViewController *fromController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -27,14 +27,19 @@
         toView = toController.view;
     }
     
+    toView.transform = CGAffineTransformMakeScale(0.8, 0.8);
+    
     [transitionContext.containerView insertSubview:toView belowSubview:fromView];
     CGFloat width = CGRectGetWidth([UIScreen mainScreen].bounds);
-    CGFloat height = CGRectGetHeight([UIScreen mainScreen].bounds);
-    fromView.frame = CGRectMake(0, 0, width, height);
+    //CGFloat height = CGRectGetHeight([UIScreen mainScreen].bounds);
+    //fromView.frame = CGRectMake(0, 0, width, height);
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-        fromView.frame = CGRectMake(width, 0, width, height);
+        //fromView.frame = CGRectMake(width, 0, width, height);
+        toView.transform = CGAffineTransformIdentity;
+        fromView.transform = CGAffineTransformMakeTranslation(width, 0);
     } completion:^(BOOL finished) {
-        [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
+        toView.transform = CGAffineTransformIdentity;
+        [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];
 }
 

@@ -8,7 +8,6 @@
 
 #import "XPYCommonTransitionAnimationViewController.h"
 #import "XPYCommonTransitionPopAnimationViewController.h"
-#import "XPYPushAnimation.h"
 
 @interface XPYCommonTransitionAnimationViewController () <UINavigationControllerDelegate>
 
@@ -36,25 +35,11 @@
     [self.view addConstraints:@[centerXConstraint, centerYConstraint]];
     
 }
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    self.navigationController.delegate = self;
-    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
-}
 
 #pragma mark - Action
 - (void)pushAction:(UIButton *)button {
     XPYCommonTransitionPopAnimationViewController *popController = [[XPYCommonTransitionPopAnimationViewController alloc] init];
     [self.navigationController pushViewController:popController animated:YES];
-}
-
-#pragma mark - Navigation controller delegate
-//指定自定义动画类
-- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
-    if (operation == UINavigationControllerOperationPush) {
-        return [[XPYPushAnimation alloc] init];
-    }
-    return nil;
 }
 
 /*
