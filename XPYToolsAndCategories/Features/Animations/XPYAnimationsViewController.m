@@ -81,7 +81,7 @@
 #pragma mark - Getters
 - (NSArray *)itemsArray {
     if (!_itemsArray) {
-        _itemsArray = @[@"XPYDrawingView", @"TransformAnimation", @"ThumbUpAnimation", @"XPYAnimationsView", @"普通转场动画"];
+        _itemsArray = @[@"XPYDrawingView", @"TransformAnimation", @"ThumbUpAnimation", @"XPYAnimationsView", @"自定义转场动画"];
     }
     return _itemsArray;
 }

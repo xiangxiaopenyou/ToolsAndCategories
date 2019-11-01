@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"普通Pop动画";
+    self.title = @"自定义Pop动画";
     self.view.backgroundColor = [UIColor greenColor];
 }
 

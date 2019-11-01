@@ -9,6 +9,9 @@
 #import "XPYCommonTransitionAnimationViewController.h"
 #import "XPYCommonTransitionPopAnimationViewController.h"
 
+#import "UIView+XPYSnapshotImage.h"
+#import "XPYFileManager.h"
+
 @interface XPYCommonTransitionAnimationViewController () <UINavigationControllerDelegate>
 
 @end
@@ -19,7 +22,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.title = @"普通转场动画";
+    self.title = @"自定义转场动画";
     
     UIButton *pushButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [pushButton setTitle:@"push" forState:UIControlStateNormal];
@@ -33,6 +36,22 @@
     NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:pushButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:50];
     [pushButton addConstraints:@[widthConstraint, heightConstraint]];
     [self.view addConstraints:@[centerXConstraint, centerYConstraint]];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+//    UIImage *snapshotImage = [self.view snapshotImage];
+//    NSString *cachePath = [XPYFileManager cacheFilePathWithKey:@"SnapshotCache"];
+//    if ([XPYFileManager createCacheDirectoryWithFilePath:cachePath]) {
+//        NSData *imageData = UIImagePNGRepresentation(snapshotImage);
+//        NSString *dataPath = [cachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_snapshop_image.png", @(self.hash)]];
+//        if ([XPYFileManager saveFile:imageData toPath:dataPath]) {
+//            NSData *data = [XPYFileManager dataWithFilePath:dataPath];
+//            UIImage *image = [UIImage imageWithData:data];
+//            NSLog(@"success");
+//        }
+//    }
     
 }
 
