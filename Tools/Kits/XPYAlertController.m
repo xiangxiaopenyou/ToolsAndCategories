@@ -22,7 +22,7 @@
 @end
 
 @implementation XPYAlertController
-+ (XPYAlertController *)makeAlert:(void (^)(XPYAlertController * _Nonnull))block alertModel:(nonnull XPYAlertModel *)model {
++(XPYAlertController *)makeAlert:(XPYAlert)block alertModel:(XPYAlertModel *)model {
     XPYAlertController *alert = [XPYAlertController alertControllerWithTitle:model.alertTitle message:model.alertMessage preferredStyle:model.preferredStyle];
     block(alert);
     return alert;

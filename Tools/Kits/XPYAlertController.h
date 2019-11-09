@@ -21,12 +21,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+typedef void * _Nonnull (^XPYAlert)(XPYAlertController *controller);
 typedef XPYAlertController * _Nonnull (^XPYShowAlert)(UIViewController *controller);
 typedef XPYAlertController * _Nonnull (^XPYActions)(NSArray<UIAlertAction *> *actions);
 
 @interface XPYAlertController : UIAlertController
 
-+ (XPYAlertController *)makeAlert:(void (^)(XPYAlertController *alert))block alertModel:(XPYAlertModel *)model;
++ (XPYAlertController *)makeAlert:(XPYAlert)block alertModel:(XPYAlertModel *)model;
 
 /**
  设置Actions

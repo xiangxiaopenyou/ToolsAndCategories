@@ -41,18 +41,18 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-//    UIImage *snapshotImage = [self.view snapshotImage];
+    UIImage *snapshotImage = [self.view snapshotImage];
 //    NSString *cachePath = [XPYFileManager cacheFilePathWithKey:@"SnapshotCache"];
 //    if ([XPYFileManager createCacheDirectoryWithFilePath:cachePath]) {
 //        NSData *imageData = UIImagePNGRepresentation(snapshotImage);
 //        NSString *dataPath = [cachePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_snapshop_image.png", @(self.hash)]];
-//        if ([XPYFileManager saveFile:imageData toPath:dataPath]) {
+//        if ([XPYFileManager saveFile:ima geData toPath:dataPath]) {
 //            NSData *data = [XPYFileManager dataWithFilePath:dataPath];
 //            UIImage *image = [UIImage imageWithData:data];
 //            NSLog(@"success");
 //        }
 //    }
-    
+
 }
 
 #pragma mark - Action
