@@ -15,14 +15,14 @@
                    message:(NSString *)messageString
                     cancel:(NSString *)cancelString
                    confirm:(NSString *)confirmString
-              inController:(UIViewController *)controller
+              inController:(UIViewController *)viewController
             confirmHandler:(void (^)(void))confirm
              cancelHandler:(void (^)(void))cancel {
     if (!cancelString && !confirmString) {
         return;
     }
     XPYAlertModel *alertModel = [[XPYAlertModel alloc] initWithTitle:titleString message:messageString style:UIAlertControllerStyleAlert];
-    [XPYAlertController makeAlert:^void * _Nonnull(XPYAlertController * _Nonnull controller) {
+    [XPYAlertController makeAlert:^(XPYAlertController * _Nonnull controller) {
         NSMutableArray *items = [[NSMutableArray alloc] init];
         if (cancelString) {
             UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelString style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -43,20 +43,20 @@
             }];
             [items addObject:confirmAction];
         }
-        controller.actionItems(items).showAlert(controller);
+        controller.actionItems(items).showAlert(viewController);
     } alertModel:alertModel];
 }
 + (void)showActionSheetWithTitle:(NSString *)titleString
                          message:(NSString *)messageString
                           cancel:(NSString *)cancelString
-                    inController:(UIViewController *)controller
+                    inController:(UIViewController *)viewController
                          actions:(NSArray<NSString *> *)actions
                    actionHandler:(void (^)(NSInteger))actionHandler {
     if (actions.count == 0) {
         return;
     }
     XPYAlertModel *alertModel = [[XPYAlertModel alloc] initWithTitle:titleString message:messageString style:UIAlertControllerStyleActionSheet];
-    [XPYAlertController makeAlert:^void * _Nonnull(XPYAlertController * _Nonnull controller) {
+    [XPYAlertController makeAlert:^(XPYAlertController * _Nonnull controller) {
         NSMutableArray *items = [[NSMutableArray alloc] init];
         if (cancelString) {
             UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelString style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -71,7 +71,7 @@
             }];
             [items addObject:alertAction];
         }];
-        controller.actionItems(items).showAlert(controller);
+        controller.actionItems(items).showAlert(viewController);
     } alertModel:alertModel];
 }
 @end

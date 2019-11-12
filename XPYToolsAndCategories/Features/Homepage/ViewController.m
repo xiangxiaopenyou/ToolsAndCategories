@@ -10,6 +10,7 @@
 #import <RSKImageCropper.h>
 #import "XPYPerson.h"
 #import "XPYAlertController.h"
+#import "XPYAlertManager.h"
 #import "XPYTableViewController.h"
 #import "XPYCategoryViewController.h"
 
@@ -32,19 +33,31 @@
     person.up().down();
     person.left(@"xianglinping").right(@"hahahaha");
 }
+
+
+/// XPYAlert
 - (void)showAlert {
+
     XPYAlertModel *alertModel = [[XPYAlertModel alloc] initWithTitle:@"提示" message:@"请注意xxxxxxxxxx" style:UIAlertControllerStyleActionSheet];
-    [XPYAlertController makeAlert:^(XPYAlertController * _Nonnull alert) {
+    [XPYAlertController makeAlert:^(XPYAlertController * _Nonnull controller) {
         UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             NSLog(@"取消");
         }];
         UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
             NSLog(@"确定");
+            [XPYAlertManager showAlertWithTitle:@"确定" message:@"点击了确定" cancel:@"取消" confirm:@"确定" inController:self confirmHandler:^{
+                NSLog(@"alert confirm");
+            } cancelHandler:^{
+                NSLog(@"alert cancel");
+            }];
         }];
         UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"哈哈" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             NSLog(@"哈哈");
+            [XPYAlertManager showActionSheetWithTitle:@"哈哈" message:@"点击了哈哈" cancel:@"取消" inController:self actions:@[@"item0", @"item1", @"item2"] actionHandler:^(NSInteger index) {
+                NSLog(@"click item%@", @(index));
+            }];
         }];
-        alert.actionItems(@[action1, action2, action3]).showAlert(self);
+        controller.actionItems(@[action1, action2, action3]).showAlert(self);
     } alertModel:alertModel];
 }
 - (IBAction)assertAction:(id)sender {
@@ -53,6 +66,10 @@
     imagePickerController.delegate = self;
     [self presentViewController:imagePickerController animated:YES completion:nil];
 }
+
+
+/// Jump between apps
+/// @param sender sender
 - (IBAction)jumpAction:(id)sender {
     NSURL *jumpURL = [NSURL URLWithString:@"TestApp://"];
     
@@ -116,7 +133,7 @@
 #pragma mark - Getters
 - (NSArray *)itemsArray {
     if (!_itemsArray) {
-        _itemsArray = @[@"相册图片裁剪", @"跳转到TestApp", @"XPYAlertController", @"TableView", @"XPYCategoryView"];
+        _itemsArray = @[@"相册图片裁剪", @"跳转到TestApp", @"XPYAlert", @"TableView", @"XPYCategoryView"];
     }
     return _itemsArray;
 }
