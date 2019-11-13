@@ -50,3 +50,48 @@ XLColorTool：单一颜色图片
         }
         
     }
+ 
+ 增加XPYAlertController（链式编程Alert）和XPYAlertManager（管理XPYAlertController）例：
+ 
+    XPYAlertModel *alertModel = [[XPYAlertModel alloc] initWithTitle:@"提示" message:@"请注意xxxxxxxxxx" style:UIAlertControllerStyleActionSheet];
+    
+    [XPYAlertController makeAlert:^(XPYAlertController * _Nonnull controller) {
+    
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+            NSLog(@"取消");
+            
+        }];
+        
+        UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        
+            NSLog(@"确定");
+            
+            [XPYAlertManager showAlertWithTitle:@"确定" message:@"点击了确定" cancel:@"取消" confirm:@"确定" inController:self confirmHandler:^{
+            
+                NSLog(@"alert confirm");
+                
+            } cancelHandler:^{
+            
+                NSLog(@"alert cancel");
+                
+            }];
+            
+        }];
+        
+        UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"哈哈" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+            NSLog(@"哈哈");
+            
+            [XPYAlertManager showActionSheetWithTitle:@"哈哈" message:@"点击了哈哈" cancel:@"取消" inController:self actions:@[@"item0", @"item1", @"item2"] actionHandler:^(NSInteger index) {
+            
+                NSLog(@"click item%@", @(index));
+                
+            }];
+            
+        }];
+        
+        controller.actionItems(@[action1, action2, action3]).showAlert(self);
+        
+    } alertModel:alertModel];
+ 
