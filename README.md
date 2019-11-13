@@ -19,7 +19,9 @@ XLColorTool：单一颜色图片
 
 增加一些简单动画效果
 
-增加一些runtime相关功能
+自定义转场效果
+
+增加一些runtime相关功能 MethodSwizzling（UIViewController+XPYScrollViewInsets）
 
 增加XPYFileManager，用于沙盒存储数据，例：
 
