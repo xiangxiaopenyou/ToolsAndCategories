@@ -8,6 +8,8 @@
 
 #import "XPYDataBaseManager.h"
 
+#import <FMDB.h>
+
 @implementation XPYDataBaseManager
 + (instancetype)sharedInstance {
     static XPYDataBaseManager *instance = nil;
@@ -16,6 +18,15 @@
         instance = [[XPYDataBaseManager alloc] init];
     });
     return instance;
+}
+
+- (BOOL)createDatabaseWithName:(NSString *)name {
+//    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+//    path = [path stringByAppendingPathComponent:name];
+//
+//
+//    FMDatabase *dataBase = [FMDatabase alloc] initWithPath:<#(NSString * _Nullable)#>
+    return NO;
 }
 
 @end

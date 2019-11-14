@@ -41,7 +41,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    UIImage *snapshotImage = [self.view snapshotImage];
+//    UIImage *snapshotImage = [self.view snapshotImage];
 //    NSString *cachePath = [XPYFileManager cacheFilePathWithKey:@"SnapshotCache"];
 //    if ([XPYFileManager createCacheDirectoryWithFilePath:cachePath]) {
 //        NSData *imageData = UIImagePNGRepresentation(snapshotImage);

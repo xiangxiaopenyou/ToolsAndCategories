@@ -44,6 +44,9 @@
 		6CE85CFE22C734C3009C5D20 /* XPYAnimationsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE85CFD22C734C3009C5D20 /* XPYAnimationsView.m */; };
 		6CE85D0122C7380B009C5D20 /* XPYAnimationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE85D0022C7380B009C5D20 /* XPYAnimationsViewController.m */; };
 		6CEAE7CD237652A000E6C43E /* XPYAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEAE7CC237652A000E6C43E /* XPYAlertManager.m */; };
+		6CEAE7D3237BAB0E00E6C43E /* XPYImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEAE7D2237BAB0E00E6C43E /* XPYImagePickerViewController.m */; };
+		6CEAE7D7237BD28400E6C43E /* XPYImagePickerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEAE7D6237BD28400E6C43E /* XPYImagePickerCollectionView.m */; };
+		6CEAE7DA237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEAE7D9237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m */; };
 		6CFC595022E1973E0001928F /* XPYDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC594F22E1973E0001928F /* XPYDrawingViewController.m */; };
 		6CFC595322E197BA0001928F /* XPYTransformAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC595222E197BA0001928F /* XPYTransformAnimationViewController.m */; };
 		6CFC595622E198A80001928F /* XPYAnimationGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC595522E198A80001928F /* XPYAnimationGroupsViewController.m */; };
@@ -126,6 +129,12 @@
 		6CE85D0022C7380B009C5D20 /* XPYAnimationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYAnimationsViewController.m; sourceTree = "<group>"; };
 		6CEAE7CB237652A000E6C43E /* XPYAlertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYAlertManager.h; sourceTree = "<group>"; };
 		6CEAE7CC237652A000E6C43E /* XPYAlertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYAlertManager.m; sourceTree = "<group>"; };
+		6CEAE7D1237BAB0E00E6C43E /* XPYImagePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYImagePickerViewController.h; sourceTree = "<group>"; };
+		6CEAE7D2237BAB0E00E6C43E /* XPYImagePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYImagePickerViewController.m; sourceTree = "<group>"; };
+		6CEAE7D5237BD28400E6C43E /* XPYImagePickerCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYImagePickerCollectionView.h; sourceTree = "<group>"; };
+		6CEAE7D6237BD28400E6C43E /* XPYImagePickerCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYImagePickerCollectionView.m; sourceTree = "<group>"; };
+		6CEAE7D8237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYImagePickerCollectionViewCell.h; sourceTree = "<group>"; };
+		6CEAE7D9237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYImagePickerCollectionViewCell.m; sourceTree = "<group>"; };
 		6CFC594E22E1973E0001928F /* XPYDrawingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYDrawingViewController.h; sourceTree = "<group>"; };
 		6CFC594F22E1973E0001928F /* XPYDrawingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYDrawingViewController.m; sourceTree = "<group>"; };
 		6CFC595122E197BA0001928F /* XPYTransformAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYTransformAnimationViewController.h; sourceTree = "<group>"; };
@@ -300,6 +309,17 @@
 			path = XPYCategoryView;
 			sourceTree = "<group>";
 		};
+		6CEAE7D4237BD24400E6C43E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6CEAE7D5237BD28400E6C43E /* XPYImagePickerCollectionView.h */,
+				6CEAE7D6237BD28400E6C43E /* XPYImagePickerCollectionView.m */,
+				6CEAE7D8237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.h */,
+				6CEAE7D9237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6CFC594A22E196480001928F /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,12 +332,15 @@
 		6CFC594B22E1968C0001928F /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				6CEAE7D4237BD24400E6C43E /* Views */,
 				3D93ABBD21E83B2A00E2C367 /* ViewController.h */,
 				3D93ABBE21E83B2A00E2C367 /* ViewController.m */,
 				6C43B20F22F40FCF0062D233 /* XPYTableViewController.h */,
 				6C43B21022F40FCF0062D233 /* XPYTableViewController.m */,
 				6CE787272322013700831516 /* XPYCategoryViewController.h */,
 				6CE787282322013700831516 /* XPYCategoryViewController.m */,
+				6CEAE7D1237BAB0E00E6C43E /* XPYImagePickerViewController.h */,
+				6CEAE7D2237BAB0E00E6C43E /* XPYImagePickerViewController.m */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -443,12 +466,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-XPYToolsAndCategories/Pods-XPYToolsAndCategories-resources.sh",
 				"${PODS_ROOT}/RSKImageCropper/RSKImageCropper/RSKImageCropperStrings.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RSKImageCropperStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -494,6 +519,7 @@
 				6CAEFE862351B70300C22FB4 /* XPYCommonTransitionAnimationViewController.m in Sources */,
 				6C1440FD2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.m in Sources */,
 				6CE787262321F9BF00831516 /* XPYCategoryContentView.m in Sources */,
+				6CEAE7D7237BD28400E6C43E /* XPYImagePickerCollectionView.m in Sources */,
 				3D93ABCA21E83B2C00E2C367 /* main.m in Sources */,
 				3D93ABE721E83BA000E2C367 /* NSDate+gyh.m in Sources */,
 				6CE85D0122C7380B009C5D20 /* XPYAnimationsViewController.m in Sources */,
@@ -502,6 +528,7 @@
 				6CE85CFE22C734C3009C5D20 /* XPYAnimationsView.m in Sources */,
 				3D93ABE521E83BA000E2C367 /* UIControl+Blocks.m in Sources */,
 				6C094E3B23682B8C008EDA86 /* XPYBaseTransitionViewController.m in Sources */,
+				6CEAE7D3237BAB0E00E6C43E /* XPYImagePickerViewController.m in Sources */,
 				6CFC595622E198A80001928F /* XPYAnimationGroupsViewController.m in Sources */,
 				6CE787292322013700831516 /* XPYCategoryViewController.m in Sources */,
 				6CE787222321F92300831516 /* XPYCategoryTitleView.m in Sources */,
@@ -512,6 +539,7 @@
 				6CFC595022E1973E0001928F /* XPYDrawingViewController.m in Sources */,
 				3D93ABBC21E83B2A00E2C367 /* AppDelegate.m in Sources */,
 				6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */,
+				6CEAE7DA237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m in Sources */,
 				6CE85CE622C4999D009C5D20 /* XPYThumbUpAnimationViewController.m in Sources */,
 				6C1E3B882341A57800915662 /* XPYDataBaseManager.m in Sources */,
 				3D93ABEC21E83BA000E2C367 /* XLColorTool.m in Sources */,

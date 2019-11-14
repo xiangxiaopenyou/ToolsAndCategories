@@ -8,4 +8,5 @@ target 'XPYToolsAndCategories' do
   pod 'HYBImageCliped'
   pod 'RSKImageCropper'
   pod 'FMDB'
+  pod 'TZImagePickerController'
 end

@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
+- (BOOL)createDatabaseWithName:(NSString *)name;
+
 @end
 
 NS_ASSUME_NONNULL_END

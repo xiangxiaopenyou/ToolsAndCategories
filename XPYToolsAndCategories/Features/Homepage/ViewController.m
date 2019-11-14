@@ -13,6 +13,9 @@
 #import "XPYAlertManager.h"
 #import "XPYTableViewController.h"
 #import "XPYCategoryViewController.h"
+#import "XPYImagePickerViewController.h"
+
+#import <objc/runtime.h>
 
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
@@ -32,12 +35,34 @@
     XPYPerson *person = [[XPYPerson alloc] init];
     person.up().down();
     person.left(@"xianglinping").right(@"hahahaha");
+    
+    //获取方法列表
+    unsigned int count;
+    Method *methods = class_copyMethodList([self class], &count);;
+    for (int i = 0; i < count; i ++) {
+        NSLog(@"method name:%@", NSStringFromSelector(method_getName(methods[i])));
+    }
+    free(methods);
+    
+    //获取属性列表
+    unsigned int pCount;
+    objc_property_t *properties = class_copyPropertyList([self class], &pCount);
+    for (int i = 0; i < pCount; i ++) {
+        NSLog(@"property name:%s", property_getName(properties[i]));
+    }
+    free(properties);
+    
+    //获取实例对象列表
+    unsigned int iCount;
+    Ivar *ivars = class_copyIvarList([self class], &iCount);
+    for (int i = 0; i < iCount; i ++) {
+        NSLog(@"ivar name:%s", ivar_getName(ivars[i]));
+    }
+    free(ivars);
+    
 }
-
-
 /// XPYAlert
 - (void)showAlert {
-
     XPYAlertModel *alertModel = [[XPYAlertModel alloc] initWithTitle:@"提示" message:@"请注意xxxxxxxxxx" style:UIAlertControllerStyleActionSheet];
     [XPYAlertController makeAlert:^(XPYAlertController * _Nonnull controller) {
         UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -100,23 +125,26 @@
         case 0:
             [self assertAction:nil];
             break;
-        case 1:
-            [self jumpAction:nil];
+        case 1: {
+            XPYImagePickerViewController *pickerController = [[XPYImagePickerViewController alloc] init];
+            [self.navigationController pushViewController:pickerController animated:YES];
+        }
             break;
         case 2:
+            [self jumpAction:nil];
+            break;
+        case 3:
             [self showAlert];
             break;
-        case 3: {
+        case 4: {
             XPYTableViewController *tableViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"XPYTableView"];
             [self.navigationController pushViewController:tableViewController animated:YES];
         }
             break;
-        case 4: {
+        case 5: {
             XPYCategoryViewController *categoryController = [[XPYCategoryViewController alloc] init];
             [self.navigationController pushViewController:categoryController animated:YES];
         }
-            break;
-        default:
             break;
     }
 }
@@ -133,7 +161,7 @@
 #pragma mark - Getters
 - (NSArray *)itemsArray {
     if (!_itemsArray) {
-        _itemsArray = @[@"相册图片裁剪", @"跳转到TestApp", @"XPYAlert", @"TableView", @"XPYCategoryView"];
+        _itemsArray = @[@"相册图片裁剪", @"ImagePicker", @"跳转到TestApp", @"XPYAlert", @"TableView", @"XPYCategoryView"];
     }
     return _itemsArray;
 }
