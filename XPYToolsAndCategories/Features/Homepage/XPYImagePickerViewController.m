@@ -8,6 +8,7 @@
 
 #import "XPYImagePickerViewController.h"
 #import "XPYImagePickerCollectionView.h"
+#import "XPYPhotosPreviewViewController.h"
 
 #import <TZImagePickerController.h>
 #import <TZImageManager.h>
@@ -22,8 +23,9 @@ static NSInteger const kXPYMaxImagesCount = 9;
 
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 
-@property (nonatomic, strong) NSMutableArray *selectedPhotos;
-@property (nonatomic, strong) NSMutableArray *selectedAssets;
+@property (nonatomic, strong) NSMutableArray <UIImage *> *selectedPhotos;
+@property (nonatomic, strong) NSMutableArray <PHAsset *> *selectedAssets;
+@property (nonatomic, assign) BOOL isSelectOriginPhoto;             //是否选择原图
 
 @end
 
@@ -59,7 +61,7 @@ static NSInteger const kXPYMaxImagesCount = 9;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell addSubview:self.collectionView];
     self.collectionView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), [self heightOfCollectionView]);
-    [self.collectionView setupData:self.selectedPhotos];
+    [self.collectionView setupData:self.selectedPhotos assets:self.selectedAssets];
     return cell;
 }
 
@@ -69,12 +71,12 @@ static NSInteger const kXPYMaxImagesCount = 9;
 }
 
 #pragma mark - XPYImagePickerCollectionViewDelegate
-/// 添加图片
+/// 点击添加图片
 - (void)imagePickerCollectionViewDidClickAdd {
     TZImagePickerController *pickerController = [[TZImagePickerController alloc] initWithMaxImagesCount:kXPYMaxImagesCount columnNumber:self.selectedAssets.count delegate:self pushPhotoPickerVc:YES];
     pickerController.selectedAssets = self.selectedAssets;
+    pickerController.isSelectOriginalPhoto = _isSelectOriginPhoto;
     pickerController.allowTakeVideo = NO;
-    pickerController.allowTakePicture = NO;
     pickerController.allowPickingGif = NO;
     pickerController.allowPickingVideo = NO;
     pickerController.showPhotoCannotSelectLayer = YES;
@@ -82,26 +84,46 @@ static NSInteger const kXPYMaxImagesCount = 9;
     pickerController.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:pickerController animated:YES completion:nil];
 }
+- (void)imagePickerCollectionView:(UICollectionView *)collectionView didSelectItem:(NSInteger)item {
+    XPYPhotosPreviewViewController *previewController = [[XPYPhotosPreviewViewController alloc] init];
+    previewController.selectedIndex = item;
+    previewController.imageAssets = [self.selectedAssets mutableCopy];
+    previewController.deletePhotoHandler = ^(NSInteger index) {
+        [self.selectedPhotos removeObjectAtIndex:index];
+        [self.selectedAssets removeObjectAtIndex:index];
+        [self.tableView reloadData];
+    };
+    [self.navigationController pushViewController:previewController animated:YES];
+}
+- (void)imagePickerCollectionView:(UICollectionView *)collectionView didChangePhotosArray:(NSArray *)photos assetsArray:(NSArray *)assets {
+    self.selectedPhotos = [photos mutableCopy];
+    self.selectedAssets = [assets mutableCopy];
+}
+- (void)imagePickerCollectionView:(UICollectionView *)collectionView didDeletePhotoAtItem:(NSInteger)item {
+    [self.selectedPhotos removeObjectAtIndex:item];
+    [self.selectedAssets removeObjectAtIndex:item];
+    [self.tableView reloadData];
+}
 
 #pragma mark - TZImagePickerControllerDelegate
 - (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto infos:(NSArray<NSDictionary *> *)infos {
     self.selectedAssets = [assets mutableCopy];
     self.selectedPhotos = [photos mutableCopy];
+    _isSelectOriginPhoto = isSelectOriginalPhoto;
     
     [self.tableView reloadData];
     
     // 3. 获取原图的示例，用队列限制最大并发为1，避免内存暴增
-    self.operationQueue = [[NSOperationQueue alloc] init];
-    self.operationQueue.maxConcurrentOperationCount = 1;
-    for (NSInteger i = 0; i < assets.count; i++) {
-        PHAsset *asset = assets[i];
-        
-        //获取图片
-        [[TZImageManager manager] getPhotoWithAsset:asset completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
-            
-        }];
-        
-    }
+//    self.operationQueue = [[NSOperationQueue alloc] init];
+//    self.operationQueue.maxConcurrentOperationCount = 1;
+//    for (NSInteger i = 0; i < assets.count; i++) {
+//        PHAsset *asset = assets[i];
+//        //获取图片
+//        [[TZImageManager manager] getPhotoWithAsset:asset completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
+//
+//        }];
+//
+//    }
     
 }
 

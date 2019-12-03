@@ -5,8 +5,8 @@ inhibit_all_warnings!
 target 'XPYToolsAndCategories' do
   pod 'XPYNetworkingLib', :git => 'https://github.com/xiangxiaopenyou/XPYNetworkingLib.git'
   pod 'YYWebImage'
-  pod 'HYBImageCliped'
   pod 'RSKImageCropper'
   pod 'FMDB'
   pod 'TZImagePickerController'
+  pod 'YBImageBrowser'
 end

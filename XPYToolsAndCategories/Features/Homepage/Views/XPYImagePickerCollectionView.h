@@ -22,7 +22,24 @@ static CGFloat const kXPYImagePickerCollectionViewRightSpacing = 10;
 
 @protocol XPYImagePickerCollectionViewDelegate <NSObject>
 
+/// 点击添加图片
 - (void)imagePickerCollectionViewDidClickAdd;
+
+/// 点击选中的图片
+/// @param collectionView self
+/// @param item indexPath.item
+- (void)imagePickerCollectionView:(UICollectionView *)collectionView didSelectItem:(NSInteger)item;
+
+/// 调整图片顺序
+/// @param collectionView self
+/// @param photos photosArray
+/// @param assets assetsArray
+- (void)imagePickerCollectionView:(UICollectionView *)collectionView didChangePhotosArray:(NSArray *)photos assetsArray:(NSArray *)assets;
+
+/// 删除图片
+/// @param collectionView self
+/// @param item indexPath.item
+- (void)imagePickerCollectionView:(UICollectionView *)collectionView didDeletePhotoAtItem:(NSInteger)item;
 
 @end
 
@@ -30,7 +47,7 @@ static CGFloat const kXPYImagePickerCollectionViewRightSpacing = 10;
 
 @property (nonatomic, weak) id <XPYImagePickerCollectionViewDelegate> imagePickerDelegate;
 
-- (void)setupData:(NSMutableArray *)images;
+- (void)setupData:(NSMutableArray *)photos assets:(NSMutableArray *)assets;
 
 @end
 

@@ -14,6 +14,7 @@
 #import "XPYTableViewController.h"
 #import "XPYCategoryViewController.h"
 #import "XPYImagePickerViewController.h"
+#import "XPYCopyLabelViewController.h"
 
 #import <objc/runtime.h>
 
@@ -22,6 +23,9 @@
 
 @property (nonatomic, copy) NSArray *itemsArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSString *strString;
+@property (nonatomic, copy) NSString *copString;
 
 @end
 
@@ -146,6 +150,11 @@
             [self.navigationController pushViewController:categoryController animated:YES];
         }
             break;
+        case 6: {
+            XPYCopyLabelViewController *copyLabelController = [[XPYCopyLabelViewController alloc] init];
+            [self.navigationController pushViewController:copyLabelController animated:YES];
+        }
+            break;
     }
 }
 
@@ -161,7 +170,7 @@
 #pragma mark - Getters
 - (NSArray *)itemsArray {
     if (!_itemsArray) {
-        _itemsArray = @[@"相册图片裁剪", @"ImagePicker", @"跳转到TestApp", @"XPYAlert", @"TableView", @"XPYCategoryView"];
+        _itemsArray = @[@"相册图片裁剪", @"ImagePicker(照片选择器)", @"跳转到TestApp", @"XPYAlert", @"TableView", @"XPYCategoryView(分类切换视图)", @"XPYCopyLabel(可复制Label)"];
     }
     return _itemsArray;
 }

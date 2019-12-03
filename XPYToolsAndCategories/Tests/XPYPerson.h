@@ -49,8 +49,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (XPYPerson * (^)(NSString *name))left;
 - (XPYPerson * (^)(NSString *name))right;
 
-
-
 @end
 
 NS_ASSUME_NONNULL_END
