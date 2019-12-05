@@ -14,23 +14,29 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self addTapGesture];
-        _isCanCopy = YES;
+        [self initialize];
     }
     return self;
 }
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        _isCanCopy = YES;
-        [self addTapGesture];
+        [self initialize];
     }
     return self;
 }
 - (void)awakeFromNib {
     [super awakeFromNib];
+    [self initialize];
+}
+- (void)initialize {
     _isCanCopy = YES;
     [self addTapGesture];
+    
+    // 添加监听，隐藏菜单时恢复背景颜色
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIMenuControllerWillHideMenuNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        self.backgroundColor = [UIColor clearColor];
+    }];
 }
 
 #pragma mark - Private methods
@@ -45,6 +51,7 @@
 - (void)pressAction:(UILongPressGestureRecognizer *)gesture {
     if (gesture.state == UIGestureRecognizerStateBegan) {
         [self becomeFirstResponder];
+        self.backgroundColor = self.selelctedBackgroundColor ? self.selelctedBackgroundColor : [UIColor lightGrayColor];
         [[UIMenuController sharedMenuController] setTargetRect:self.frame inView:self.superview];
         [[UIMenuController sharedMenuController] setMenuVisible:YES animated:YES];
     }

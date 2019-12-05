@@ -30,13 +30,13 @@
 		6C1E3B882341A57800915662 /* XPYDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E3B872341A57800915662 /* XPYDataBaseManager.m */; };
 		6C1E3B8D2341AA5400915662 /* XPYUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E3B8C2341AA5400915662 /* XPYUtilities.m */; };
 		6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43B21022F40FCF0062D233 /* XPYTableViewController.m */; };
+		6C4847AC2398F254000E1A9F /* XPYCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4847AB2398F253000E1A9F /* XPYCopyLabel.m */; };
 		6C9008B6236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9008B5236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m */; };
 		6C9008B9236BD8CB00E8EDE6 /* XPYFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9008B8236BD8CB00E8EDE6 /* XPYFileManager.m */; };
 		6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */; };
 		6CAEFE862351B70300C22FB4 /* XPYCommonTransitionAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEFE852351B70300C22FB4 /* XPYCommonTransitionAnimationViewController.m */; };
 		6CAEFE8A2351B82900C22FB4 /* XPYPushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEFE892351B82900C22FB4 /* XPYPushAnimation.m */; };
 		6CAEFE8D2351B83400C22FB4 /* XPYPopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEFE8C2351B83400C22FB4 /* XPYPopAnimation.m */; };
-		6CB6E16823865D0B00C9666B /* XPYCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB6E16723865D0B00C9666B /* XPYCopyLabel.m */; };
 		6CB6E16C2386616D00C9666B /* XPYCopyLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB6E16B2386616D00C9666B /* XPYCopyLabelViewController.m */; };
 		6CB9F035238240240043025B /* XPYPhotosPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9F034238240240043025B /* XPYPhotosPreviewViewController.m */; };
 		6CB9F03823826F820043025B /* XPYPhotosPreviewToolViewHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9F03723826F820043025B /* XPYPhotosPreviewToolViewHandler.m */; };
@@ -105,6 +105,8 @@
 		6C1E3B8E2341E70600915662 /* XPYUtilitiesDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYUtilitiesDefine.h; sourceTree = "<group>"; };
 		6C43B20F22F40FCF0062D233 /* XPYTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYTableViewController.h; sourceTree = "<group>"; };
 		6C43B21022F40FCF0062D233 /* XPYTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYTableViewController.m; sourceTree = "<group>"; };
+		6C4847AA2398F253000E1A9F /* XPYCopyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYCopyLabel.h; sourceTree = "<group>"; };
+		6C4847AB2398F253000E1A9F /* XPYCopyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYCopyLabel.m; sourceTree = "<group>"; };
 		6C9008B4236BC27800E8EDE6 /* UIView+XPYSnapshotImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XPYSnapshotImage.h"; sourceTree = "<group>"; };
 		6C9008B5236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XPYSnapshotImage.m"; sourceTree = "<group>"; };
 		6C9008B7236BD8CB00E8EDE6 /* XPYFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYFileManager.h; sourceTree = "<group>"; };
@@ -117,8 +119,6 @@
 		6CAEFE892351B82900C22FB4 /* XPYPushAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYPushAnimation.m; sourceTree = "<group>"; };
 		6CAEFE8B2351B83400C22FB4 /* XPYPopAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYPopAnimation.h; sourceTree = "<group>"; };
 		6CAEFE8C2351B83400C22FB4 /* XPYPopAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYPopAnimation.m; sourceTree = "<group>"; };
-		6CB6E16623865D0B00C9666B /* XPYCopyLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYCopyLabel.h; sourceTree = "<group>"; };
-		6CB6E16723865D0B00C9666B /* XPYCopyLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYCopyLabel.m; sourceTree = "<group>"; };
 		6CB6E16A2386616D00C9666B /* XPYCopyLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYCopyLabelViewController.h; sourceTree = "<group>"; };
 		6CB6E16B2386616D00C9666B /* XPYCopyLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYCopyLabelViewController.m; sourceTree = "<group>"; };
 		6CB9F033238240240043025B /* XPYPhotosPreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYPhotosPreviewViewController.h; sourceTree = "<group>"; };
@@ -272,8 +272,8 @@
 				6C02149F22BC790E004726D7 /* XPYAlertController.m */,
 				6CEAE7CB237652A000E6C43E /* XPYAlertManager.h */,
 				6CEAE7CC237652A000E6C43E /* XPYAlertManager.m */,
-				6CB6E16623865D0B00C9666B /* XPYCopyLabel.h */,
-				6CB6E16723865D0B00C9666B /* XPYCopyLabel.m */,
+				6C4847AA2398F253000E1A9F /* XPYCopyLabel.h */,
+				6C4847AB2398F253000E1A9F /* XPYCopyLabel.m */,
 			);
 			path = Kits;
 			sourceTree = "<group>";
@@ -532,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C9008B9236BD8CB00E8EDE6 /* XPYFileManager.m in Sources */,
+				6C4847AC2398F254000E1A9F /* XPYCopyLabel.m in Sources */,
 				3D93ABEB21E83BA000E2C367 /* XLHyperLinkButton.m in Sources */,
 				3D93ABE921E83BA000E2C367 /* XLNoticeHelper.m in Sources */,
 				6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */,
@@ -574,7 +575,6 @@
 				6C1E3B8D2341AA5400915662 /* XPYUtilities.m in Sources */,
 				6CB9F035238240240043025B /* XPYPhotosPreviewViewController.m in Sources */,
 				3D93ABEA21E83BA000E2C367 /* XLBlockAlertView.m in Sources */,
-				6CB6E16823865D0B00C9666B /* XPYCopyLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

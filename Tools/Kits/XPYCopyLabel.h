@@ -12,7 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XPYCopyLabel : UILabel
 
+
+/// 是否可以长按复制，默认可以复制
 @property (nonatomic, assign) BOOL isCanCopy;
+
+/// 选中时背景颜色
+@property (nonatomic, strong) UIColor *selelctedBackgroundColor;
 
 @end
 

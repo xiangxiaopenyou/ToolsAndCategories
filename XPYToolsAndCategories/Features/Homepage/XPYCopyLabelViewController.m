@@ -23,8 +23,9 @@
     
     XPYCopyLabel *label = [[XPYCopyLabel alloc] initWithFrame:CGRectMake(200, 200, 100, 50)];
     label.text = @"点我复制";
-    label.isCanCopy = NO;
+    [label sizeToFit];
     label.isCanCopy = YES;
+    label.selelctedBackgroundColor = [UIColor grayColor];
     [self.view addSubview:label];
 }
 
