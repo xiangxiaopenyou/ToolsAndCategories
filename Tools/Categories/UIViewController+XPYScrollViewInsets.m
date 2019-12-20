@@ -19,7 +19,7 @@
         Class class = [self class];
         Method originMethod = class_getInstanceMethod(class, @selector(viewDidLoad));
         Method swizzledMethod = class_getInstanceMethod(class, @selector(xpy_viewDidLoad));
-        //先将要交换的方法实现加入到原来的方法中去，如果添加失败，说明子类中已经实现了这个方法，就可以直接交换方法实现来达到效果，如果添加成功，说明子类中没有实现这个方法，则可以在添加成功以后替换掉原来的方法，这样就可以保证不影响父类
+    //先将要交换的方法实现加入到原来的方法中去，如果添加失败，说明子类中已经实现了这个方法，就可以直接交换方法实现来达到效果，如果添加成功，说明子类中没有实现这个方法，则可以在添加成功以后替换掉原来的方法，这样就可以保证不影响父类
         BOOL didAddMethod = class_addMethod(class, @selector(viewDidLoad), method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
         if (didAddMethod) {
             class_replaceMethod(class, @selector(xpy_viewDidLoad), method_getImplementation(originMethod), method_getTypeEncoding(originMethod));

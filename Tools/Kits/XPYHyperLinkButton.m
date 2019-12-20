@@ -1,20 +1,16 @@
 //
-//  XLHyperLinkButton.m
-//  InHeart
+//  XPYHyperLinkButton.m
+//  XPYKit
 //
 //  Created by 项小盆友 on 16/9/22.
 //  Copyright © 2016年 项小盆友. All rights reserved.
 //
 
-#import "XLHyperLinkButton.h"
+#import "XPYHyperLinkButton.h"
 
-@implementation XLHyperLinkButton
+@implementation XPYHyperLinkButton
 
-
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
-    // Drawing code
     CGRect textRect = self.titleLabel.frame;
     CGContextRef contextRef = UIGraphicsGetCurrentContext();
     CGFloat descender = self.titleLabel.font.descender;
@@ -26,10 +22,10 @@
     CGContextClosePath(contextRef);
     CGContextDrawPath(contextRef, kCGPathStroke);
 }
+
 - (void)setColor:(UIColor *)color {
     self.lineColor = [color copy];
     [self setNeedsDisplay];
 }
-
 
 @end

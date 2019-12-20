@@ -20,13 +20,13 @@
 		3D93ABE821E83BA000E2C367 /* XLBlockActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABDB21E83BA000E2C367 /* XLBlockActionSheet.m */; };
 		3D93ABE921E83BA000E2C367 /* XLNoticeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABDC21E83BA000E2C367 /* XLNoticeHelper.m */; };
 		3D93ABEA21E83BA000E2C367 /* XLBlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE021E83BA000E2C367 /* XLBlockAlertView.m */; };
-		3D93ABEB21E83BA000E2C367 /* XLHyperLinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE121E83BA000E2C367 /* XLHyperLinkButton.m */; };
 		3D93ABEC21E83BA000E2C367 /* XLColorTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE321E83BA000E2C367 /* XLColorTool.m */; };
 		6C0214A022BC790E004726D7 /* XPYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C02149F22BC790E004726D7 /* XPYAlertController.m */; };
 		6C094E3B23682B8C008EDA86 /* XPYBaseTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C094E3A23682B8C008EDA86 /* XPYBaseTransitionViewController.m */; };
 		6C0C1B4822743C9E0055BAB4 /* XPYDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */; };
 		6C1440FD2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1440FC2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.m */; };
 		6C144100236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1440FF236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.m */; };
+		6C19334E23AC69F300E3A0CA /* XPYHyperLinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19334D23AC69F300E3A0CA /* XPYHyperLinkButton.m */; };
 		6C1E3B882341A57800915662 /* XPYDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E3B872341A57800915662 /* XPYDataBaseManager.m */; };
 		6C1E3B8D2341AA5400915662 /* XPYUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E3B8C2341AA5400915662 /* XPYUtilities.m */; };
 		6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43B21022F40FCF0062D233 /* XPYTableViewController.m */; };
@@ -81,11 +81,9 @@
 		3D93ABDA21E83BA000E2C367 /* XLBlockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLBlockAlertView.h; sourceTree = "<group>"; };
 		3D93ABDB21E83BA000E2C367 /* XLBlockActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLBlockActionSheet.m; sourceTree = "<group>"; };
 		3D93ABDC21E83BA000E2C367 /* XLNoticeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLNoticeHelper.m; sourceTree = "<group>"; };
-		3D93ABDD21E83BA000E2C367 /* XLHyperLinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLHyperLinkButton.h; sourceTree = "<group>"; };
 		3D93ABDE21E83BA000E2C367 /* XLColorTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLColorTool.h; sourceTree = "<group>"; };
 		3D93ABDF21E83BA000E2C367 /* XLBlockActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLBlockActionSheet.h; sourceTree = "<group>"; };
 		3D93ABE021E83BA000E2C367 /* XLBlockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLBlockAlertView.m; sourceTree = "<group>"; };
-		3D93ABE121E83BA000E2C367 /* XLHyperLinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLHyperLinkButton.m; sourceTree = "<group>"; };
 		3D93ABE221E83BA000E2C367 /* XLNoticeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLNoticeHelper.h; sourceTree = "<group>"; };
 		3D93ABE321E83BA000E2C367 /* XLColorTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLColorTool.m; sourceTree = "<group>"; };
 		6C02149E22BC790E004726D7 /* XPYAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYAlertController.h; sourceTree = "<group>"; };
@@ -98,6 +96,8 @@
 		6C1440FC2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XPYScrollViewInsets.m"; sourceTree = "<group>"; };
 		6C1440FE236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYCommonTransitionPopAnimationViewController.h; sourceTree = "<group>"; };
 		6C1440FF236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYCommonTransitionPopAnimationViewController.m; sourceTree = "<group>"; };
+		6C19334C23AC69F300E3A0CA /* XPYHyperLinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYHyperLinkButton.h; sourceTree = "<group>"; };
+		6C19334D23AC69F300E3A0CA /* XPYHyperLinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYHyperLinkButton.m; sourceTree = "<group>"; };
 		6C1E3B862341A57800915662 /* XPYDataBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYDataBaseManager.h; sourceTree = "<group>"; };
 		6C1E3B872341A57800915662 /* XPYDataBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYDataBaseManager.m; sourceTree = "<group>"; };
 		6C1E3B8B2341AA5400915662 /* XPYUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYUtilities.h; sourceTree = "<group>"; };
@@ -264,10 +264,10 @@
 				3D93ABDB21E83BA000E2C367 /* XLBlockActionSheet.m */,
 				3D93ABE221E83BA000E2C367 /* XLNoticeHelper.h */,
 				3D93ABDC21E83BA000E2C367 /* XLNoticeHelper.m */,
-				3D93ABDD21E83BA000E2C367 /* XLHyperLinkButton.h */,
-				3D93ABE121E83BA000E2C367 /* XLHyperLinkButton.m */,
 				3D93ABDE21E83BA000E2C367 /* XLColorTool.h */,
 				3D93ABE321E83BA000E2C367 /* XLColorTool.m */,
+				6C19334C23AC69F300E3A0CA /* XPYHyperLinkButton.h */,
+				6C19334D23AC69F300E3A0CA /* XPYHyperLinkButton.m */,
 				6C02149E22BC790E004726D7 /* XPYAlertController.h */,
 				6C02149F22BC790E004726D7 /* XPYAlertController.m */,
 				6CEAE7CB237652A000E6C43E /* XPYAlertManager.h */,
@@ -533,7 +533,6 @@
 			files = (
 				6C9008B9236BD8CB00E8EDE6 /* XPYFileManager.m in Sources */,
 				6C4847AC2398F254000E1A9F /* XPYCopyLabel.m in Sources */,
-				3D93ABEB21E83BA000E2C367 /* XLHyperLinkButton.m in Sources */,
 				3D93ABE921E83BA000E2C367 /* XLNoticeHelper.m in Sources */,
 				6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */,
 				6C0214A022BC790E004726D7 /* XPYAlertController.m in Sources */,
@@ -558,6 +557,7 @@
 				6CE787222321F92300831516 /* XPYCategoryTitleView.m in Sources */,
 				6CE85CE322C491DC009C5D20 /* XPYBaseNavigationController.m in Sources */,
 				6C0C1B4822743C9E0055BAB4 /* XPYDrawingView.m in Sources */,
+				6C19334E23AC69F300E3A0CA /* XPYHyperLinkButton.m in Sources */,
 				6CEAE7CD237652A000E6C43E /* XPYAlertManager.m in Sources */,
 				3D93ABE821E83BA000E2C367 /* XLBlockActionSheet.m in Sources */,
 				6CB9F03823826F820043025B /* XPYPhotosPreviewToolViewHandler.m in Sources */,
