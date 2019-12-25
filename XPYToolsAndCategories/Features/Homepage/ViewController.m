@@ -15,6 +15,7 @@
 #import "XPYCategoryViewController.h"
 #import "XPYImagePickerViewController.h"
 #import "XPYCopyLabelViewController.h"
+#import "XPYUtilitiesDefine.h"
 
 #import <objc/runtime.h>
 
@@ -120,6 +121,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XPYHomepageItemCell" forIndexPath:indexPath];
     cell.textLabel.text = self.itemsArray[indexPath.row];
+    //cell.backgroundColor = XPYColorFromHex(0xf2f2f2);
+    //cell.backgroundColor = XPYColorFromHexString(@"f2f2f2");
     return cell;
 }
 

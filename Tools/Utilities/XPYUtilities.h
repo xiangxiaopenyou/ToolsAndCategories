@@ -16,6 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否iPhoneX系列机型
 + (BOOL)isIphoneX;
 
+/// 根据Hex字符串获取颜色
+/// @param hexString 16进制字符串
+/// @param alpha 透明度
++ (UIColor *)colorFromHexString:(NSString *)hexString alpha:(CGFloat)alpha;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -54,7 +54,28 @@
     animationGroup.repeatCount = 10;
     
     [self.view addSubview:self.imageView]; // 添加控件
-    [self.imageView.layer addAnimation:animationGroup forKey:nil ];// 添加动画
+    [self.imageView.layer addAnimation:animationGroup forKey:nil];// 添加动画
+    
+    UIBezierPath *circlePath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(10, 400, 200, 200)];
+    CAShapeLayer *circleLayer = [CAShapeLayer layer];
+    circleLayer.path = circlePath.CGPath;
+    circleLayer.lineWidth = 5;
+    circleLayer.fillColor = [UIColor whiteColor].CGColor;
+    circleLayer.strokeColor = [UIColor redColor].CGColor;
+    [self.view.layer addSublayer:circleLayer];
+    
+    UIImageView *moveImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"like"]];
+    moveImage.frame = CGRectMake(110, 390, 30, 30);
+    
+    CAKeyframeAnimation *moveAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    moveAnimation.removedOnCompletion = NO;
+    moveAnimation.fillMode = kCAFillModeForwards;
+    moveAnimation.duration = 2;
+    moveAnimation.repeatCount = 10;
+//    moveAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    moveAnimation.path = circlePath.CGPath;
+    [self.view addSubview:moveImage];
+    [moveImage.layer addAnimation:moveAnimation forKey:nil];
     
 }
 

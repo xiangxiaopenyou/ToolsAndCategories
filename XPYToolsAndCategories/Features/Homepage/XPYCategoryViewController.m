@@ -36,7 +36,6 @@
     self.categoryTitleView.delegate = self;
     [self.view addSubview:self.categoryTitleView];
     
-    
     UIViewController *controller1 = [[UIViewController alloc] init];
     controller1.view.backgroundColor = [UIColor redColor];
     UIViewController *controller2 = [[UIViewController alloc] init];
