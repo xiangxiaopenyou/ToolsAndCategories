@@ -27,6 +27,7 @@
 		6C1440FD2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1440FC2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.m */; };
 		6C144100236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1440FF236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.m */; };
 		6C19334E23AC69F300E3A0CA /* XPYHyperLinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19334D23AC69F300E3A0CA /* XPYHyperLinkButton.m */; };
+		6C19336523B4495800E3A0CA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6C19336423B4495800E3A0CA /* README.md */; };
 		6C1E3B882341A57800915662 /* XPYDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E3B872341A57800915662 /* XPYDataBaseManager.m */; };
 		6C1E3B8D2341AA5400915662 /* XPYUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E3B8C2341AA5400915662 /* XPYUtilities.m */; };
 		6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43B21022F40FCF0062D233 /* XPYTableViewController.m */; };
@@ -98,6 +99,7 @@
 		6C1440FF236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYCommonTransitionPopAnimationViewController.m; sourceTree = "<group>"; };
 		6C19334C23AC69F300E3A0CA /* XPYHyperLinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYHyperLinkButton.h; sourceTree = "<group>"; };
 		6C19334D23AC69F300E3A0CA /* XPYHyperLinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYHyperLinkButton.m; sourceTree = "<group>"; };
+		6C19336423B4495800E3A0CA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		6C1E3B862341A57800915662 /* XPYDataBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYDataBaseManager.h; sourceTree = "<group>"; };
 		6C1E3B872341A57800915662 /* XPYDataBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYDataBaseManager.m; sourceTree = "<group>"; };
 		6C1E3B8B2341AA5400915662 /* XPYUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYUtilities.h; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		3D93ABAE21E83B2A00E2C367 = {
 			isa = PBXGroup;
 			children = (
+				6C19336323B4493C00E3A0CA /* README */,
 				3D93ABB921E83B2A00E2C367 /* XPYToolsAndCategories */,
 				3D93ABB821E83B2A00E2C367 /* Products */,
 				39342D1EC59C25D29EB2E46A /* Pods */,
@@ -244,6 +247,14 @@
 			);
 			path = Tools;
 			sourceTree = SOURCE_ROOT;
+		};
+		6C19336323B4493C00E3A0CA /* README */ = {
+			isa = PBXGroup;
+			children = (
+				6C19336423B4495800E3A0CA /* README.md */,
+			);
+			path = README;
+			sourceTree = "<group>";
 		};
 		6C1E3B852341A54400915662 /* DataBase */ = {
 			isa = PBXGroup;
@@ -469,6 +480,7 @@
 			files = (
 				3D93ABC721E83B2C00E2C367 /* LaunchScreen.storyboard in Resources */,
 				3D93ABC421E83B2C00E2C367 /* Assets.xcassets in Resources */,
+				6C19336523B4495800E3A0CA /* README.md in Resources */,
 				3D93ABC221E83B2A00E2C367 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
