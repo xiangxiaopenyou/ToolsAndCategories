@@ -12,6 +12,7 @@
 #import "XPYTransformAnimationViewController.h"
 #import "XPYAnimationGroupsViewController.h"
 #import "XPYCommonTransitionAnimationViewController.h"
+#import "XPYCircleProgressViewController.h"
 
 #import "XPYAnimationsView.h"
 
@@ -72,7 +73,12 @@
             [self.navigationController pushViewController:commonTransitionController animated:YES];
         }
             break;
-            
+        case 5: {
+            XPYCircleProgressViewController *progressController = [[XPYCircleProgressViewController alloc] init];
+            progressController.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:progressController animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -81,7 +87,7 @@
 #pragma mark - Getters
 - (NSArray *)itemsArray {
     if (!_itemsArray) {
-        _itemsArray = @[@"XPYDrawingView", @"TransformAnimation", @"ThumbUpAnimation", @"XPYAnimationsView", @"自定义转场动画"];
+        _itemsArray = @[@"XPYDrawingView", @"TransformAnimation", @"ThumbUpAnimation", @"XPYAnimationsView", @"自定义转场动画", @"圆形进度条"];
     }
     return _itemsArray;
 }

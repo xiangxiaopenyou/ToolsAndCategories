@@ -8,6 +8,8 @@
 
 #import "XPYTableViewController.h"
 
+#import <Foundation/Foundation.h>
+
 @interface XPYTableViewController ()
 @property (nonatomic, strong) NSMutableArray *datas;
 

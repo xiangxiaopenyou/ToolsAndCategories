@@ -28,6 +28,10 @@
 		6C144100236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1440FF236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.m */; };
 		6C19334E23AC69F300E3A0CA /* XPYHyperLinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19334D23AC69F300E3A0CA /* XPYHyperLinkButton.m */; };
 		6C19336523B4495800E3A0CA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6C19336423B4495800E3A0CA /* README.md */; };
+		6C19336B23B4597C00E3A0CA /* NSLayoutConstraint+XPYFitConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19336A23B4597C00E3A0CA /* NSLayoutConstraint+XPYFitConstant.m */; };
+		6C19336E23B481DC00E3A0CA /* XPYFitSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19336D23B481DC00E3A0CA /* XPYFitSizeViewController.m */; };
+		6C19337123B48D4600E3A0CA /* UILabel+XPYFitFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19337023B48D4600E3A0CA /* UILabel+XPYFitFont.m */; };
+		6C19337423B499B000E3A0CA /* XPYCircleProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19337323B499B000E3A0CA /* XPYCircleProgressViewController.m */; };
 		6C1E3B882341A57800915662 /* XPYDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E3B872341A57800915662 /* XPYDataBaseManager.m */; };
 		6C1E3B8D2341AA5400915662 /* XPYUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E3B8C2341AA5400915662 /* XPYUtilities.m */; };
 		6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43B21022F40FCF0062D233 /* XPYTableViewController.m */; };
@@ -100,6 +104,14 @@
 		6C19334C23AC69F300E3A0CA /* XPYHyperLinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYHyperLinkButton.h; sourceTree = "<group>"; };
 		6C19334D23AC69F300E3A0CA /* XPYHyperLinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYHyperLinkButton.m; sourceTree = "<group>"; };
 		6C19336423B4495800E3A0CA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		6C19336923B4597C00E3A0CA /* NSLayoutConstraint+XPYFitConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+XPYFitConstant.h"; sourceTree = "<group>"; };
+		6C19336A23B4597C00E3A0CA /* NSLayoutConstraint+XPYFitConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+XPYFitConstant.m"; sourceTree = "<group>"; };
+		6C19336C23B481DC00E3A0CA /* XPYFitSizeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYFitSizeViewController.h; sourceTree = "<group>"; };
+		6C19336D23B481DC00E3A0CA /* XPYFitSizeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYFitSizeViewController.m; sourceTree = "<group>"; };
+		6C19336F23B48D4600E3A0CA /* UILabel+XPYFitFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+XPYFitFont.h"; sourceTree = "<group>"; };
+		6C19337023B48D4600E3A0CA /* UILabel+XPYFitFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+XPYFitFont.m"; sourceTree = "<group>"; };
+		6C19337223B499B000E3A0CA /* XPYCircleProgressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYCircleProgressViewController.h; sourceTree = "<group>"; };
+		6C19337323B499B000E3A0CA /* XPYCircleProgressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYCircleProgressViewController.m; sourceTree = "<group>"; };
 		6C1E3B862341A57800915662 /* XPYDataBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYDataBaseManager.h; sourceTree = "<group>"; };
 		6C1E3B872341A57800915662 /* XPYDataBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYDataBaseManager.m; sourceTree = "<group>"; };
 		6C1E3B8B2341AA5400915662 /* XPYUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYUtilities.h; sourceTree = "<group>"; };
@@ -233,6 +245,10 @@
 				6C1440FC2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.m */,
 				6C9008B4236BC27800E8EDE6 /* UIView+XPYSnapshotImage.h */,
 				6C9008B5236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m */,
+				6C19336923B4597C00E3A0CA /* NSLayoutConstraint+XPYFitConstant.h */,
+				6C19336A23B4597C00E3A0CA /* NSLayoutConstraint+XPYFitConstant.m */,
+				6C19336F23B48D4600E3A0CA /* UILabel+XPYFitFont.h */,
+				6C19337023B48D4600E3A0CA /* UILabel+XPYFitFont.m */,
 			);
 			name = Categories;
 			path = Tools/Categories;
@@ -372,6 +388,8 @@
 				6CB9F034238240240043025B /* XPYPhotosPreviewViewController.m */,
 				6CB6E16A2386616D00C9666B /* XPYCopyLabelViewController.h */,
 				6CB6E16B2386616D00C9666B /* XPYCopyLabelViewController.m */,
+				6C19336C23B481DC00E3A0CA /* XPYFitSizeViewController.h */,
+				6C19336D23B481DC00E3A0CA /* XPYFitSizeViewController.m */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -395,6 +413,8 @@
 				6CAEFE852351B70300C22FB4 /* XPYCommonTransitionAnimationViewController.m */,
 				6C1440FE236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.h */,
 				6C1440FF236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.m */,
+				6C19337223B499B000E3A0CA /* XPYCircleProgressViewController.h */,
+				6C19337323B499B000E3A0CA /* XPYCircleProgressViewController.m */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -544,6 +564,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C9008B9236BD8CB00E8EDE6 /* XPYFileManager.m in Sources */,
+				6C19336B23B4597C00E3A0CA /* NSLayoutConstraint+XPYFitConstant.m in Sources */,
 				6C4847AC2398F254000E1A9F /* XPYCopyLabel.m in Sources */,
 				3D93ABE921E83BA000E2C367 /* XLNoticeHelper.m in Sources */,
 				6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */,
@@ -554,7 +575,9 @@
 				6CAEFE862351B70300C22FB4 /* XPYCommonTransitionAnimationViewController.m in Sources */,
 				6C1440FD2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.m in Sources */,
 				6CE787262321F9BF00831516 /* XPYCategoryContentView.m in Sources */,
+				6C19337123B48D4600E3A0CA /* UILabel+XPYFitFont.m in Sources */,
 				6CEAE7D7237BD28400E6C43E /* XPYImagePickerCollectionView.m in Sources */,
+				6C19336E23B481DC00E3A0CA /* XPYFitSizeViewController.m in Sources */,
 				3D93ABCA21E83B2C00E2C367 /* main.m in Sources */,
 				3D93ABE721E83BA000E2C367 /* NSDate+gyh.m in Sources */,
 				6CE85D0122C7380B009C5D20 /* XPYAnimationsViewController.m in Sources */,
@@ -565,6 +588,7 @@
 				6C094E3B23682B8C008EDA86 /* XPYBaseTransitionViewController.m in Sources */,
 				6CEAE7D3237BAB0E00E6C43E /* XPYImagePickerViewController.m in Sources */,
 				6CFC595622E198A80001928F /* XPYAnimationGroupsViewController.m in Sources */,
+				6C19337423B499B000E3A0CA /* XPYCircleProgressViewController.m in Sources */,
 				6CE787292322013700831516 /* XPYCategoryViewController.m in Sources */,
 				6CE787222321F92300831516 /* XPYCategoryTitleView.m in Sources */,
 				6CE85CE322C491DC009C5D20 /* XPYBaseNavigationController.m in Sources */,

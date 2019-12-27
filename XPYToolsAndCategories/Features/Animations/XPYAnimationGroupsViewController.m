@@ -56,6 +56,7 @@
     [self.view addSubview:self.imageView]; // 添加控件
     [self.imageView.layer addAnimation:animationGroup forKey:nil];// 添加动画
     
+    //沿着圆形轨迹运动
     UIBezierPath *circlePath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(10, 400, 200, 200)];
     CAShapeLayer *circleLayer = [CAShapeLayer layer];
     circleLayer.path = circlePath.CGPath;

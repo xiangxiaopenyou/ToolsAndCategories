@@ -15,6 +15,8 @@
 #import "XPYCategoryViewController.h"
 #import "XPYImagePickerViewController.h"
 #import "XPYCopyLabelViewController.h"
+#import "XPYFitSizeViewController.h"
+
 #import "XPYUtilitiesDefine.h"
 
 #import <objc/runtime.h>
@@ -158,6 +160,11 @@
             [self.navigationController pushViewController:copyLabelController animated:YES];
         }
             break;
+        case 7: {
+            XPYFitSizeViewController *fitController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"XPYFitSizeViewController"];
+            [self.navigationController pushViewController:fitController animated:YES];
+        }
+            break;
     }
 }
 
@@ -173,7 +180,7 @@
 #pragma mark - Getters
 - (NSArray *)itemsArray {
     if (!_itemsArray) {
-        _itemsArray = @[@"相册图片裁剪", @"ImagePicker(照片选择器)", @"跳转到TestApp", @"XPYAlert", @"TableView", @"XPYCategoryView(分类切换视图)", @"XPYCopyLabel(可复制Label)"];
+        _itemsArray = @[@"相册图片裁剪", @"ImagePicker(照片选择器)", @"跳转到TestApp", @"XPYAlert", @"TableView", @"XPYCategoryView(分类切换视图)", @"XPYCopyLabel(可复制Label)", @"storyboard根据屏幕自适应控件约束、字体大小"];
     }
     return _itemsArray;
 }

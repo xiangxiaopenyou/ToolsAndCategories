@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zgz-MA-KVe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zgz-MA-KVe">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nS9-IN-ODC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1286" y="-254"/>
+            <point key="canvasLocation" x="-2327" y="-417"/>
         </scene>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
@@ -69,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1359" y="-1171"/>
+            <point key="canvasLocation" x="-1586" y="-441"/>
         </scene>
         <!--TableView-->
         <scene sceneID="Oq7-Yk-BjG">
@@ -97,7 +97,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64R-kl-hsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-404" y="222"/>
+            <point key="canvasLocation" x="-855" y="-459"/>
         </scene>
         <!--动画-->
         <scene sceneID="wip-NT-QRe">
@@ -105,7 +105,7 @@
                 <navigationController id="st5-kz-o7H" customClass="XPYTransitionAnimationNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="动画" id="aN1-wg-g0m"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1zU-nh-xpO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -114,7 +114,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEg-rc-K4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1793" y="-1213"/>
+            <point key="canvasLocation" x="-1444" y="-1258"/>
         </scene>
         <!--Animations View Controller-->
         <scene sceneID="OmG-3N-yky">
@@ -159,7 +159,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NaI-HW-11Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-549" y="-785"/>
+            <point key="canvasLocation" x="-655" y="-1258"/>
+        </scene>
+        <!--Fit Size View Controller-->
+        <scene sceneID="UYK-qv-RMA">
+            <objects>
+                <viewController storyboardIdentifier="XPYFitSizeViewController" id="umx-6p-5pD" customClass="XPYFitSizeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ojx-F7-5ap">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Hf-0c-MwY">
+                                <rect key="frame" x="100" y="144" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1HV-34-nxU">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fitConstant">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="100" id="zYU-Br-MYm">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fitConstant">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自适应屏幕宽度Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31V-OR-6xC">
+                                <rect key="frame" x="69.333333333333329" y="391" width="236.66666666666669" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fitFontSize">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1Hf-0c-MwY" firstAttribute="leading" secondItem="IPd-kD-7IH" secondAttribute="leading" constant="100" id="CGV-rv-vMn">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fitConstant">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="31V-OR-6xC" firstAttribute="centerY" secondItem="Ojx-F7-5ap" secondAttribute="centerY" id="Hcf-q4-JT1"/>
+                            <constraint firstItem="1Hf-0c-MwY" firstAttribute="top" secondItem="IPd-kD-7IH" secondAttribute="top" constant="100" id="eqt-KH-E9w">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fitConstant">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="31V-OR-6xC" firstAttribute="centerX" secondItem="Ojx-F7-5ap" secondAttribute="centerX" id="g3V-HO-EJX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IPd-kD-7IH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9FP-sM-Cm4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="-1351"/>
         </scene>
         <!--Thumb Up Animation View Controller-->
         <scene sceneID="kek-yH-wMI">
@@ -192,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTg-h3-NHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="322" y="-611"/>
+            <point key="canvasLocation" x="265" y="-460"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GBd-8P-YWO">
@@ -210,7 +276,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3kH-BU-ksz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2684" y="-1171"/>
+            <point key="canvasLocation" x="-2327" y="-1258"/>
         </scene>
     </scenes>
     <resources>
