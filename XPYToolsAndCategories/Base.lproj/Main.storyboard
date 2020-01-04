@@ -62,7 +62,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="NXm-uq-Kxn"/>
-                    <navigationItem key="navigationItem" id="Nsj-OT-M4z"/>
+                    <navigationItem key="navigationItem" id="Nsj-OT-M4z">
+                        <barButtonItem key="rightBarButtonItem" title="下拉菜单" id="q9f-rk-SfU">
+                            <connections>
+                                <action selector="dropdownAction:" destination="BYZ-38-t0r" id="tiG-sm-fjt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="0dO-29-cI9" id="Ts1-va-xKN"/>
                     </connections>

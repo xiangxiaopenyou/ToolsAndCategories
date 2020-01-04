@@ -17,12 +17,14 @@
 #import "XPYCopyLabelViewController.h"
 #import "XPYFitSizeViewController.h"
 
+#import "XPYDropdownDefine.h"
+
 #import "XPYUtilitiesDefine.h"
 
 #import <objc/runtime.h>
 
 
-@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource, XPYDropdownViewDelegate>
 
 @property (nonatomic, copy) NSArray *itemsArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -92,6 +94,24 @@
         controller.actionItems(@[action1, action2, action3]).showAlert(self);
     } alertModel:alertModel];
 }
+
+- (IBAction)dropdownAction:(id)sender {
+    XPYDropdownConfigurations *config = [[XPYDropdownConfigurations alloc] init];
+    config.dropdownBackgroundColor = [UIColor blackColor];
+    config.mainBackgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
+    config.titleColor = [UIColor whiteColor];
+    config.arrowOriginX = 100.f;
+
+    XPYDropdownItemModel *model1 = [XPYDropdownItemModel makeModel:1 icon:[UIImage imageNamed:@"like"] title:@"like" titleColor:nil];
+    XPYDropdownItemModel *model2 = [XPYDropdownItemModel makeModel:2 icon:[UIImage imageNamed:@"dislike"] title:@"dislike" titleColor:nil];
+    XPYDropdownItemModel *model3 = [XPYDropdownItemModel makeModel:3 icon:[UIImage imageNamed:@"delete"] title:@"delete" titleColor:nil];
+    
+    CGFloat pointX = CGRectGetWidth(self.view.bounds) - 50.f;
+    CGFloat pointY = XPYDeviceIsIphoneX ? 88.f : 64.f;
+    XPYDropdownView *dropdownView = [[XPYDropdownView alloc] initWithItemsArray:@[model1, model2, model3] configurations:config arrowPoint:CGPointMake(pointX, pointY)];
+    dropdownView.delegate = self;
+    [dropdownView show];
+}
 - (IBAction)assertAction:(id)sender {
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -116,6 +136,11 @@
     }
 }
 
+#pragma mark - XPYDropdownViewDelegate
+- (void)dropdownView:(XPYDropdownView *)sender didClickItem:(XPYDropdownItemModel *)model {
+    NSLog(@"点击了下拉菜单-%@", model.itemTitle);
+}
+
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.itemsArray.count;
@@ -123,8 +148,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XPYHomepageItemCell" forIndexPath:indexPath];
     cell.textLabel.text = self.itemsArray[indexPath.row];
-    //cell.backgroundColor = XPYColorFromHex(0xf2f2f2);
-    //cell.backgroundColor = XPYColorFromHexString(@"f2f2f2");
     return cell;
 }
 

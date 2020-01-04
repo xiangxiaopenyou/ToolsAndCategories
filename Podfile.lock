@@ -46,7 +46,7 @@ DEPENDENCIES:
   - YYWebImage
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AFNetworking
     - FMDB
     - RSKImageCropper
@@ -80,4 +80,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: a7061b77b530341201ff653c5e2794861bc0c9f8
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.8.4

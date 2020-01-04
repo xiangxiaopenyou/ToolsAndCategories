@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,10 +32,15 @@
 		6C19336E23B481DC00E3A0CA /* XPYFitSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19336D23B481DC00E3A0CA /* XPYFitSizeViewController.m */; };
 		6C19337123B48D4600E3A0CA /* UILabel+XPYFitFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19337023B48D4600E3A0CA /* UILabel+XPYFitFont.m */; };
 		6C19337423B499B000E3A0CA /* XPYCircleProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19337323B499B000E3A0CA /* XPYCircleProgressViewController.m */; };
+		6C19337723BAEDD400E3A0CA /* XPYCopyTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19337623BAEDD400E3A0CA /* XPYCopyTextView.m */; };
 		6C1E3B882341A57800915662 /* XPYDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E3B872341A57800915662 /* XPYDataBaseManager.m */; };
 		6C1E3B8D2341AA5400915662 /* XPYUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E3B8C2341AA5400915662 /* XPYUtilities.m */; };
 		6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43B21022F40FCF0062D233 /* XPYTableViewController.m */; };
 		6C4847AC2398F254000E1A9F /* XPYCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4847AB2398F253000E1A9F /* XPYCopyLabel.m */; };
+		6C7BBCB323C0892900D70AC1 /* XPYDropdownItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7BBCAA23C0892900D70AC1 /* XPYDropdownItemModel.m */; };
+		6C7BBCB423C0892900D70AC1 /* XPYDropdownConfigurations.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7BBCAC23C0892900D70AC1 /* XPYDropdownConfigurations.m */; };
+		6C7BBCB523C0892900D70AC1 /* XPYDropdownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7BBCAF23C0892900D70AC1 /* XPYDropdownCell.m */; };
+		6C7BBCB623C0892900D70AC1 /* XPYDropdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7BBCB023C0892900D70AC1 /* XPYDropdownView.m */; };
 		6C9008B6236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9008B5236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m */; };
 		6C9008B9236BD8CB00E8EDE6 /* XPYFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9008B8236BD8CB00E8EDE6 /* XPYFileManager.m */; };
 		6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */; };
@@ -112,6 +117,8 @@
 		6C19337023B48D4600E3A0CA /* UILabel+XPYFitFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+XPYFitFont.m"; sourceTree = "<group>"; };
 		6C19337223B499B000E3A0CA /* XPYCircleProgressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYCircleProgressViewController.h; sourceTree = "<group>"; };
 		6C19337323B499B000E3A0CA /* XPYCircleProgressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYCircleProgressViewController.m; sourceTree = "<group>"; };
+		6C19337523BAEDD400E3A0CA /* XPYCopyTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYCopyTextView.h; sourceTree = "<group>"; };
+		6C19337623BAEDD400E3A0CA /* XPYCopyTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYCopyTextView.m; sourceTree = "<group>"; };
 		6C1E3B862341A57800915662 /* XPYDataBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYDataBaseManager.h; sourceTree = "<group>"; };
 		6C1E3B872341A57800915662 /* XPYDataBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYDataBaseManager.m; sourceTree = "<group>"; };
 		6C1E3B8B2341AA5400915662 /* XPYUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYUtilities.h; sourceTree = "<group>"; };
@@ -121,6 +128,15 @@
 		6C43B21022F40FCF0062D233 /* XPYTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYTableViewController.m; sourceTree = "<group>"; };
 		6C4847AA2398F253000E1A9F /* XPYCopyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYCopyLabel.h; sourceTree = "<group>"; };
 		6C4847AB2398F253000E1A9F /* XPYCopyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYCopyLabel.m; sourceTree = "<group>"; };
+		6C7BBCAA23C0892900D70AC1 /* XPYDropdownItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYDropdownItemModel.m; sourceTree = "<group>"; };
+		6C7BBCAB23C0892900D70AC1 /* XPYDropdownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYDropdownCell.h; sourceTree = "<group>"; };
+		6C7BBCAC23C0892900D70AC1 /* XPYDropdownConfigurations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYDropdownConfigurations.m; sourceTree = "<group>"; };
+		6C7BBCAD23C0892900D70AC1 /* XPYDropdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYDropdownView.h; sourceTree = "<group>"; };
+		6C7BBCAE23C0892900D70AC1 /* XPYDropdownItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYDropdownItemModel.h; sourceTree = "<group>"; };
+		6C7BBCAF23C0892900D70AC1 /* XPYDropdownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYDropdownCell.m; sourceTree = "<group>"; };
+		6C7BBCB023C0892900D70AC1 /* XPYDropdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYDropdownView.m; sourceTree = "<group>"; };
+		6C7BBCB123C0892900D70AC1 /* XPYDropdownConfigurations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYDropdownConfigurations.h; sourceTree = "<group>"; };
+		6C7BBCB223C0892900D70AC1 /* XPYDropdownDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYDropdownDefine.h; sourceTree = "<group>"; };
 		6C9008B4236BC27800E8EDE6 /* UIView+XPYSnapshotImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XPYSnapshotImage.h"; sourceTree = "<group>"; };
 		6C9008B5236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XPYSnapshotImage.m"; sourceTree = "<group>"; };
 		6C9008B7236BD8CB00E8EDE6 /* XPYFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYFileManager.h; sourceTree = "<group>"; };
@@ -284,6 +300,7 @@
 		6C1E3B892341A93A00915662 /* Kits */ = {
 			isa = PBXGroup;
 			children = (
+				6C7BBCA923C0892900D70AC1 /* XPYDropdownView */,
 				6CE787232321F93F00831516 /* XPYCategoryView */,
 				3D93ABDA21E83BA000E2C367 /* XLBlockAlertView.h */,
 				3D93ABE021E83BA000E2C367 /* XLBlockAlertView.m */,
@@ -301,6 +318,8 @@
 				6CEAE7CC237652A000E6C43E /* XPYAlertManager.m */,
 				6C4847AA2398F253000E1A9F /* XPYCopyLabel.h */,
 				6C4847AB2398F253000E1A9F /* XPYCopyLabel.m */,
+				6C19337523BAEDD400E3A0CA /* XPYCopyTextView.h */,
+				6C19337623BAEDD400E3A0CA /* XPYCopyTextView.m */,
 			);
 			path = Kits;
 			sourceTree = "<group>";
@@ -315,6 +334,22 @@
 				6C9008B8236BD8CB00E8EDE6 /* XPYFileManager.m */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6C7BBCA923C0892900D70AC1 /* XPYDropdownView */ = {
+			isa = PBXGroup;
+			children = (
+				6C7BBCB223C0892900D70AC1 /* XPYDropdownDefine.h */,
+				6C7BBCAD23C0892900D70AC1 /* XPYDropdownView.h */,
+				6C7BBCB023C0892900D70AC1 /* XPYDropdownView.m */,
+				6C7BBCAB23C0892900D70AC1 /* XPYDropdownCell.h */,
+				6C7BBCAF23C0892900D70AC1 /* XPYDropdownCell.m */,
+				6C7BBCB123C0892900D70AC1 /* XPYDropdownConfigurations.h */,
+				6C7BBCAC23C0892900D70AC1 /* XPYDropdownConfigurations.m */,
+				6C7BBCAE23C0892900D70AC1 /* XPYDropdownItemModel.h */,
+				6C7BBCAA23C0892900D70AC1 /* XPYDropdownItemModel.m */,
+			);
+			path = XPYDropdownView;
 			sourceTree = "<group>";
 		};
 		6C9FD3DA229FB8C4003297B5 /* Tests */ = {
@@ -467,7 +502,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = XPY;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = xpy;
 				TargetAttributes = {
 					3D93ABB621E83B2A00E2C367 = {
@@ -514,20 +549,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-XPYToolsAndCategories/Pods-XPYToolsAndCategories-resources.sh",
-				"${PODS_ROOT}/RSKImageCropper/RSKImageCropper/RSKImageCropperStrings.bundle",
-				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
-				"${PODS_ROOT}/YBImageBrowser/YBImageBrowser/YBImageBrowser.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-XPYToolsAndCategories/Pods-XPYToolsAndCategories-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RSKImageCropperStrings.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YBImageBrowser.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-XPYToolsAndCategories/Pods-XPYToolsAndCategories-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -563,6 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C7BBCB423C0892900D70AC1 /* XPYDropdownConfigurations.m in Sources */,
 				6C9008B9236BD8CB00E8EDE6 /* XPYFileManager.m in Sources */,
 				6C19336B23B4597C00E3A0CA /* NSLayoutConstraint+XPYFitConstant.m in Sources */,
 				6C4847AC2398F254000E1A9F /* XPYCopyLabel.m in Sources */,
@@ -570,11 +597,13 @@
 				6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */,
 				6C0214A022BC790E004726D7 /* XPYAlertController.m in Sources */,
 				3D93ABBF21E83B2A00E2C367 /* ViewController.m in Sources */,
+				6C7BBCB323C0892900D70AC1 /* XPYDropdownItemModel.m in Sources */,
 				6CB6E16C2386616D00C9666B /* XPYCopyLabelViewController.m in Sources */,
 				6C144100236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.m in Sources */,
 				6CAEFE862351B70300C22FB4 /* XPYCommonTransitionAnimationViewController.m in Sources */,
 				6C1440FD2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.m in Sources */,
 				6CE787262321F9BF00831516 /* XPYCategoryContentView.m in Sources */,
+				6C7BBCB523C0892900D70AC1 /* XPYDropdownCell.m in Sources */,
 				6C19337123B48D4600E3A0CA /* UILabel+XPYFitFont.m in Sources */,
 				6CEAE7D7237BD28400E6C43E /* XPYImagePickerCollectionView.m in Sources */,
 				6C19336E23B481DC00E3A0CA /* XPYFitSizeViewController.m in Sources */,
@@ -588,6 +617,7 @@
 				6C094E3B23682B8C008EDA86 /* XPYBaseTransitionViewController.m in Sources */,
 				6CEAE7D3237BAB0E00E6C43E /* XPYImagePickerViewController.m in Sources */,
 				6CFC595622E198A80001928F /* XPYAnimationGroupsViewController.m in Sources */,
+				6C7BBCB623C0892900D70AC1 /* XPYDropdownView.m in Sources */,
 				6C19337423B499B000E3A0CA /* XPYCircleProgressViewController.m in Sources */,
 				6CE787292322013700831516 /* XPYCategoryViewController.m in Sources */,
 				6CE787222321F92300831516 /* XPYCategoryTitleView.m in Sources */,
@@ -602,6 +632,7 @@
 				6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */,
 				6CEAE7DA237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m in Sources */,
 				6CE85CE622C4999D009C5D20 /* XPYThumbUpAnimationViewController.m in Sources */,
+				6C19337723BAEDD400E3A0CA /* XPYCopyTextView.m in Sources */,
 				6C1E3B882341A57800915662 /* XPYDataBaseManager.m in Sources */,
 				3D93ABEC21E83BA000E2C367 /* XLColorTool.m in Sources */,
 				3D93ABE421E83BA000E2C367 /* UIImage+ResizeMagick.m in Sources */,
