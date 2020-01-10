@@ -49,6 +49,20 @@ static NSString * const kXPYDropdownCellIdentifierKey = @"XPYDropdownCellIdentif
         
         self.items = [itemsArray copy];
         self.configurations = configurations;
+        /// 限制界面参数
+        // 限制箭头宽度
+        if (self.configurations.arrowWidth < 2) {
+            self.configurations.arrowWidth = 2;
+        }
+        if (self.configurations.arrowWidth > self.configurations.dropdownWidth / 2.0) {
+            self.configurations.arrowWidth = self.configurations.dropdownWidth / 2.0;
+        }
+        
+        // 限制箭头左下角x位置
+        if (self.configurations.arrowOriginX > self.configurations.dropdownWidth - self.configurations.arrowWidth - self.configurations.cornerRadius) {
+            self.configurations.arrowOriginX = self.configurations.dropdownWidth - self.configurations.arrowWidth - self.configurations.cornerRadius;
+        }
+        
         self.arrowPoint = point;
         self.pointXScale = point.x / kXPYScreenWidth * 1.0f;
         
@@ -67,20 +81,31 @@ static NSString * const kXPYDropdownCellIdentifierKey = @"XPYDropdownCellIdentif
         return;
     }
     
-    //设置全屏幕frame
+    // 设置全屏幕frame
     self.frame = kXPYScreenBounds;
     
-    //设置下拉菜单的anchorPoint，为缩放动画准备
+    // 设置下拉菜单的anchorPoint，为缩放动画准备
     CGFloat x = (self.configurations.arrowWidth / 2.0 + self.configurations.arrowOriginX) / self.configurations.dropdownWidth * 1.0;
     self.contentView.layer.anchorPoint = CGPointMake(x, 0);
     
     // 设置菜单frame
     [self refreshContentFrame];
     
-    //画三角形箭头
-    [self drawArrow];
     
-    //设置tableView的frame
+    if (self.configurations.isAddShadow) {
+        // 设置阴影
+        self.contentView.layer.shadowOffset = CGSizeZero;
+        self.contentView.layer.shadowColor = [UIColor blackColor].CGColor;
+        self.contentView.layer.shadowRadius = 12.f;
+        self.contentView.layer.shadowOpacity = 0.2;
+    }
+    
+    if (self.configurations.arrowHeight > 0) {
+        // 画三角形箭头
+        [self drawArrow];
+    }
+    
+    // 设置tableView的frame
     [self.contentView addSubview:self.tableView];
     self.tableView.frame = CGRectMake(0, self.configurations.arrowHeight, self.configurations.dropdownWidth, self.items.count * self.configurations.cellHeight);
     
@@ -99,11 +124,11 @@ static NSString * const kXPYDropdownCellIdentifierKey = @"XPYDropdownCellIdentif
     CAShapeLayer *arrowLayer = [CAShapeLayer layer];
     UIBezierPath *arrowPath = [UIBezierPath bezierPath];
     
-    //三角形左侧点
+    // 三角形左侧点
     [arrowPath moveToPoint:CGPointMake(self.configurations.arrowOriginX, self.configurations.arrowHeight)];
-    //三角形顶点
+    // 三角形顶点
     [arrowPath addLineToPoint:CGPointMake(self.configurations.arrowOriginX + self.configurations.arrowWidth / 2.0, 0)];
-    //三角形右侧点
+    // 三角形右侧点
     [arrowPath addLineToPoint:CGPointMake(self.configurations.arrowOriginX + self.configurations.arrowWidth, self.configurations.arrowHeight)];
     arrowPath.lineJoinStyle = kCGLineJoinRound;
     arrowPath.lineCapStyle = kCGLineJoinRound;
@@ -115,14 +140,14 @@ static NSString * const kXPYDropdownCellIdentifierKey = @"XPYDropdownCellIdentif
 
 #pragma mark - Instance methods
 - (void)show {
-    //KeyWindow的子视图
+    // KeyWindow的子视图
     [kXPYKeyWindow addSubview:self];
-    //先设置透明
+    // 先设置透明
     self.alpha = 0;
-    //先缩小下拉菜单视图
+    // 先缩小下拉菜单视图
     self.contentView.transform = CGAffineTransformMakeScale(0.01, 0.01);
     [self addSubview:self.contentView];
-    //放大并设置透明度动画
+    // 放大并设置透明度动画
     [UIView animateWithDuration:0.2 animations:^{
         self.alpha = 1;
         self.contentView.transform = CGAffineTransformMakeScale(1, 1);
@@ -137,8 +162,8 @@ static NSString * const kXPYDropdownCellIdentifierKey = @"XPYDropdownCellIdentif
     }];
 }
 
-#pragma mark -
-//设备方向改变的处理
+#pragma mark - Notification
+// 设备方向改变的处理
 - (void)handleDeviceOrientationChange:(NSNotification *)notification {
     self.frame = kXPYScreenBounds;
     [self refreshContentFrame];

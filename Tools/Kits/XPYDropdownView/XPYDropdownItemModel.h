@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// index
 @property (nonatomic, assign) NSInteger itemIndex;
 
-/// 图片
+/// 图片，最大size(cellHeight - 5, cellHeight)，不压缩不拉伸
 @property (nonatomic, strong, nullable) UIImage *itemIcon;
 
 /// 文字

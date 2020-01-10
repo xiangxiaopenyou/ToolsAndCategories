@@ -99,8 +99,10 @@
     XPYDropdownConfigurations *config = [[XPYDropdownConfigurations alloc] init];
     config.dropdownBackgroundColor = [UIColor blackColor];
     config.mainBackgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
+    config.cellSelectedColor = [UIColor colorWithWhite:0 alpha:0.2];
     config.titleColor = [UIColor whiteColor];
-    config.arrowOriginX = 100.f;
+    // 隐藏箭头
+    //config.arrowHeight = 0;
 
     XPYDropdownItemModel *model1 = [XPYDropdownItemModel makeModel:1 icon:[UIImage imageNamed:@"like"] title:@"like" titleColor:nil];
     XPYDropdownItemModel *model2 = [XPYDropdownItemModel makeModel:2 icon:[UIImage imageNamed:@"dislike"] title:@"dislike" titleColor:nil];

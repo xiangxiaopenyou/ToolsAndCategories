@@ -39,13 +39,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// 下拉菜单圆角，默认为5
 @property (nonatomic, assign) CGFloat cornerRadius;
 
-/// 箭头宽度，默认为12
+/// 箭头宽度，默认为12，取值(2 — dropdownWidth/2.0)
 @property (nonatomic, assign) CGFloat arrowWidth;
 
-/// 箭头高度，默认为8
+/// 箭头高度，默认为8，当该值为0时隐藏箭头
 @property (nonatomic, assign) CGFloat arrowHeight;
 
-/// 箭头起始x位置(相对于下拉菜单)，不超过 (dropdownWidth - arrowWidth)， 默认为130
+/// 箭头左底角起始x位置(相对于下拉菜单)，不超过 (dropdownWidth - arrowWidth - cornerRadius )， 默认为130
 @property (nonatomic, assign) CGFloat arrowOriginX;
 
 /// 字体，默认为 [UIFont systemFontOfSize:14]
@@ -54,8 +54,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 字体颜色，默认为 [UIColor blackColor]
 @property (nonatomic, strong) UIColor *titleColor;
 
-///// 特殊需求支持屏幕旋转，默认frame无变化
-//@property (nonatomic, assign) BOOL isScreenRotation;
+/// 特殊需求：是否添加阴影，默认NO
+@property (nonatomic, assign) BOOL isAddShadow;
 
 @end
 

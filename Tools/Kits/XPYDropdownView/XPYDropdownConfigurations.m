@@ -26,6 +26,7 @@
         self.titleFont = [UIFont systemFontOfSize:14];
         self.titleColor = [UIColor blackColor];
         self.separatorEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 15);
+        self.isAddShadow = NO;
     }
     return self;
 }
