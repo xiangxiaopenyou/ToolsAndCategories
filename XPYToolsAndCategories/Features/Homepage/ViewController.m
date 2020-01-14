@@ -17,6 +17,9 @@
 #import "XPYCopyLabelViewController.h"
 #import "XPYFitSizeViewController.h"
 
+
+#import "XPYTestAPIManager.h"
+
 #import "XPYDropdownDefine.h"
 
 #import "XPYUtilitiesDefine.h"
@@ -31,6 +34,8 @@
 
 @property (nonatomic, strong) NSString *strString;
 @property (nonatomic, copy) NSString *copString;
+
+@property (nonatomic, strong) XPYTestAPIManager *apiManager;
 
 @end
 
@@ -68,6 +73,8 @@
         NSLog(@"ivar name:%s", ivar_getName(ivars[i]));
     }
     free(ivars);
+    
+    [self.apiManager requestData];
     
 }
 /// XPYAlert
@@ -208,5 +215,11 @@
         _itemsArray = @[@"相册图片裁剪", @"ImagePicker(照片选择器)", @"跳转到TestApp", @"XPYAlert", @"TableView", @"XPYCategoryView(分类切换视图)", @"XPYCopyLabel(可复制Label)", @"storyboard根据屏幕自适应控件约束、字体大小"];
     }
     return _itemsArray;
+}
+- (XPYTestAPIManager *)apiManager {
+    if (!_apiManager) {
+        _apiManager = [[XPYTestAPIManager alloc] init];
+    }
+    return _apiManager;
 }
 @end

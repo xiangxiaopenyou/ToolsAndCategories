@@ -36,6 +36,10 @@
 		6C1E3B8D2341AA5400915662 /* XPYUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E3B8C2341AA5400915662 /* XPYUtilities.m */; };
 		6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43B21022F40FCF0062D233 /* XPYTableViewController.m */; };
 		6C4847AC2398F254000E1A9F /* XPYCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4847AB2398F253000E1A9F /* XPYCopyLabel.m */; };
+		6C7680E323CC5B2100A8498F /* XPYNetworkingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7680DF23CC5B2100A8498F /* XPYNetworkingHelper.m */; };
+		6C7680E423CC5B2100A8498F /* XPYNetworkingBaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7680E123CC5B2100A8498F /* XPYNetworkingBaseAPIManager.m */; };
+		6C7680E723CC5DEA00A8498F /* XPYNetworkingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7680E623CC5DEA00A8498F /* XPYNetworkingService.m */; };
+		6C7680EA23CD56A500A8498F /* XPYTestAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7680E923CD56A500A8498F /* XPYTestAPIManager.m */; };
 		6C9008B6236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9008B5236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m */; };
 		6C9008B9236BD8CB00E8EDE6 /* XPYFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9008B8236BD8CB00E8EDE6 /* XPYFileManager.m */; };
 		6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */; };
@@ -125,6 +129,15 @@
 		6C43B21022F40FCF0062D233 /* XPYTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYTableViewController.m; sourceTree = "<group>"; };
 		6C4847AA2398F253000E1A9F /* XPYCopyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYCopyLabel.h; sourceTree = "<group>"; };
 		6C4847AB2398F253000E1A9F /* XPYCopyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYCopyLabel.m; sourceTree = "<group>"; };
+		6C7680DD23CC5B2000A8498F /* XPYNetworkingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYNetworkingHelper.h; sourceTree = "<group>"; };
+		6C7680DE23CC5B2000A8498F /* XPYNetworkingBaseAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYNetworkingBaseAPIManager.h; sourceTree = "<group>"; };
+		6C7680DF23CC5B2100A8498F /* XPYNetworkingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYNetworkingHelper.m; sourceTree = "<group>"; };
+		6C7680E123CC5B2100A8498F /* XPYNetworkingBaseAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYNetworkingBaseAPIManager.m; sourceTree = "<group>"; };
+		6C7680E223CC5B2100A8498F /* XPYNetworkingDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYNetworkingDefine.h; sourceTree = "<group>"; };
+		6C7680E523CC5DEA00A8498F /* XPYNetworkingService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYNetworkingService.h; sourceTree = "<group>"; };
+		6C7680E623CC5DEA00A8498F /* XPYNetworkingService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYNetworkingService.m; sourceTree = "<group>"; };
+		6C7680E823CD56A500A8498F /* XPYTestAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYTestAPIManager.h; sourceTree = "<group>"; };
+		6C7680E923CD56A500A8498F /* XPYTestAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYTestAPIManager.m; sourceTree = "<group>"; };
 		6C9008B4236BC27800E8EDE6 /* UIView+XPYSnapshotImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XPYSnapshotImage.h"; sourceTree = "<group>"; };
 		6C9008B5236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XPYSnapshotImage.m"; sourceTree = "<group>"; };
 		6C9008B7236BD8CB00E8EDE6 /* XPYFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYFileManager.h; sourceTree = "<group>"; };
@@ -239,6 +252,10 @@
 				3D93ABC521E83B2C00E2C367 /* LaunchScreen.storyboard */,
 				3D93ABC821E83B2C00E2C367 /* Info.plist */,
 				3D93ABC921E83B2C00E2C367 /* main.m */,
+				6C7680E523CC5DEA00A8498F /* XPYNetworkingService.h */,
+				6C7680E623CC5DEA00A8498F /* XPYNetworkingService.m */,
+				6C7680E823CD56A500A8498F /* XPYTestAPIManager.h */,
+				6C7680E923CD56A500A8498F /* XPYTestAPIManager.m */,
 			);
 			path = XPYToolsAndCategories;
 			sourceTree = "<group>";
@@ -270,6 +287,7 @@
 		3D93ABD921E83BA000E2C367 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				6C7680DC23CC5B0B00A8498F /* Networking */,
 				6C1E3B8A2341A9EA00915662 /* Utilities */,
 				6C1E3B892341A93A00915662 /* Kits */,
 				3D93ABD021E83BA000E2C367 /* Categories */,
@@ -329,6 +347,18 @@
 				6C9008B8236BD8CB00E8EDE6 /* XPYFileManager.m */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6C7680DC23CC5B0B00A8498F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6C7680E223CC5B2100A8498F /* XPYNetworkingDefine.h */,
+				6C7680DE23CC5B2000A8498F /* XPYNetworkingBaseAPIManager.h */,
+				6C7680E123CC5B2100A8498F /* XPYNetworkingBaseAPIManager.m */,
+				6C7680DD23CC5B2000A8498F /* XPYNetworkingHelper.h */,
+				6C7680DF23CC5B2100A8498F /* XPYNetworkingHelper.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		6C9FD3DA229FB8C4003297B5 /* Tests */ = {
@@ -596,6 +626,7 @@
 				6CAEFE862351B70300C22FB4 /* XPYCommonTransitionAnimationViewController.m in Sources */,
 				6C1440FD2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.m in Sources */,
 				6CE787262321F9BF00831516 /* XPYCategoryContentView.m in Sources */,
+				6C7680E723CC5DEA00A8498F /* XPYNetworkingService.m in Sources */,
 				6C19337123B48D4600E3A0CA /* UILabel+XPYFitFont.m in Sources */,
 				6CEAE7D7237BD28400E6C43E /* XPYImagePickerCollectionView.m in Sources */,
 				6C19336E23B481DC00E3A0CA /* XPYFitSizeViewController.m in Sources */,
@@ -603,11 +634,14 @@
 				3D93ABE721E83BA000E2C367 /* NSDate+gyh.m in Sources */,
 				6CE85D0122C7380B009C5D20 /* XPYAnimationsViewController.m in Sources */,
 				6CFC595322E197BA0001928F /* XPYTransformAnimationViewController.m in Sources */,
+				6C7680EA23CD56A500A8498F /* XPYTestAPIManager.m in Sources */,
+				6C7680E423CC5B2100A8498F /* XPYNetworkingBaseAPIManager.m in Sources */,
 				3D93ABE621E83BA000E2C367 /* UIImage+ImageEffects.m in Sources */,
 				6CE85CFE22C734C3009C5D20 /* XPYAnimationsView.m in Sources */,
 				3D93ABE521E83BA000E2C367 /* UIControl+Blocks.m in Sources */,
 				6C094E3B23682B8C008EDA86 /* XPYBaseTransitionViewController.m in Sources */,
 				6CEAE7D3237BAB0E00E6C43E /* XPYImagePickerViewController.m in Sources */,
+				6C7680E323CC5B2100A8498F /* XPYNetworkingHelper.m in Sources */,
 				6CFC595622E198A80001928F /* XPYAnimationGroupsViewController.m in Sources */,
 				6C19337423B499B000E3A0CA /* XPYCircleProgressViewController.m in Sources */,
 				6CE787292322013700831516 /* XPYCategoryViewController.m in Sources */,
