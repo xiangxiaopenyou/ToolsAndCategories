@@ -36,9 +36,21 @@ typedef NS_ENUM(NSInteger, XPYNetworkingRequestType) {
 /// API请求类型
 - (XPYNetworkingRequestType)requestType;
 
+/// 网络服务Identifier
+- (NSString *)serviceIdentifier;
+
 @optional
 /// API请求参数
 - (NSDictionary *)requestParams;
+
+/// 文件上传对应服务器上的字段，当XPYNetworkingRequestTypeUploadFile时不能为空
+- (NSString *)bucketName;
+
+/// 文件路径，当XPYNetworkingRequestTypeUploadFile时不能为空
+- (NSString *)filePath;
+
+/// 下载文件保存文件夹，默认为Download
+- (NSString *)dowloadFileDirectory;
 
 /// API请求超时时间
 - (NSTimeInterval)timeoutInterval;
@@ -54,22 +66,20 @@ typedef NS_ENUM(NSInteger, XPYNetworkingRequestType) {
 
 @end
 
-#pragma mark -  服务协议 (请求URL拼接、结果解析)
+#pragma mark - 请求服务（获取完整链接、解析结果）
 @protocol XPYNetworkingServiceProtocol <NSObject>
 
-/// 获取完整请求URL
-/// @param methodName 方法名
-/// @param requestType 请求类型
+/// 获取完整请求链接（为了拼接baseURL和接口方法名）
+/// @param methodName 接口方法名
+- (NSString *)requestURLStringWithMethod:(NSString *)methodName requestType:(XPYNetworkingRequestType)type;
+
+/// 获取完整的请求参数（为了拼接统一参数，如UserID、Token）
 /// @param params 参数
-- (NSString *)requestURLStringWithMethod:(NSString *)methodName
-                             requestType:(XPYNetworkingRequestType)requestType
-                              parameters:(NSDictionary *)params;
+- (NSDictionary *)completedParametersWithParams:(NSDictionary *)params;
 
-
-/// 请求结果解析
-/// @param responseObjcect 请求结果
-/// @param error 错误信息
-- (NSDictionary *)resultWithResponse:(id)responseObjcect error:(NSError *)error;
+/// 解析responseObject
+/// @param responseObject 请求成功结果统一解析
+- (id)resultWithResponseObject:(id)responseObject;
 
 @end
 
@@ -83,6 +93,12 @@ typedef NS_ENUM(NSInteger, XPYNetworkingRequestType) {
 /// 请求失败结果返回
 /// @param manager XPYNetworkingBaseAPIManager
 - (void)networkingAPIResponseDidFail:(XPYNetworkingBaseAPIManager *)manager;
+
+@optional
+
+/// 请求进度
+/// @param manager XPYNetworkingBaseAPIManager
+- (void)networkingAPIResponseProgress:(XPYNetworkingBaseAPIManager *)manager;
 
 @end
 

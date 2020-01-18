@@ -34,6 +34,8 @@
 		6C19337423B499B000E3A0CA /* XPYCircleProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C19337323B499B000E3A0CA /* XPYCircleProgressViewController.m */; };
 		6C1E3B882341A57800915662 /* XPYDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E3B872341A57800915662 /* XPYDataBaseManager.m */; };
 		6C1E3B8D2341AA5400915662 /* XPYUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E3B8C2341AA5400915662 /* XPYUtilities.m */; };
+		6C3D9C5A23CEF1D20036D43D /* XPYNetworkingServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D9C5923CEF1D20036D43D /* XPYNetworkingServiceFactory.m */; };
+		6C3D9C5E23CEF5610036D43D /* Target_XPYNetworkingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D9C5D23CEF5610036D43D /* Target_XPYNetworkingService.m */; };
 		6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43B21022F40FCF0062D233 /* XPYTableViewController.m */; };
 		6C4847AC2398F254000E1A9F /* XPYCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4847AB2398F253000E1A9F /* XPYCopyLabel.m */; };
 		6C7680E323CC5B2100A8498F /* XPYNetworkingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7680DF23CC5B2100A8498F /* XPYNetworkingHelper.m */; };
@@ -53,6 +55,8 @@
 		6CC976B523C31C5B003C5797 /* XPYDropdownConfigurations.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC976AD23C31C5B003C5797 /* XPYDropdownConfigurations.m */; };
 		6CC976B623C31C5B003C5797 /* XPYDropdownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC976B023C31C5B003C5797 /* XPYDropdownCell.m */; };
 		6CC976B723C31C5B003C5797 /* XPYDropdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC976B123C31C5B003C5797 /* XPYDropdownView.m */; };
+		6CD845C223D2EB29000609E9 /* XPYLoginAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD845C123D2EB29000609E9 /* XPYLoginAPIManager.m */; };
+		6CD845C523D2FA3A000609E9 /* XPYDownloadAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD845C423D2FA3A000609E9 /* XPYDownloadAPIManager.m */; };
 		6CE787222321F92300831516 /* XPYCategoryTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE787212321F92300831516 /* XPYCategoryTitleView.m */; };
 		6CE787262321F9BF00831516 /* XPYCategoryContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE787252321F9BF00831516 /* XPYCategoryContentView.m */; };
 		6CE787292322013700831516 /* XPYCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE787282322013700831516 /* XPYCategoryViewController.m */; };
@@ -125,6 +129,10 @@
 		6C1E3B8B2341AA5400915662 /* XPYUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYUtilities.h; sourceTree = "<group>"; };
 		6C1E3B8C2341AA5400915662 /* XPYUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYUtilities.m; sourceTree = "<group>"; };
 		6C1E3B8E2341E70600915662 /* XPYUtilitiesDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYUtilitiesDefine.h; sourceTree = "<group>"; };
+		6C3D9C5823CEF1D20036D43D /* XPYNetworkingServiceFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYNetworkingServiceFactory.h; sourceTree = "<group>"; };
+		6C3D9C5923CEF1D20036D43D /* XPYNetworkingServiceFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYNetworkingServiceFactory.m; sourceTree = "<group>"; };
+		6C3D9C5C23CEF5610036D43D /* Target_XPYNetworkingService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_XPYNetworkingService.h; sourceTree = "<group>"; };
+		6C3D9C5D23CEF5610036D43D /* Target_XPYNetworkingService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_XPYNetworkingService.m; sourceTree = "<group>"; };
 		6C43B20F22F40FCF0062D233 /* XPYTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYTableViewController.h; sourceTree = "<group>"; };
 		6C43B21022F40FCF0062D233 /* XPYTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYTableViewController.m; sourceTree = "<group>"; };
 		6C4847AA2398F253000E1A9F /* XPYCopyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYCopyLabel.h; sourceTree = "<group>"; };
@@ -165,6 +173,10 @@
 		6CC976B123C31C5B003C5797 /* XPYDropdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYDropdownView.m; sourceTree = "<group>"; };
 		6CC976B223C31C5B003C5797 /* XPYDropdownConfigurations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYDropdownConfigurations.h; sourceTree = "<group>"; };
 		6CC976B323C31C5B003C5797 /* XPYDropdownDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYDropdownDefine.h; sourceTree = "<group>"; };
+		6CD845C023D2EB29000609E9 /* XPYLoginAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYLoginAPIManager.h; sourceTree = "<group>"; };
+		6CD845C123D2EB29000609E9 /* XPYLoginAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYLoginAPIManager.m; sourceTree = "<group>"; };
+		6CD845C323D2FA3A000609E9 /* XPYDownloadAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYDownloadAPIManager.h; sourceTree = "<group>"; };
+		6CD845C423D2FA3A000609E9 /* XPYDownloadAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYDownloadAPIManager.m; sourceTree = "<group>"; };
 		6CE787202321F92300831516 /* XPYCategoryTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYCategoryTitleView.h; sourceTree = "<group>"; };
 		6CE787212321F92300831516 /* XPYCategoryTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYCategoryTitleView.m; sourceTree = "<group>"; };
 		6CE787242321F9BF00831516 /* XPYCategoryContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYCategoryContentView.h; sourceTree = "<group>"; };
@@ -243,6 +255,7 @@
 				6C1E3B852341A54400915662 /* DataBase */,
 				3D93ABD921E83BA000E2C367 /* Tools */,
 				6CFC594A22E196480001928F /* Features */,
+				6C3D9C5B23CEF51B0036D43D /* NetworkingDemo */,
 				3D93ABBA21E83B2A00E2C367 /* AppDelegate.h */,
 				3D93ABBB21E83B2A00E2C367 /* AppDelegate.m */,
 				6CE85CE122C491DC009C5D20 /* XPYBaseNavigationController.h */,
@@ -252,10 +265,6 @@
 				3D93ABC521E83B2C00E2C367 /* LaunchScreen.storyboard */,
 				3D93ABC821E83B2C00E2C367 /* Info.plist */,
 				3D93ABC921E83B2C00E2C367 /* main.m */,
-				6C7680E523CC5DEA00A8498F /* XPYNetworkingService.h */,
-				6C7680E623CC5DEA00A8498F /* XPYNetworkingService.m */,
-				6C7680E823CD56A500A8498F /* XPYTestAPIManager.h */,
-				6C7680E923CD56A500A8498F /* XPYTestAPIManager.m */,
 			);
 			path = XPYToolsAndCategories;
 			sourceTree = "<group>";
@@ -349,14 +358,57 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		6C3D9C5123CEED460036D43D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6C3D9C5823CEF1D20036D43D /* XPYNetworkingServiceFactory.h */,
+				6C3D9C5923CEF1D20036D43D /* XPYNetworkingServiceFactory.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6C3D9C5223CEED5E0036D43D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6C7680DE23CC5B2000A8498F /* XPYNetworkingBaseAPIManager.h */,
+				6C7680E123CC5B2100A8498F /* XPYNetworkingBaseAPIManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		6C3D9C5323CEEDFF0036D43D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6C7680DD23CC5B2000A8498F /* XPYNetworkingHelper.h */,
+				6C7680DF23CC5B2100A8498F /* XPYNetworkingHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		6C3D9C5B23CEF51B0036D43D /* NetworkingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6C7680E523CC5DEA00A8498F /* XPYNetworkingService.h */,
+				6C7680E623CC5DEA00A8498F /* XPYNetworkingService.m */,
+				6C3D9C5C23CEF5610036D43D /* Target_XPYNetworkingService.h */,
+				6C3D9C5D23CEF5610036D43D /* Target_XPYNetworkingService.m */,
+				6C7680E823CD56A500A8498F /* XPYTestAPIManager.h */,
+				6C7680E923CD56A500A8498F /* XPYTestAPIManager.m */,
+				6CD845C023D2EB29000609E9 /* XPYLoginAPIManager.h */,
+				6CD845C123D2EB29000609E9 /* XPYLoginAPIManager.m */,
+				6CD845C323D2FA3A000609E9 /* XPYDownloadAPIManager.h */,
+				6CD845C423D2FA3A000609E9 /* XPYDownloadAPIManager.m */,
+			);
+			path = NetworkingDemo;
+			sourceTree = "<group>";
+		};
 		6C7680DC23CC5B0B00A8498F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				6C7680E223CC5B2100A8498F /* XPYNetworkingDefine.h */,
-				6C7680DE23CC5B2000A8498F /* XPYNetworkingBaseAPIManager.h */,
-				6C7680E123CC5B2100A8498F /* XPYNetworkingBaseAPIManager.m */,
-				6C7680DD23CC5B2000A8498F /* XPYNetworkingHelper.h */,
-				6C7680DF23CC5B2100A8498F /* XPYNetworkingHelper.m */,
+				6C3D9C5323CEEDFF0036D43D /* Helper */,
+				6C3D9C5223CEED5E0036D43D /* Manager */,
+				6C3D9C5123CEED460036D43D /* Service */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -616,6 +668,7 @@
 			files = (
 				6C9008B9236BD8CB00E8EDE6 /* XPYFileManager.m in Sources */,
 				6C19336B23B4597C00E3A0CA /* NSLayoutConstraint+XPYFitConstant.m in Sources */,
+				6CD845C223D2EB29000609E9 /* XPYLoginAPIManager.m in Sources */,
 				6C4847AC2398F254000E1A9F /* XPYCopyLabel.m in Sources */,
 				3D93ABE921E83BA000E2C367 /* XLNoticeHelper.m in Sources */,
 				6C43B21122F40FCF0062D233 /* XPYTableViewController.m in Sources */,
@@ -657,9 +710,11 @@
 				6CFC595022E1973E0001928F /* XPYDrawingViewController.m in Sources */,
 				3D93ABBC21E83B2A00E2C367 /* AppDelegate.m in Sources */,
 				6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */,
+				6CD845C523D2FA3A000609E9 /* XPYDownloadAPIManager.m in Sources */,
 				6CEAE7DA237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m in Sources */,
 				6CE85CE622C4999D009C5D20 /* XPYThumbUpAnimationViewController.m in Sources */,
 				6C1E3B882341A57800915662 /* XPYDataBaseManager.m in Sources */,
+				6C3D9C5A23CEF1D20036D43D /* XPYNetworkingServiceFactory.m in Sources */,
 				3D93ABEC21E83BA000E2C367 /* XLColorTool.m in Sources */,
 				3D93ABE421E83BA000E2C367 /* UIImage+ResizeMagick.m in Sources */,
 				6CC976B523C31C5B003C5797 /* XPYDropdownConfigurations.m in Sources */,
@@ -667,6 +722,7 @@
 				6C9008B6236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m in Sources */,
 				6CAEFE8A2351B82900C22FB4 /* XPYPushAnimation.m in Sources */,
 				6C1E3B8D2341AA5400915662 /* XPYUtilities.m in Sources */,
+				6C3D9C5E23CEF5610036D43D /* Target_XPYNetworkingService.m in Sources */,
 				6CC976B723C31C5B003C5797 /* XPYDropdownView.m in Sources */,
 				6CB9F035238240240043025B /* XPYPhotosPreviewViewController.m in Sources */,
 				3D93ABEA21E83BA000E2C367 /* XLBlockAlertView.m in Sources */,

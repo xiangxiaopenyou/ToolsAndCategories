@@ -19,6 +19,8 @@
 
 
 #import "XPYTestAPIManager.h"
+#import "XPYLoginAPIManager.h"
+#import "XPYDownloadAPIManager.h"
 
 #import "XPYDropdownDefine.h"
 
@@ -27,7 +29,7 @@
 #import <objc/runtime.h>
 
 
-@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource, XPYDropdownViewDelegate>
+@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource, XPYDropdownViewDelegate, XPYNetworkingAPIResponseDelegate>
 
 @property (nonatomic, copy) NSArray *itemsArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -35,7 +37,9 @@
 @property (nonatomic, strong) NSString *strString;
 @property (nonatomic, copy) NSString *copString;
 
-@property (nonatomic, strong) XPYTestAPIManager *apiManager;
+@property (nonatomic, strong) XPYTestAPIManager *testApiManager;        // get请求
+@property (nonatomic, strong) XPYLoginAPIManager *loginAPIManager;       // post请求
+@property (nonatomic, strong) XPYDownloadAPIManager *downloadAPIManager;    //download请求
 
 @end
 
@@ -74,7 +78,10 @@
     }
     free(ivars);
     
-    [self.apiManager requestData];
+    // XPYNetworking测试
+    [self.testApiManager requestData];
+    [self.loginAPIManager requestData];
+    [self.downloadAPIManager requestData];
     
 }
 /// XPYAlert
@@ -143,6 +150,12 @@
     } else {
         NSLog(@"没有安装TestApp");
     }
+}
+
+#pragma mark - XPYNetworkingAPIResponseDelegate
+- (void)networkingAPIResponseDidSuccess:(XPYNetworkingBaseAPIManager *)manager {
+}
+- (void)networkingAPIResponseDidFail:(XPYNetworkingBaseAPIManager *)manager {
 }
 
 #pragma mark - XPYDropdownViewDelegate
@@ -216,10 +229,25 @@
     }
     return _itemsArray;
 }
-- (XPYTestAPIManager *)apiManager {
-    if (!_apiManager) {
-        _apiManager = [[XPYTestAPIManager alloc] init];
+- (XPYTestAPIManager *)testApiManager {
+    if (!_testApiManager) {
+        _testApiManager = [[XPYTestAPIManager alloc] init];
+        _testApiManager.responseDelegate = self;
     }
-    return _apiManager;
+    return _testApiManager;
+}
+- (XPYLoginAPIManager *)loginAPIManager {
+    if (!_loginAPIManager) {
+        _loginAPIManager = [[XPYLoginAPIManager alloc] init];
+        _loginAPIManager.responseDelegate = self;
+    }
+    return _loginAPIManager;
+}
+- (XPYDownloadAPIManager *)downloadAPIManager {
+    if (!_downloadAPIManager) {
+        _downloadAPIManager = [[XPYDownloadAPIManager alloc] init];
+        _downloadAPIManager.responseDelegate = self;
+    }
+    return _downloadAPIManager;
 }
 @end

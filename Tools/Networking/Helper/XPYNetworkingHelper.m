@@ -76,7 +76,7 @@
         _manager.requestSerializer.timeoutInterval = 30.f;
         // 默认acceptableContentTypes
         _manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", @"text/xml", @"image/*", nil];
-        // 状态栏的ActivityIndicator默认打开
+        // 状态栏的ActivityIndicator默认开启
         [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
         // 默认不打印log
         _logEnable = NO;
@@ -117,6 +117,9 @@
                parameters:(NSDictionary *)parameters
                   success:(XPYRequestSuccess)success
                   failure:(XPYRequestFailure)failure {
+    if (self.logEnable) {
+        NSLog(@"\nURL:%@\nparams:%@", URLString, parameters);
+    }
     NSURLSessionTask *sessionTask = [self.manager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -142,6 +145,9 @@
                 parameters:(NSDictionary *)parameters
                    success:(XPYRequestSuccess)success
                    failure:(XPYRequestFailure)failure {
+    if (self.logEnable) {
+        NSLog(@"\nURL:%@\nparams:%@", URLString, parameters);
+    }
     NSURLSessionTask *sessionTask = [self.manager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (self.logEnable) {
@@ -164,14 +170,17 @@
 #pragma mark - 上传文件
 - (NSURLSessionTask *)uploadFileWithURL:(NSString *)URLString
                              parameters:(NSDictionary *)parameters
-                                   name:(NSString *)name
+                             bucketName:(NSString *)bucketName
                                filePath:(NSString *)filePath
                                progress:(XPYRequestProgress)progress
                                 success:(XPYRequestSuccess)success
                                 failure:(XPYRequestFailure)failure {
+    if (self.logEnable) {
+        NSLog(@"\nURL:%@\nparams:%@\nbucketName:%@\nfilePath:%@", URLString, parameters, bucketName, filePath);
+    }
     NSURLSessionTask *sessionTask = [self.manager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         NSError *error = nil;
-        [formData appendPartWithFileURL:[NSURL URLWithString:filePath] name:name error:&error];
+        [formData appendPartWithFileURL:[NSURL URLWithString:filePath] name:bucketName error:&error];
         if (failure && error) {
             if (self.logEnable) {
                 NSLog(@"error = %@", error);
@@ -206,16 +215,25 @@
                                  progress:(XPYRequestProgress)progress
                                   success:(XPYRequestSuccess)success
                                   failure:(XPYRequestFailure)failure {
+    if (self.logEnable) {
+        NSLog(@"\nURL:%@\n fileDirectory:%@", URLString, fileDirectory);
+    }
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:URLString]];
     __block NSURLSessionDownloadTask *downloadTask = [self.manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+        if (self.logEnable) {
+            NSLog(@"progress = %@", downloadProgress);
+        }
         dispatch_sync(dispatch_get_main_queue(), ^{
             progress ? progress(downloadProgress) : nil;
         });
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        NSString *directoryPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:fileDirectory ? fileDirectory : nil];
+        NSString *directoryPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:fileDirectory ? fileDirectory : @"Download"];
         NSFileManager *fileManager = [NSFileManager defaultManager];
         [fileManager createDirectoryAtPath:directoryPath withIntermediateDirectories:YES attributes:nil error:nil];
         NSString *filePath = [directoryPath stringByAppendingPathComponent:response.suggestedFilename];
+        if (self.logEnable) {
+            NSLog(@"destinationPath = %@", filePath);
+        }
         return [NSURL fileURLWithPath:filePath];
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         [self.tasksArray removeObject:downloadTask];

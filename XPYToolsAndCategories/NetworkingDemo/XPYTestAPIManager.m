@@ -8,14 +8,10 @@
 
 #import "XPYTestAPIManager.h"
 
-@interface XPYTestAPIManager ()
-
-@end
-
 @implementation XPYTestAPIManager
 
-- (nonnull NSString *)methodName {
-    return @"";
+- (NSString *)methodName {
+    return @"book-city?action=db-home";
 }
 
 - (XPYNetworkingRequestType)requestType {
@@ -23,6 +19,15 @@
 }
 
 - (NSDictionary *)requestParams {
-    return @{};
+    return @{@"page" : @1};
 }
+
+- (NSString *)serviceIdentifier {
+    // 根据CTMediator的命名规则
+    return @"XPYNetworkingService";
+}
+- (BOOL)logEnable {
+    return YES;
+}
+
 @end

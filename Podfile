@@ -10,4 +10,5 @@ target 'XPYToolsAndCategories' do
   pod 'TZImagePickerController'
   pod 'YBImageBrowser'
   pod 'AFNetworking'
+  pod 'CTMediator'
 end

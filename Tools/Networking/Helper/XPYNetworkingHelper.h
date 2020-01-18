@@ -68,7 +68,7 @@ typedef void (^XPYRequestProgress)(NSProgress *progress);
 
  @param URLString 请求URL
  @param parameters 请求参数
- @param name 文件名称对应服务器上的字段
+ @param bucketName 文件对应服务器上的字段
  @param filePath 文件本地沙盒路径
  @param progress 上传进度
  @param success 上传成功回调
@@ -77,7 +77,7 @@ typedef void (^XPYRequestProgress)(NSProgress *progress);
  */
 - (NSURLSessionTask *)uploadFileWithURL:(NSString *)URLString
                              parameters:(NSDictionary *)parameters
-                                   name:(NSString *)name
+                             bucketName:(NSString *)bucketName
                                filePath:(NSString *)filePath
                                progress:(XPYRequestProgress)progress
                                 success:(XPYRequestSuccess)success

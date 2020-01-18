@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - CTMediator (25)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
@@ -37,6 +38,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - CTMediator
   - FMDB
   - RSKImageCropper
   - TZImagePickerController
@@ -46,6 +48,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - CTMediator
     - FMDB
     - RSKImageCropper
     - SDWebImage
@@ -57,6 +60,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   RSKImageCropper: 98296ad26b41753f796b6898d015509598f13d97
   SDWebImage: 4eabf2fa6695c95c47724214417a9c036c965e4a
@@ -66,6 +70,6 @@ SPEC CHECKSUMS:
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: ef8ba30116f86c6e6f5a00bbc1a5a4dc90b7b8b8
+PODFILE CHECKSUM: 80436da0a4cf625b4b38c968508a51b8c812b981
 
 COCOAPODS: 1.8.4

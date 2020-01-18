@@ -14,8 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 会用到NSObject的方法，所以不用id
 @property (nonatomic, weak) NSObject <XPYNetworkingAPIManagerProtocol> *child;
-@property (nonatomic, weak) id <XPYNetworkingServiceProtocol> services;
 @property (nonatomic, weak) id <XPYNetworkingAPIResponseDelegate> responseDelegate;
+
+@property (nonatomic, strong) id responseObject;
+@property (nonatomic, strong) NSError *responseError;
+@property (nonatomic, strong) NSProgress *responseProgress;
 
 /// 唯一开始请求方法
 - (void)requestData;
