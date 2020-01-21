@@ -17,7 +17,7 @@
 #define XPYDeviceIsIphoneX [XPYUtilities isIphoneX]
 
 /// 以375宽度屏幕为基准自适应
-#define XPYScreenScaleConstant(aConstant) [[UIScreen mainScreen] bounds].size.width / 375 * aConstant
+#define XPYScreenScaleConstant(aConstant) CGRectGetWidth([UIScreen mainScreen].bounds) / 375 * aConstant
 
 /// 根据Hex值和透明度获取颜色
 #define XPYColorFromHexWithAlpha(aHex, aAlpha) [UIColor colorWithRed:((float)((aHex & 0xFF0000) >> 16)) / 255.0 green:((float)((aHex & 0xFF00) >> 8)) / 255.0 blue:((float)(aHex & 0xFF)) / 255.0 alpha:aAlpha]

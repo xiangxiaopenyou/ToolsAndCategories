@@ -21,6 +21,7 @@
 		3D93ABE921E83BA000E2C367 /* XLNoticeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABDC21E83BA000E2C367 /* XLNoticeHelper.m */; };
 		3D93ABEA21E83BA000E2C367 /* XLBlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE021E83BA000E2C367 /* XLBlockAlertView.m */; };
 		3D93ABEC21E83BA000E2C367 /* XLColorTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE321E83BA000E2C367 /* XLColorTool.m */; };
+		6C00108323D5B055005308D0 /* UIImage+XPYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C00108223D5B055005308D0 /* UIImage+XPYTools.m */; };
 		6C0214A022BC790E004726D7 /* XPYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C02149F22BC790E004726D7 /* XPYAlertController.m */; };
 		6C094E3B23682B8C008EDA86 /* XPYBaseTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C094E3A23682B8C008EDA86 /* XPYBaseTransitionViewController.m */; };
 		6C0C1B4822743C9E0055BAB4 /* XPYDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */; };
@@ -103,6 +104,8 @@
 		3D93ABE021E83BA000E2C367 /* XLBlockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLBlockAlertView.m; sourceTree = "<group>"; };
 		3D93ABE221E83BA000E2C367 /* XLNoticeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLNoticeHelper.h; sourceTree = "<group>"; };
 		3D93ABE321E83BA000E2C367 /* XLColorTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLColorTool.m; sourceTree = "<group>"; };
+		6C00108123D5B055005308D0 /* UIImage+XPYTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+XPYTools.h"; sourceTree = "<group>"; };
+		6C00108223D5B055005308D0 /* UIImage+XPYTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XPYTools.m"; sourceTree = "<group>"; };
 		6C02149E22BC790E004726D7 /* XPYAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYAlertController.h; sourceTree = "<group>"; };
 		6C02149F22BC790E004726D7 /* XPYAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYAlertController.m; sourceTree = "<group>"; };
 		6C094E3923682B8C008EDA86 /* XPYBaseTransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYBaseTransitionViewController.h; sourceTree = "<group>"; };
@@ -288,6 +291,8 @@
 				6C19336A23B4597C00E3A0CA /* NSLayoutConstraint+XPYFitConstant.m */,
 				6C19336F23B48D4600E3A0CA /* UILabel+XPYFitFont.h */,
 				6C19337023B48D4600E3A0CA /* UILabel+XPYFitFont.m */,
+				6C00108123D5B055005308D0 /* UIImage+XPYTools.h */,
+				6C00108223D5B055005308D0 /* UIImage+XPYTools.m */,
 			);
 			name = Categories;
 			path = Tools/Categories;
@@ -717,6 +722,7 @@
 				6C3D9C5A23CEF1D20036D43D /* XPYNetworkingServiceFactory.m in Sources */,
 				3D93ABEC21E83BA000E2C367 /* XLColorTool.m in Sources */,
 				3D93ABE421E83BA000E2C367 /* UIImage+ResizeMagick.m in Sources */,
+				6C00108323D5B055005308D0 /* UIImage+XPYTools.m in Sources */,
 				6CC976B523C31C5B003C5797 /* XPYDropdownConfigurations.m in Sources */,
 				6CAEFE8D2351B83400C22FB4 /* XPYPopAnimation.m in Sources */,
 				6C9008B6236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m in Sources */,

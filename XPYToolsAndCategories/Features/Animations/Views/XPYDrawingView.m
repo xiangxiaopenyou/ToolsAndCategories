@@ -7,6 +7,9 @@
 //
 
 #import "XPYDrawingView.h"
+#import "UIImage+XPYTools.h"
+#import "XPYUtilitiesDefine.h"
+
 #define UIColorFromRGBA(rgbValue, alp) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:alp]
 
 @implementation XPYDrawingView
@@ -14,6 +17,26 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
+        
+        UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds) / 4.0, CGRectGetHeight([UIScreen mainScreen].bounds) / 2, 100, 100)];
+        UIImage *image1 = [UIImage imageWithColor:[UIColor redColor] size:CGSizeMake(100, 100)];
+        imageView1.image = image1;
+        [self addSubview:imageView1];
+        
+        UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds) / 3.0, CGRectGetHeight([UIScreen mainScreen].bounds) * 0.66, 100, 100)];
+        UIImage *image2 = [UIImage imageWithColor:[UIColor redColor] size:CGSizeMake(100, 100) radius:10];
+        imageView2.image = image2;
+        [self addSubview:imageView2];
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds) / 2.0, CGRectGetHeight([UIScreen mainScreen].bounds) * 0.8, 50, 16);
+        UIImage *image3 = [UIImage imageWithColor:[UIColor whiteColor] size:CGSizeMake(50, 16) radius:2 borderWidth:4 borderColor:XPYColorFromHex(0xFF8080)];
+        //[button setBackgroundImage:image3 forState:UIControlStateNormal];
+        UIImageView *imageView3 = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetWidth([UIScreen mainScreen].bounds) / 2.0, CGRectGetHeight([UIScreen mainScreen].bounds) * 0.8, 50, 16)];
+        
+        imageView3.image = image3;
+        [self addSubview:imageView3];
+        //[self addSubview:button];
     }
     return self;
 }
