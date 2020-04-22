@@ -32,6 +32,7 @@
     configurations.titleFont = [UIFont systemFontOfSize:17];
     configurations.selectedTitleFont = [UIFont boldSystemFontOfSize:19];
     configurations.indicatorBottomSpacing = 10;
+    configurations.isHideIndicator = YES;
     self.categoryTitleView = [[XPYCategoryTitleView alloc] initWithFrame:CGRectMake(0, XPYDeviceIsIphoneX ? 88 : 64, CGRectGetWidth(self.view.bounds), 50) titles:@[@"视图一", @"视图二", @"视图三", @"视图四"] configuration:configurations];
     self.categoryTitleView.delegate = self;
     [self.view addSubview:self.categoryTitleView];

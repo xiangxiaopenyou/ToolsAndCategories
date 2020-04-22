@@ -50,6 +50,7 @@
                          message:(NSString *)messageString
                           cancel:(NSString *)cancelString
                     inController:(UIViewController *)viewController
+                      sourceView:(UIView *)sourceView
                          actions:(NSArray<NSString *> *)actions
                    actionHandler:(void (^)(NSInteger))actionHandler {
     if (actions.count == 0) {
@@ -71,7 +72,7 @@
             }];
             [items addObject:alertAction];
         }];
-        controller.actionItems(items).showAlert(viewController);
+        controller.actionItems(items).sourceView(sourceView).showAlert(viewController);
     } alertModel:alertModel];
 }
 @end

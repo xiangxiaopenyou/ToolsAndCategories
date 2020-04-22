@@ -34,12 +34,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param messageString message
 /// @param cancelString 取消
 /// @param viewController 控制器
+/// @param sourceView 设备为iPad时需要传入
 /// @param actions 选项
 /// @param actionHandler 选项闭包
 + (void)showActionSheetWithTitle:(NSString  * _Nullable)titleString
                          message:(NSString  * _Nullable)messageString
                           cancel:(NSString * _Nullable)cancelString
                     inController:(UIViewController *)viewController
+                      sourceView:(UIView * _Nullable)sourceView
                          actions:(NSArray<NSString *> *)actions
                    actionHandler:(void (^)(NSInteger index))actionHandler;
 

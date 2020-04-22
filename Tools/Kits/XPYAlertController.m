@@ -43,7 +43,17 @@
     };
     return showBlock;
 }
-
+- (XPYSourceView)sourceView {
+    XPYSourceView sourceViewBlock = ^(UIView *sourceView) {
+        if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad && sourceView) {
+            self.popoverPresentationController.sourceView = sourceView;
+            self.popoverPresentationController.sourceRect = sourceView.bounds;
+            self.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionAny;
+        }
+        return self;
+    };
+    return sourceViewBlock;
+}
 
 
 @end

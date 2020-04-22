@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void (^XPYAlert)(XPYAlertController *controller);
 typedef XPYAlertController * _Nonnull (^XPYShowAlert)(UIViewController *controller);
 typedef XPYAlertController * _Nonnull (^XPYActions)(NSArray<UIAlertAction *> *actions);
+typedef XPYAlertController * _Nullable (^XPYSourceView)(UIView *sourceView);
 
 @interface XPYAlertController : UIAlertController
 
@@ -35,6 +36,13 @@ typedef XPYAlertController * _Nonnull (^XPYActions)(NSArray<UIAlertAction *> *ac
  @return Self
  */
 - (XPYActions)actionItems;
+
+/**
+ 当设备为iPad时设置SourceView
+
+ @return Self
+ */
+- (XPYSourceView)sourceView;
 
 /**
  显示Alert

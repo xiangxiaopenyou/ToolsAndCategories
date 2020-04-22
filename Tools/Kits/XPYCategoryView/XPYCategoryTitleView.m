@@ -85,7 +85,7 @@
     }];
     [self.scrollView addSubview:self.indicatorView];
     self.indicatorView.backgroundColor = self.configurations.selectedColor;
-    
+    self.indicatorView.hidden = self.configurations.isHideIndicator;
 }
 
 #pragma mark - Instance method
@@ -102,10 +102,6 @@
 - (void)selectCategoryViewItemWithIndex:(NSInteger)index {
     UIButton *targetButton = self.titleButtons[index];
     [self selectButton:targetButton];
-    
-//    if (self.delegate && [self.delegate respondsToSelector:@selector(categoryTitleViewDidSelectItemAtIndex:)]) {
-//        [self.delegate categoryTitleViewDidSelectItemAtIndex:index];
-//    }
 }
 
 #pragma mark - Private methods
@@ -142,6 +138,9 @@
     }
     if (configuration.indicatorBottomSpacing != self.configurations.indicatorBottomSpacing) {
         self.configurations.indicatorBottomSpacing = configuration.indicatorBottomSpacing;
+    }
+    if (configuration.isHideIndicator != self.configurations.isHideIndicator) {
+        self.configurations.isHideIndicator = configuration.isHideIndicator;
     }
 }
 
@@ -259,6 +258,7 @@
         _configurations.indicatorWidth = 20;
         _configurations.indicatorHeight = 2;
         _configurations.indicatorBottomSpacing = 0;
+        _configurations.isHideIndicator = NO;
     }
     return _configurations;
 }

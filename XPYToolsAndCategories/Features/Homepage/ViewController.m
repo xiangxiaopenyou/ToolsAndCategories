@@ -84,6 +84,7 @@
     [self.downloadAPIManager requestData];
     
 }
+
 /// XPYAlert
 - (void)showAlert {
     XPYAlertModel *alertModel = [[XPYAlertModel alloc] initWithTitle:@"提示" message:@"请注意xxxxxxxxxx" style:UIAlertControllerStyleActionSheet];
@@ -101,11 +102,11 @@
         }];
         UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"哈哈" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             NSLog(@"哈哈");
-            [XPYAlertManager showActionSheetWithTitle:@"哈哈" message:@"点击了哈哈" cancel:@"取消" inController:self actions:@[@"item0", @"item1", @"item2"] actionHandler:^(NSInteger index) {
+            [XPYAlertManager showActionSheetWithTitle:@"哈哈" message:@"点击了哈哈" cancel:@"取消" inController:self sourceView:[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]] actions:@[@"item0", @"item1", @"item2"] actionHandler:^(NSInteger index) {
                 NSLog(@"click item%@", @(index));
             }];
         }];
-        controller.actionItems(@[action1, action2, action3]).showAlert(self);
+        controller.actionItems(@[action1, action2, action3]).sourceView([self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]]).showAlert(self);
     } alertModel:alertModel];
 }
 
