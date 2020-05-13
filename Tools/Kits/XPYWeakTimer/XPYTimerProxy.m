@@ -28,9 +28,9 @@
 
 #pragma mark - 消息转发，转发给target对象
 // 转发目标选择器
-- (id)forwardingTargetForSelector:(SEL)selector {
-    return self.target;
-}
+//- (id)forwardingTargetForSelector:(SEL)selector {
+//    return self.target;
+//}
 - (void)forwardInvocation:(NSInvocation *)invocation {
     if (self.target && [self.target respondsToSelector:invocation.selector]) {
         [invocation invokeWithTarget:self.target];

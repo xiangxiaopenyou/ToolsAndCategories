@@ -57,6 +57,7 @@
     CGPathRelease(path);                                                    //释放路径
     
     //画直线方法2
+    CGContextScaleCTM(context, 1, 1);
     CGContextMoveToPoint(context, 10, 100);
     CGContextAddLineToPoint(context, 100, 100);
     CGContextSetStrokeColorWithColor(context, [UIColor greenColor].CGColor);//直线颜色

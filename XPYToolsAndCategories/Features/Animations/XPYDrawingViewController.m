@@ -9,7 +9,11 @@
 #import "XPYDrawingViewController.h"
 #import "XPYDrawingView.h"
 
+#import "NSTimer+XPYWeakTimer.h"
+
 @interface XPYDrawingViewController ()
+
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -21,6 +25,18 @@
     
     XPYDrawingView *drawingView = [[XPYDrawingView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:drawingView];
+    
+    self.timer = [NSTimer xpy_timerWithTimeInterval:2 target:self selector:@selector(counter:) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)counter:(NSTimer *)timer {
+    NSLog(@"倒计时");
+}
+
+- (void)dealloc {
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 /*
