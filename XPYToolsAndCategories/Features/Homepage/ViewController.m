@@ -16,7 +16,7 @@
 #import "XPYImagePickerViewController.h"
 #import "XPYCopyLabelViewController.h"
 #import "XPYFitSizeViewController.h"
-
+#import "XPYEnlargeImageViewController.h"
 
 #import "XPYTestAPIManager.h"
 #import "XPYLoginAPIManager.h"
@@ -27,7 +27,6 @@
 #import "XPYUtilitiesDefine.h"
 
 #import <objc/runtime.h>
-
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource, XPYDropdownViewDelegate, XPYNetworkingAPIResponseDelegate>
 
@@ -122,7 +121,7 @@
     XPYDropdownItemModel *model1 = [XPYDropdownItemModel makeModel:1 icon:[UIImage imageNamed:@"like"] title:@"like" titleColor:nil];
     XPYDropdownItemModel *model2 = [XPYDropdownItemModel makeModel:2 icon:[UIImage imageNamed:@"dislike"] title:@"dislike" titleColor:nil];
     XPYDropdownItemModel *model3 = [XPYDropdownItemModel makeModel:3 icon:[UIImage imageNamed:@"delete"] title:@"delete" titleColor:nil];
-    
+
     CGFloat pointX = CGRectGetWidth(self.view.bounds) - 50.f;
     CGFloat pointY = XPYDeviceIsIphoneX ? 88.f : 64.f;
     XPYDropdownView *dropdownView = [[XPYDropdownView alloc] initWithItemsArray:@[model1, model2, model3] configurations:config arrowPoint:CGPointMake(pointX, pointY)];
@@ -211,6 +210,11 @@
             [self.navigationController pushViewController:fitController animated:YES];
         }
             break;
+        case 8: {
+            XPYEnlargeImageViewController *enlargeImageController = [[XPYEnlargeImageViewController alloc] init];
+            [self.navigationController pushViewController:enlargeImageController animated:YES];
+        }
+            break;
     }
 }
 
@@ -226,7 +230,7 @@
 #pragma mark - Getters
 - (NSArray *)itemsArray {
     if (!_itemsArray) {
-        _itemsArray = @[@"相册图片裁剪", @"ImagePicker(照片选择器)", @"跳转到TestApp", @"XPYAlert", @"TableView", @"XPYCategoryView(分类切换视图)", @"XPYCopyLabel(可复制Label)", @"storyboard根据屏幕自适应控件约束、字体大小"];
+        _itemsArray = @[@"相册图片裁剪", @"ImagePicker(照片选择器)", @"跳转到TestApp", @"XPYAlert", @"TableView", @"XPYCategoryView(分类切换视图)", @"XPYCopyLabel(可复制Label)", @"storyboard根据屏幕自适应控件约束、字体大小", @"长按放大图片"];
     }
     return _itemsArray;
 }

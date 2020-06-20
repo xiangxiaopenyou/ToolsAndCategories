@@ -11,4 +11,5 @@ target 'XPYToolsAndCategories' do
   pod 'YBImageBrowser'
   pod 'AFNetworking'
   pod 'CTMediator'
+  #pod 'XPYKit', :git => 'https://github.com/xiangxiaopenyou/XPYKit.git'
 end

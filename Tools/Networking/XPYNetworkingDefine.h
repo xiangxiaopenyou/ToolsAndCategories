@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, XPYNetworkStatus) {
     XPYNetworkStatusReachableWiFi   //wifi网络
 };
 
-/// 网络请求方式 (GET、POST、PUT)
+/// 网络请求方式
 typedef NS_ENUM(NSInteger, XPYNetworkingRequestType) {
     XPYNetworkingRequestTypeGet,
     XPYNetworkingRequestTypePost,

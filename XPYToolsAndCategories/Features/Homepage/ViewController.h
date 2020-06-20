@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-NSInteger age = 10;
-
 @interface ViewController : UIViewController
 
 

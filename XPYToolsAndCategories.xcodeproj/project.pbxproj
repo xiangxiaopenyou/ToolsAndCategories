@@ -72,6 +72,10 @@
 		6CEAE7D3237BAB0E00E6C43E /* XPYImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEAE7D2237BAB0E00E6C43E /* XPYImagePickerViewController.m */; };
 		6CEAE7D7237BD28400E6C43E /* XPYImagePickerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEAE7D6237BD28400E6C43E /* XPYImagePickerCollectionView.m */; };
 		6CEAE7DA237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEAE7D9237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m */; };
+		6CEF2FE5249B6ADA00AB56E7 /* XPYEnlargeImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF2FE4249B6ADA00AB56E7 /* XPYEnlargeImageViewController.m */; };
+		6CEF2FE8249B6E7100AB56E7 /* XPYTouchToEnlargeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF2FE7249B6E7100AB56E7 /* XPYTouchToEnlargeView.m */; };
+		6CEF2FEB249C9C6600AB56E7 /* XPYEnlargeViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF2FEA249C9C6600AB56E7 /* XPYEnlargeViewManager.m */; };
+		6CEF2FEE249DA3A900AB56E7 /* XPYViewControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF2FEC249DA3A900AB56E7 /* XPYViewControllerHelper.m */; };
 		6CFC595022E1973E0001928F /* XPYDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC594F22E1973E0001928F /* XPYDrawingViewController.m */; };
 		6CFC595322E197BA0001928F /* XPYTransformAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC595222E197BA0001928F /* XPYTransformAnimationViewController.m */; };
 		6CFC595622E198A80001928F /* XPYAnimationGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC595522E198A80001928F /* XPYAnimationGroupsViewController.m */; };
@@ -211,6 +215,14 @@
 		6CEAE7D6237BD28400E6C43E /* XPYImagePickerCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYImagePickerCollectionView.m; sourceTree = "<group>"; };
 		6CEAE7D8237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYImagePickerCollectionViewCell.h; sourceTree = "<group>"; };
 		6CEAE7D9237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYImagePickerCollectionViewCell.m; sourceTree = "<group>"; };
+		6CEF2FE3249B6ADA00AB56E7 /* XPYEnlargeImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYEnlargeImageViewController.h; sourceTree = "<group>"; };
+		6CEF2FE4249B6ADA00AB56E7 /* XPYEnlargeImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYEnlargeImageViewController.m; sourceTree = "<group>"; };
+		6CEF2FE6249B6E7100AB56E7 /* XPYTouchToEnlargeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYTouchToEnlargeView.h; sourceTree = "<group>"; };
+		6CEF2FE7249B6E7100AB56E7 /* XPYTouchToEnlargeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYTouchToEnlargeView.m; sourceTree = "<group>"; };
+		6CEF2FE9249C9C6600AB56E7 /* XPYEnlargeViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYEnlargeViewManager.h; sourceTree = "<group>"; };
+		6CEF2FEA249C9C6600AB56E7 /* XPYEnlargeViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYEnlargeViewManager.m; sourceTree = "<group>"; };
+		6CEF2FEC249DA3A900AB56E7 /* XPYViewControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPYViewControllerHelper.m; sourceTree = "<group>"; };
+		6CEF2FED249DA3A900AB56E7 /* XPYViewControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPYViewControllerHelper.h; sourceTree = "<group>"; };
 		6CFC594E22E1973E0001928F /* XPYDrawingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYDrawingViewController.h; sourceTree = "<group>"; };
 		6CFC594F22E1973E0001928F /* XPYDrawingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYDrawingViewController.m; sourceTree = "<group>"; };
 		6CFC595122E197BA0001928F /* XPYTransformAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYTransformAnimationViewController.h; sourceTree = "<group>"; };
@@ -340,23 +352,16 @@
 		6C1E3B892341A93A00915662 /* Kits */ = {
 			isa = PBXGroup;
 			children = (
+				6C4F795D248F5F4A00D46D3F /* XPYAlert */,
 				6C665E6724594FED002EE358 /* XPYWeakTimer */,
 				6CC976AA23C31C5B003C5797 /* XPYDropdownView */,
 				6CE787232321F93F00831516 /* XPYCategoryView */,
-				3D93ABDA21E83BA000E2C367 /* XLBlockAlertView.h */,
-				3D93ABE021E83BA000E2C367 /* XLBlockAlertView.m */,
-				3D93ABDF21E83BA000E2C367 /* XLBlockActionSheet.h */,
-				3D93ABDB21E83BA000E2C367 /* XLBlockActionSheet.m */,
 				3D93ABE221E83BA000E2C367 /* XLNoticeHelper.h */,
 				3D93ABDC21E83BA000E2C367 /* XLNoticeHelper.m */,
 				3D93ABDE21E83BA000E2C367 /* XLColorTool.h */,
 				3D93ABE321E83BA000E2C367 /* XLColorTool.m */,
 				6C19334C23AC69F300E3A0CA /* XPYHyperLinkButton.h */,
 				6C19334D23AC69F300E3A0CA /* XPYHyperLinkButton.m */,
-				6C02149E22BC790E004726D7 /* XPYAlertController.h */,
-				6C02149F22BC790E004726D7 /* XPYAlertController.m */,
-				6CEAE7CB237652A000E6C43E /* XPYAlertManager.h */,
-				6CEAE7CC237652A000E6C43E /* XPYAlertManager.m */,
 				6C4847AA2398F253000E1A9F /* XPYCopyLabel.h */,
 				6C4847AB2398F253000E1A9F /* XPYCopyLabel.m */,
 			);
@@ -371,6 +376,8 @@
 				6C1E3B8E2341E70600915662 /* XPYUtilitiesDefine.h */,
 				6C9008B7236BD8CB00E8EDE6 /* XPYFileManager.h */,
 				6C9008B8236BD8CB00E8EDE6 /* XPYFileManager.m */,
+				6CEF2FED249DA3A900AB56E7 /* XPYViewControllerHelper.h */,
+				6CEF2FEC249DA3A900AB56E7 /* XPYViewControllerHelper.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -417,6 +424,21 @@
 				6CD845C423D2FA3A000609E9 /* XPYDownloadAPIManager.m */,
 			);
 			path = NetworkingDemo;
+			sourceTree = "<group>";
+		};
+		6C4F795D248F5F4A00D46D3F /* XPYAlert */ = {
+			isa = PBXGroup;
+			children = (
+				6C02149E22BC790E004726D7 /* XPYAlertController.h */,
+				6C02149F22BC790E004726D7 /* XPYAlertController.m */,
+				6CEAE7CB237652A000E6C43E /* XPYAlertManager.h */,
+				6CEAE7CC237652A000E6C43E /* XPYAlertManager.m */,
+				3D93ABDA21E83BA000E2C367 /* XLBlockAlertView.h */,
+				3D93ABE021E83BA000E2C367 /* XLBlockAlertView.m */,
+				3D93ABDF21E83BA000E2C367 /* XLBlockActionSheet.h */,
+				3D93ABDB21E83BA000E2C367 /* XLBlockActionSheet.m */,
+			);
+			path = XPYAlert;
 			sourceTree = "<group>";
 		};
 		6C665E6724594FED002EE358 /* XPYWeakTimer */ = {
@@ -499,6 +521,10 @@
 				6CEAE7D9237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m */,
 				6CB9F03623826F820043025B /* XPYPhotosPreviewToolViewHandler.h */,
 				6CB9F03723826F820043025B /* XPYPhotosPreviewToolViewHandler.m */,
+				6CEF2FE6249B6E7100AB56E7 /* XPYTouchToEnlargeView.h */,
+				6CEF2FE7249B6E7100AB56E7 /* XPYTouchToEnlargeView.m */,
+				6CEF2FE9249C9C6600AB56E7 /* XPYEnlargeViewManager.h */,
+				6CEF2FEA249C9C6600AB56E7 /* XPYEnlargeViewManager.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -530,6 +556,8 @@
 				6CB6E16B2386616D00C9666B /* XPYCopyLabelViewController.m */,
 				6C19336C23B481DC00E3A0CA /* XPYFitSizeViewController.h */,
 				6C19336D23B481DC00E3A0CA /* XPYFitSizeViewController.m */,
+				6CEF2FE3249B6ADA00AB56E7 /* XPYEnlargeImageViewController.h */,
+				6CEF2FE4249B6ADA00AB56E7 /* XPYEnlargeImageViewController.m */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -724,6 +752,7 @@
 				3D93ABE521E83BA000E2C367 /* UIControl+Blocks.m in Sources */,
 				6C094E3B23682B8C008EDA86 /* XPYBaseTransitionViewController.m in Sources */,
 				6CEAE7D3237BAB0E00E6C43E /* XPYImagePickerViewController.m in Sources */,
+				6CEF2FE8249B6E7100AB56E7 /* XPYTouchToEnlargeView.m in Sources */,
 				6C7680E323CC5B2100A8498F /* XPYNetworkingHelper.m in Sources */,
 				6CFC595622E198A80001928F /* XPYAnimationGroupsViewController.m in Sources */,
 				6C19337423B499B000E3A0CA /* XPYCircleProgressViewController.m in Sources */,
@@ -733,18 +762,21 @@
 				6C0C1B4822743C9E0055BAB4 /* XPYDrawingView.m in Sources */,
 				6C19334E23AC69F300E3A0CA /* XPYHyperLinkButton.m in Sources */,
 				6CC976B423C31C5B003C5797 /* XPYDropdownItemModel.m in Sources */,
+				6CEF2FEE249DA3A900AB56E7 /* XPYViewControllerHelper.m in Sources */,
 				6CC976B623C31C5B003C5797 /* XPYDropdownCell.m in Sources */,
 				6CEAE7CD237652A000E6C43E /* XPYAlertManager.m in Sources */,
 				3D93ABE821E83BA000E2C367 /* XLBlockActionSheet.m in Sources */,
 				6CB9F03823826F820043025B /* XPYPhotosPreviewToolViewHandler.m in Sources */,
 				6CFC595022E1973E0001928F /* XPYDrawingViewController.m in Sources */,
 				3D93ABBC21E83B2A00E2C367 /* AppDelegate.m in Sources */,
+				6CEF2FEB249C9C6600AB56E7 /* XPYEnlargeViewManager.m in Sources */,
 				6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */,
 				6CD845C523D2FA3A000609E9 /* XPYDownloadAPIManager.m in Sources */,
 				6CEAE7DA237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m in Sources */,
 				6CE85CE622C4999D009C5D20 /* XPYThumbUpAnimationViewController.m in Sources */,
 				6C1E3B882341A57800915662 /* XPYDataBaseManager.m in Sources */,
 				6C665E6A24595026002EE358 /* NSTimer+XPYWeakTimer.m in Sources */,
+				6CEF2FE5249B6ADA00AB56E7 /* XPYEnlargeImageViewController.m in Sources */,
 				6C3D9C5A23CEF1D20036D43D /* XPYNetworkingServiceFactory.m in Sources */,
 				3D93ABEC21E83BA000E2C367 /* XLColorTool.m in Sources */,
 				3D93ABE421E83BA000E2C367 /* UIImage+ResizeMagick.m in Sources */,
