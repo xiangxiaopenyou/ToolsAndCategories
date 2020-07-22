@@ -21,6 +21,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param alpha 透明度
 + (UIColor *)colorFromHexString:(NSString *)hexString alpha:(CGFloat)alpha;
 
+/// 计算文字高度
+/// @param text 文字内容
+/// @param width 文字宽度
+/// @param font 字体大小
+/// @param lineSpacing 行间距
++ (CGFloat)textHeightWithText:(NSString *)text width:(CGFloat)width font:(UIFont *)font spacing:(CGFloat)lineSpacing;
+
 @end
 
 NS_ASSUME_NONNULL_END

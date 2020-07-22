@@ -53,4 +53,19 @@
     UIColor *resultColor = [UIColor colorWithRed:red / 255.0 green:green / 255.0 blue:blue / 255.0 alpha:alpha];
     return resultColor;
 }
+
++ (CGFloat)textHeightWithText:(NSString *)text width:(CGFloat)width font:(UIFont *)font spacing:(CGFloat)lineSpacing {
+    NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
+    paraStyle.alignment = NSTextAlignmentJustified;
+    paraStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    if (lineSpacing > 0) {
+        paraStyle.lineSpacing = lineSpacing;
+    }
+    CGSize contentSize = [text boundingRectWithSize:CGSizeMake(width, MAXFLOAT)
+                                            options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                         attributes:@{NSFontAttributeName : font, NSParagraphStyleAttributeName : paraStyle}
+                                            context:nil].size;
+    return ceilf(contentSize.height);
+}
+
 @end

@@ -36,7 +36,6 @@
 - (void)yb_hide:(BOOL)hide {
 }
 
-
 #pragma mark - Instance methods
 - (void)hideTopView {
     if (self.viewOfTop.hidden) {

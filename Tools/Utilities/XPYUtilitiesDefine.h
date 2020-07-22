@@ -31,3 +31,6 @@
 /// 根据Hex字符串获取颜色（透明度为1）
 #define XPYColorFromHexString(aHexString) XPYColorFromHexStringWithAlpha(aHexString, 1)
 
+/// 获取文字高度
+#define XPYTextHeight(aText, aWidth, aFont, aSpacing) [XPYUtilities textHeightWithText:aText width:aWidth font:aFont spacing:aSpacing]
+

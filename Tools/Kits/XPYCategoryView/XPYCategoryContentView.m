@@ -60,7 +60,7 @@ static NSString * const kXPYCategoryContentCellIdentifier = @"XPYCategoryContent
 
 #pragma mark - Scroll view delegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    NSInteger index = scrollView.contentOffset.x / scrollView.frame.size.width;
+    NSInteger index = floor(scrollView.contentOffset.x) / floor(CGRectGetWidth(scrollView.frame));
     if (self.delegate && [self.delegate respondsToSelector:@selector(categoryContentView:didEndDecelerating:)]) {
         [self.delegate categoryContentView:self didEndDecelerating:index];
     }

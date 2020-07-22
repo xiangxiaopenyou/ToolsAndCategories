@@ -72,6 +72,7 @@
 		6CEAE7D3237BAB0E00E6C43E /* XPYImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEAE7D2237BAB0E00E6C43E /* XPYImagePickerViewController.m */; };
 		6CEAE7D7237BD28400E6C43E /* XPYImagePickerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEAE7D6237BD28400E6C43E /* XPYImagePickerCollectionView.m */; };
 		6CEAE7DA237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEAE7D9237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m */; };
+		6CED67E524C6C664002AA820 /* UIDevice+XPYModelString.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CED67E424C6C664002AA820 /* UIDevice+XPYModelString.m */; };
 		6CEF2FE5249B6ADA00AB56E7 /* XPYEnlargeImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF2FE4249B6ADA00AB56E7 /* XPYEnlargeImageViewController.m */; };
 		6CEF2FE8249B6E7100AB56E7 /* XPYTouchToEnlargeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF2FE7249B6E7100AB56E7 /* XPYTouchToEnlargeView.m */; };
 		6CEF2FEB249C9C6600AB56E7 /* XPYEnlargeViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF2FEA249C9C6600AB56E7 /* XPYEnlargeViewManager.m */; };
@@ -216,6 +217,8 @@
 		6CEAE7D6237BD28400E6C43E /* XPYImagePickerCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYImagePickerCollectionView.m; sourceTree = "<group>"; };
 		6CEAE7D8237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYImagePickerCollectionViewCell.h; sourceTree = "<group>"; };
 		6CEAE7D9237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYImagePickerCollectionViewCell.m; sourceTree = "<group>"; };
+		6CED67E324C6C664002AA820 /* UIDevice+XPYModelString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+XPYModelString.h"; sourceTree = "<group>"; };
+		6CED67E424C6C664002AA820 /* UIDevice+XPYModelString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+XPYModelString.m"; sourceTree = "<group>"; };
 		6CEF2FE3249B6ADA00AB56E7 /* XPYEnlargeImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYEnlargeImageViewController.h; sourceTree = "<group>"; };
 		6CEF2FE4249B6ADA00AB56E7 /* XPYEnlargeImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYEnlargeImageViewController.m; sourceTree = "<group>"; };
 		6CEF2FE6249B6E7100AB56E7 /* XPYTouchToEnlargeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYTouchToEnlargeView.h; sourceTree = "<group>"; };
@@ -319,6 +322,8 @@
 				6C00108223D5B055005308D0 /* UIImage+XPYTools.m */,
 				6CE447F524581A3000593F63 /* NSObject+XPYMethodSwizzling.h */,
 				6CE447F624581A3000593F63 /* NSObject+XPYMethodSwizzling.m */,
+				6CED67E324C6C664002AA820 /* UIDevice+XPYModelString.h */,
+				6CED67E424C6C664002AA820 /* UIDevice+XPYModelString.m */,
 			);
 			name = Categories;
 			path = Tools/Categories;
@@ -757,6 +762,7 @@
 				3D93ABE521E83BA000E2C367 /* UIControl+Blocks.m in Sources */,
 				6C094E3B23682B8C008EDA86 /* XPYBaseTransitionViewController.m in Sources */,
 				6CEAE7D3237BAB0E00E6C43E /* XPYImagePickerViewController.m in Sources */,
+				6CED67E524C6C664002AA820 /* UIDevice+XPYModelString.m in Sources */,
 				6CEF2FE8249B6E7100AB56E7 /* XPYTouchToEnlargeView.m in Sources */,
 				6C7680E323CC5B2100A8498F /* XPYNetworkingHelper.m in Sources */,
 				6CFC595622E198A80001928F /* XPYAnimationGroupsViewController.m in Sources */,

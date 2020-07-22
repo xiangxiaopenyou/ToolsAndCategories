@@ -26,6 +26,8 @@
 
 #import "XPYUtilitiesDefine.h"
 
+#import "UIDevice+XPYModelString.h"
+
 #import <objc/runtime.h>
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource, XPYDropdownViewDelegate, XPYNetworkingAPIResponseDelegate>
@@ -82,6 +84,11 @@
     [self.loginAPIManager requestData];
     [self.downloadAPIManager requestData];
     
+    // 获取机型
+    NSString *string = [[UIDevice currentDevice] modelString];
+    [XPYAlertManager showAlertWithTitle:@"获取机型成功" message:[NSString stringWithFormat:@"本机机型：%@", string] cancel:nil confirm:@"确定" inController:self confirmHandler:^{
+    } cancelHandler:^{
+    }];
 }
 
 /// XPYAlert
