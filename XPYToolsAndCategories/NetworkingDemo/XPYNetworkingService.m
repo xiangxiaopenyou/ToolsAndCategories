@@ -14,6 +14,7 @@ static NSString * const kXPYBaseURL = @"http://testapp.zhangdu.com/v1";
 static NSString * const kXPYDownloadURL = @"http://zhangdu-test.oss-cn-shanghai.aliyuncs.com/app/package/voice.zip";
 #else
 static NSString * const kXPYBaseURL = @"";
+static NSString * const kXPYDownloadURL = @"http://zhangdu-test.oss-cn-shanghai.aliyuncs.com/app/package/voice.zip";
 #endif
 
 /// 示例参数

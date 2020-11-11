@@ -62,7 +62,8 @@
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
     if (operation == UINavigationControllerOperationPop) {
         return [[XPYPopAnimation alloc] init];
-    } else if (operation == UINavigationControllerOperationPush) {
+    } else
+        if (operation == UINavigationControllerOperationPush) {
         return [[XPYPushAnimation alloc] init];
     }
     return nil;

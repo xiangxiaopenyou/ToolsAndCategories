@@ -35,12 +35,11 @@
 @property (nonatomic, copy) NSArray *itemsArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic, strong) NSString *strString;
-@property (nonatomic, copy) NSString *copString;
-
 @property (nonatomic, strong) XPYTestAPIManager *testApiManager;        // get请求
 @property (nonatomic, strong) XPYLoginAPIManager *loginAPIManager;       // post请求
 @property (nonatomic, strong) XPYDownloadAPIManager *downloadAPIManager;    //download请求
+
+@property (nonatomic, weak) NSString *testString;
 
 @end
 
@@ -89,7 +88,9 @@
     [XPYAlertManager showAlertWithTitle:@"获取机型成功" message:[NSString stringWithFormat:@"本机机型：%@", string] cancel:nil confirm:@"确定" inController:self confirmHandler:^{
     } cancelHandler:^{
     }];
+    
 }
+
 
 /// XPYAlert
 - (void)showAlert {

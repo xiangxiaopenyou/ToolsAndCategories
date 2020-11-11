@@ -24,6 +24,7 @@
 		6C00108323D5B055005308D0 /* UIImage+XPYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C00108223D5B055005308D0 /* UIImage+XPYTools.m */; };
 		6C0214A022BC790E004726D7 /* XPYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C02149F22BC790E004726D7 /* XPYAlertController.m */; };
 		6C094E3B23682B8C008EDA86 /* XPYBaseTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C094E3A23682B8C008EDA86 /* XPYBaseTransitionViewController.m */; };
+		6C097FED255A2AA70014321E /* NSArray+XPYAvoidOutOfRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C097FEC255A2AA70014321E /* NSArray+XPYAvoidOutOfRange.m */; };
 		6C0C1B4822743C9E0055BAB4 /* XPYDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */; };
 		6C1440FD2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1440FC2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.m */; };
 		6C144100236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1440FF236432D100B9841E /* XPYCommonTransitionPopAnimationViewController.m */; };
@@ -119,6 +120,8 @@
 		6C02149F22BC790E004726D7 /* XPYAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYAlertController.m; sourceTree = "<group>"; };
 		6C094E3923682B8C008EDA86 /* XPYBaseTransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYBaseTransitionViewController.h; sourceTree = "<group>"; };
 		6C094E3A23682B8C008EDA86 /* XPYBaseTransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYBaseTransitionViewController.m; sourceTree = "<group>"; };
+		6C097FEB255A2AA70014321E /* NSArray+XPYAvoidOutOfRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+XPYAvoidOutOfRange.h"; sourceTree = "<group>"; };
+		6C097FEC255A2AA70014321E /* NSArray+XPYAvoidOutOfRange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+XPYAvoidOutOfRange.m"; sourceTree = "<group>"; };
 		6C0C1B4622743C9E0055BAB4 /* XPYDrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYDrawingView.h; sourceTree = "<group>"; };
 		6C0C1B4722743C9E0055BAB4 /* XPYDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYDrawingView.m; sourceTree = "<group>"; };
 		6C1440FB2363F18E00B9841E /* UIViewController+XPYScrollViewInsets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XPYScrollViewInsets.h"; sourceTree = "<group>"; };
@@ -324,6 +327,8 @@
 				6CE447F624581A3000593F63 /* NSObject+XPYMethodSwizzling.m */,
 				6CED67E324C6C664002AA820 /* UIDevice+XPYModelString.h */,
 				6CED67E424C6C664002AA820 /* UIDevice+XPYModelString.m */,
+				6C097FEB255A2AA70014321E /* NSArray+XPYAvoidOutOfRange.h */,
+				6C097FEC255A2AA70014321E /* NSArray+XPYAvoidOutOfRange.m */,
 			);
 			name = Categories;
 			path = Tools/Categories;
@@ -786,6 +791,7 @@
 				6CEAE7DA237BE04A00E6C43E /* XPYImagePickerCollectionViewCell.m in Sources */,
 				6CE85CE622C4999D009C5D20 /* XPYThumbUpAnimationViewController.m in Sources */,
 				6C1E3B882341A57800915662 /* XPYDataBaseManager.m in Sources */,
+				6C097FED255A2AA70014321E /* NSArray+XPYAvoidOutOfRange.m in Sources */,
 				6C665E6A24595026002EE358 /* NSTimer+XPYWeakTimer.m in Sources */,
 				6CEF2FE5249B6ADA00AB56E7 /* XPYEnlargeImageViewController.m in Sources */,
 				6CEF2FF1249DDE8600AB56E7 /* XPYLargeImageViewController.m in Sources */,
