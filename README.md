@@ -2,7 +2,7 @@
 
 ※ XLBlockAlertView：UIAlertView使用Block着陆
 
-※ XLBlockActionSheet：UIActionSheet实现着陆
+※ XLBlockActionSheet：UIActionSheet使用Block着陆
 
 ※ XLNoticeHelper：简单提示控件
 
