@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface XLColorTool : NSObject
+
 + (UIImage *)imageWithColor:(UIColor *)color;
 
 @end

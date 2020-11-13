@@ -1,47 +1,48 @@
 # ToolsAndCategories
 
-1、UIControl+Blocks：继承自UIControl的控件添加点击Block
+※ XLBlockAlertView：UIAlertView使用Block着陆
 
-2、NSData+gyh：日期处理相关
+※ XLBlockActionSheet：UIActionSheet实现着陆
 
-3、UIImage+ImageEffects：图片处理高斯模糊等效果
+※ XLNoticeHelper：简单提示控件
 
-4、UIImage+ResizeMagick：图片压缩处理
+※ XLColorTool：获取纯色图片
 
-5、XPYHyperLinkButton：button加下划线
+    UIImage *resultImage = [XLColorTool imageWithColor:[UIColor redColor]];
 
-6、XLBlockAlertView：UIAlertView实现Block
+※ XPYCategoryTitleView和XPYCategoryContentView：分页切换控件，实现tab切换页面
 
-7、XLBlockActionSheet：UIActionSheet实现Block
-
-8、XLNoticeHelper：简单提示控件
-
-9、XLColorTool：单一颜色图片
-
-10、XPYCategoryTitleView和XPYCategoryContentView：分页切换控件
-
-11、XPYCopyLabel：可长按复制标签
+※ XPYCopyLabel：可长按复制标签
 
     XPYCopyLabel *label = [[XPYCopyLabel alloc] initWithFrame:CGRectMake(200, 200, 100, 50)];
+    
     label.text = @"点我复制";
+    
     [label sizeToFit];
+    
     label.isCanCopy = YES;
+    
     label.selelctedBackgroundColor = [UIColor grayColor];
+    
     [self.view addSubview:label];
 
-10、增加一些简单动画效果
+※ 一些简单动画效果
 
-（1）XPYDrawingView：绘制各类图形
-（2）平移、旋转、缩放动画（点赞缩放、轨迹运动）
-（3）自定义转场动画
+  · XPYDrawingView：绘制各类图形
+  · 平移、旋转、缩放动画（点赞缩放、轨迹运动）
+  · 自定义转场动画
 
-11、增加一些runtime相关功能 MethodSwizzling（UIViewController+XPYScrollViewInsets）
+※ runtime相关功能 MethodSwizzling
 
-12、XPYPerson链式编程测试
+    UIViewController+XPYScrollViewInsets：全局实现UIScrollViewContentInsetAdjustmentNever
+    
+    NSArray+XPYAvoidOutOfRange：防止数组越界Crash
 
-13、XPYUtilities常用工具类
+※ XPYPerson链式编程测试
 
-14、增加XPYFileManager，用于沙盒存储数据，例：
+※ XPYUtilities常用工具类实现一些小功能
+
+※ XPYFileManager，用于沙盒存储数据
 
     //截屏并保存到沙盒
     
@@ -69,7 +70,7 @@
         
     }
  
- 15、增加XPYAlertController（链式编程Alert）和XPYAlertManager（管理XPYAlertController）例：
+※ XPYAlertController（链式编程Alert）和XPYAlertManager（管理XPYAlertController）
  
     XPYAlertModel *alertModel = [[XPYAlertModel alloc] initWithTitle:@"提示" message:@"请注意xxxxxxxxxx" style:UIAlertControllerStyleActionSheet];
     
@@ -113,4 +114,6 @@
         
     } alertModel:alertModel];
  
-16、3D Touch相关内容
+ ※ 3D Touch相关内容
+ 
+ ※ 网络框架相关（使用CTMediator实现网络组件）
