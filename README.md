@@ -29,7 +29,9 @@
 ※ 一些简单动画效果
 
   · XPYDrawingView：绘制各类图形
+  
   · 平移、旋转、缩放动画（点赞缩放、轨迹运动）
+  
   · 自定义转场动画
 
 ※ runtime相关功能 MethodSwizzling
