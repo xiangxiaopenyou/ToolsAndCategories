@@ -59,7 +59,7 @@ static NSInteger const kXPYMaxImagesCount = 9;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kXPYImagePickerTableViewCellIdentifier];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    [cell addSubview:self.collectionView];
+    [cell.contentView addSubview:self.collectionView];
     self.collectionView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), [self heightOfCollectionView]);
     [self.collectionView setupData:self.selectedPhotos assets:self.selectedAssets];
     return cell;

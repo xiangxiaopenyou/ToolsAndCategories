@@ -28,6 +28,8 @@
 
 #import "UIDevice+XPYModelString.h"
 
+#import "XPYTopToast.h"
+
 #import <objc/runtime.h>
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource, XPYDropdownViewDelegate, XPYNetworkingAPIResponseDelegate>
@@ -88,9 +90,12 @@
     [XPYAlertManager showAlertWithTitle:@"获取机型成功" message:[NSString stringWithFormat:@"本机机型：%@", string] cancel:nil confirm:@"确定" inController:self confirmHandler:^{
     } cancelHandler:^{
     }];
-    
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    // [XPYTopToast showWithTips:@"测试"];
+}
 
 /// XPYAlert
 - (void)showAlert {
@@ -218,11 +223,11 @@
             [self.navigationController pushViewController:fitController animated:YES];
         }
             break;
-        case 8: {
-            XPYEnlargeImageViewController *enlargeImageController = [[XPYEnlargeImageViewController alloc] init];
-            [self.navigationController pushViewController:enlargeImageController animated:YES];
-        }
-            break;
+//        case 8: {
+//            XPYEnlargeImageViewController *enlargeImageController = [[XPYEnlargeImageViewController alloc] init];
+//            [self.navigationController pushViewController:enlargeImageController animated:YES];
+//        }
+//            break;
     }
 }
 
@@ -238,7 +243,7 @@
 #pragma mark - Getters
 - (NSArray *)itemsArray {
     if (!_itemsArray) {
-        _itemsArray = @[@"相册图片裁剪", @"ImagePicker(照片选择器)", @"跳转到TestApp", @"XPYAlert", @"TableView", @"XPYCategoryView(分类切换视图)", @"XPYCopyLabel(可复制Label)", @"storyboard根据屏幕自适应控件约束、字体大小", @"3D Touch按压图片放大"];
+        _itemsArray = @[@"相册图片裁剪", @"ImagePicker(照片选择器)", @"跳转到TestApp", @"XPYAlert", @"TableView", @"XPYCategoryView(分类切换视图)", @"XPYCopyLabel(可复制Label)", @"storyboard根据屏幕自适应控件约束、字体大小"/*, @"3D Touch按压图片放大"*/];
     }
     return _itemsArray;
 }

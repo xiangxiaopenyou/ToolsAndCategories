@@ -41,6 +41,7 @@
 		6C7680E423CC5B2100A8498F /* XPYNetworkingBaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7680E123CC5B2100A8498F /* XPYNetworkingBaseAPIManager.m */; };
 		6C7680E723CC5DEA00A8498F /* XPYNetworkingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7680E623CC5DEA00A8498F /* XPYNetworkingService.m */; };
 		6C7680EA23CD56A500A8498F /* XPYTestAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7680E923CD56A500A8498F /* XPYTestAPIManager.m */; };
+		6C8F6BFE2570D3C300FA72F4 /* XPYTopToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8F6BFD2570D3C300FA72F4 /* XPYTopToast.m */; };
 		6C9008B6236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9008B5236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m */; };
 		6C9008B9236BD8CB00E8EDE6 /* XPYFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9008B8236BD8CB00E8EDE6 /* XPYFileManager.m */; };
 		6C9FD3DD229FB8E5003297B5 /* XPYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9FD3DC229FB8E5003297B5 /* XPYPerson.m */; };
@@ -150,6 +151,8 @@
 		6C7680E623CC5DEA00A8498F /* XPYNetworkingService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYNetworkingService.m; sourceTree = "<group>"; };
 		6C7680E823CD56A500A8498F /* XPYTestAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYTestAPIManager.h; sourceTree = "<group>"; };
 		6C7680E923CD56A500A8498F /* XPYTestAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYTestAPIManager.m; sourceTree = "<group>"; };
+		6C8F6BFC2570D3C300FA72F4 /* XPYTopToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYTopToast.h; sourceTree = "<group>"; };
+		6C8F6BFD2570D3C300FA72F4 /* XPYTopToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPYTopToast.m; sourceTree = "<group>"; };
 		6C9008B4236BC27800E8EDE6 /* UIView+XPYSnapshotImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XPYSnapshotImage.h"; sourceTree = "<group>"; };
 		6C9008B5236BC27800E8EDE6 /* UIView+XPYSnapshotImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XPYSnapshotImage.m"; sourceTree = "<group>"; };
 		6C9008B7236BD8CB00E8EDE6 /* XPYFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPYFileManager.h; sourceTree = "<group>"; };
@@ -342,6 +345,7 @@
 		6C1E3B892341A93A00915662 /* Kits */ = {
 			isa = PBXGroup;
 			children = (
+				6C8F6BF5257098E200FA72F4 /* XPYTopToast */,
 				6C4F795D248F5F4A00D46D3F /* XPYAlert */,
 				6C665E6724594FED002EE358 /* XPYWeakTimer */,
 				6CC976AA23C31C5B003C5797 /* XPYDropdownView */,
@@ -449,6 +453,15 @@
 				6C3D9C5123CEED460036D43D /* Service */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		6C8F6BF5257098E200FA72F4 /* XPYTopToast */ = {
+			isa = PBXGroup;
+			children = (
+				6C8F6BFC2570D3C300FA72F4 /* XPYTopToast.h */,
+				6C8F6BFD2570D3C300FA72F4 /* XPYTopToast.m */,
+			);
+			path = XPYTopToast;
 			sourceTree = "<group>";
 		};
 		6C9FD3DA229FB8C4003297B5 /* Tests */ = {
@@ -765,6 +778,7 @@
 				6C097FED255A2AA70014321E /* NSArray+XPYAvoidOutOfRange.m in Sources */,
 				6C665E6A24595026002EE358 /* NSTimer+XPYWeakTimer.m in Sources */,
 				6CEF2FE5249B6ADA00AB56E7 /* XPYEnlargeImageViewController.m in Sources */,
+				6C8F6BFE2570D3C300FA72F4 /* XPYTopToast.m in Sources */,
 				6CEF2FF1249DDE8600AB56E7 /* XPYLargeImageViewController.m in Sources */,
 				6C3D9C5A23CEF1D20036D43D /* XPYNetworkingServiceFactory.m in Sources */,
 				3D93ABEC21E83BA000E2C367 /* XLColorTool.m in Sources */,
