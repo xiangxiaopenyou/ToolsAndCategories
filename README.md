@@ -1,18 +1,18 @@
 # ToolsAndCategories
 
-※ XLBlockAlertView：UIAlertView使用Block着陆
+### XLBlockAlertView：UIAlertView使用Block着陆
 
-※ XLBlockActionSheet：UIActionSheet使用Block着陆
+### XLBlockActionSheet：UIActionSheet使用Block着陆
 
-※ XLNoticeHelper：简单提示控件
+### XLNoticeHelper：简单提示控件
 
-※ XLColorTool：获取纯色图片
+### XLColorTool：获取纯色图片
 
     UIImage *resultImage = [XLColorTool imageWithColor:[UIColor redColor]];
 
-※ XPYCategoryTitleView和XPYCategoryContentView：分页切换控件，实现tab切换页面
+### XPYCategoryTitleView和XPYCategoryContentView：分页切换控件，实现tab切换页面
 
-※ XPYCopyLabel：可长按复制标签
+### XPYCopyLabel：可长按复制标签
 
     XPYCopyLabel *label = [[XPYCopyLabel alloc] initWithFrame:CGRectMake(200, 200, 100, 50)];
     
@@ -26,25 +26,25 @@
     
     [self.view addSubview:label];
 
-※ 一些简单动画效果
+### 一些简单动画效果
 
-  · XPYDrawingView：绘制各类图形
+  #### XPYDrawingView：绘制各类图形
   
-  · 平移、旋转、缩放动画（点赞缩放、轨迹运动）
+  #### 平移、旋转、缩放动画（点赞缩放、轨迹运动）
   
-  · 自定义转场动画
+  #### 自定义转场动画
 
-※ runtime相关功能 MethodSwizzling
+### runtime相关功能 MethodSwizzling
 
     UIViewController+XPYScrollViewInsets：全局实现UIScrollViewContentInsetAdjustmentNever
     
     NSArray+XPYAvoidOutOfRange：防止数组越界Crash
 
-※ XPYPerson链式编程测试
+### XPYPerson链式编程测试
 
-※ XPYUtilities常用工具类实现一些小功能
+### XPYUtilities常用工具类实现一些小功能
 
-※ XPYFileManager，用于沙盒存储数据
+### XPYFileManager，用于沙盒存储数据
 
     //截屏并保存到沙盒
     
@@ -72,7 +72,7 @@
         
     }
  
-※ XPYAlertController（链式编程Alert）和XPYAlertManager（管理XPYAlertController）
+ ### XPYAlertController（链式编程Alert）和XPYAlertManager（管理XPYAlertController）
  
     XPYAlertModel *alertModel = [[XPYAlertModel alloc] initWithTitle:@"提示" message:@"请注意xxxxxxxxxx" style:UIAlertControllerStyleActionSheet];
     
@@ -116,6 +116,10 @@
         
     } alertModel:alertModel];
  
- ※ 3D Touch相关内容
+ ### 3D Touch相关内容
  
- ※ 网络框架相关（使用CTMediator实现网络组件）
+ ### 组件化相关
+ 
+#### 使用CTMediator实现网络组件
+
+#### 使用JLRoutes实现简单组件跳转

@@ -18,11 +18,13 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - JLRoutes (2.1)
   - RSKImageCropper (2.3.1)
   - SDWebImage (5.9.5):
     - SDWebImage/Core (= 5.9.5)
   - SDWebImage/Core (5.9.5)
   - TZImagePickerController (3.5.4)
+  - XPYModuleA (1.0)
   - YBImageBrowser (3.0.9):
     - YBImageBrowser/Core (= 3.0.9)
   - YBImageBrowser/Core (3.0.9):
@@ -40,8 +42,10 @@ DEPENDENCIES:
   - AFNetworking
   - CTMediator
   - FMDB
+  - JLRoutes
   - RSKImageCropper
   - TZImagePickerController
+  - XPYModuleA (from `https://github.com/xiangxiaopenyou/XPYModuleA.git`)
   - YBImageBrowser
   - YYWebImage
 
@@ -50,6 +54,7 @@ SPEC REPOS:
     - AFNetworking
     - CTMediator
     - FMDB
+    - JLRoutes
     - RSKImageCropper
     - SDWebImage
     - TZImagePickerController
@@ -58,18 +63,29 @@ SPEC REPOS:
     - YYImage
     - YYWebImage
 
+EXTERNAL SOURCES:
+  XPYModuleA:
+    :git: https://github.com/xiangxiaopenyou/XPYModuleA.git
+
+CHECKOUT OPTIONS:
+  XPYModuleA:
+    :commit: 168d8fb121088b87402c4f3734d76550e12a5c9f
+    :git: https://github.com/xiangxiaopenyou/XPYModuleA.git
+
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CTMediator: 933dba523da87bf875e4a7e8728945fbc512f1d2
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
   RSKImageCropper: cde3c539d0bfb0226635637caa30087668c9bed7
   SDWebImage: 0b2ba0d56479bf6a45ecddbfd5558bea93150d25
   TZImagePickerController: 891421e1fa0d8dfa295388e1f8a8ce2d5152ae88
+  XPYModuleA: 76b142aa671641e5da84fa487fd3d3a5537aa06f
   YBImageBrowser: 7ecc8bf33ffa5f3b94c397c29b4f3638dd37f527
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 80436da0a4cf625b4b38c968508a51b8c812b981
+PODFILE CHECKSUM: 5fd763e02a380361ddfe0f076e3a3c5909b40ae0
 
 COCOAPODS: 1.9.1

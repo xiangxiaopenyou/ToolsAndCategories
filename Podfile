@@ -10,5 +10,11 @@ target 'XPYToolsAndCategories' do
   pod 'TZImagePickerController'
   pod 'YBImageBrowser'
   pod 'AFNetworking'
+  
+  # Routers 组件化路由
   pod 'CTMediator'
+  pod 'JLRoutes'
+  
+  # 测试组件
+  pod 'XPYModuleA', :git => "https://github.com/xiangxiaopenyou/XPYModuleA.git"
 end

@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import "NSArray+XPYAvoidOutOfRange.h"
+#import "XPYViewControllerHelper.h"
+
+#import <JLRoutes.h>
+#import <XPYModuleAViewController.h>
 
 @interface AppDelegate ()
 
@@ -20,6 +24,13 @@
     // Override point for customization after application launch.
     
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    [[JLRoutes globalRoutes] addRoute:@"/transition" handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
+        UIViewController *viewController = (XPYModuleAViewController *)[[NSClassFromString(parameters[@"class"]) alloc] init];
+        [[XPYViewControllerHelper currentViewController].navigationController pushViewController:viewController animated:YES];
+        return YES;
+    }];
+    
     return YES;
 }
 
