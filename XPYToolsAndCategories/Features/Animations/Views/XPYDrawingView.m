@@ -37,6 +37,12 @@
         imageView3.image = image3;
         [self addSubview:imageView3];
         //[self addSubview:button];
+        
+        // 渐变颜色图片
+        UIImageView *imageView4 = [[UIImageView alloc] initWithFrame:CGRectMake(200, 300, 50, 50)];
+        UIImage *gradientImage = [UIImage gradientColorImageWithColors:@[[UIColor redColor], [UIColor yellowColor]] gradiantColorType:XPYGradientColorTypeTopLeftToBottomRight size:CGSizeMake(50, 50)];
+        imageView4.image = gradientImage;
+        [self addSubview:imageView4];
     }
     return self;
 }

@@ -95,7 +95,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    // [XPYTopToast showWithTips:@"测试"];
 }
 
 /// XPYAlert

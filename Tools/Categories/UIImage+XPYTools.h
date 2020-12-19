@@ -10,6 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, XPYGradientColorType) {
+    XPYGradientColorTypeTopLeftToBottomRight = 0,    // 左上到右下
+    XPYGradientColorTypeTopRightToBottomLeft,        // 右上到左下
+    XPYGradientColorTypeTopToBottom,                 // 上到下
+    XPYGradientColorTypeLeftToRight                  // 左到右
+};
+
 @interface UIImage (XPYTools)
 
 /// 根据颜色和大小获取纯色图片
@@ -36,6 +43,12 @@ NS_ASSUME_NONNULL_BEGIN
                      radius:(CGFloat)radius
                 borderWidth:(CGFloat)borderWidth
                 borderColor:(UIColor *)borderColor;
+
+/// 获取渐变色图片
+/// @param colors 渐变色数组
++ (UIImage *)gradientColorImageWithColors:(NSArray<UIColor *> *)colors
+                        gradiantColorType:(XPYGradientColorType)gradiantColorType
+                                     size:(CGSize)imageSize;
 
 @end
 
