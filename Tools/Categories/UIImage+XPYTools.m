@@ -87,7 +87,6 @@
     UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
     CGGradientRelease(gradient);
     CGContextRestoreGState(context);
-    CGColorSpaceRelease(colorSpace);
     UIGraphicsEndImageContext();
     return resultImage;
 }
