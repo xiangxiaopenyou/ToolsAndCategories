@@ -131,7 +131,7 @@ static NSString * const kXPYDropdownCellIdentifierKey = @"XPYDropdownCellIdentif
     // 三角形右侧点
     [arrowPath addLineToPoint:CGPointMake(self.configurations.arrowOriginX + self.configurations.arrowWidth, self.configurations.arrowHeight)];
     arrowPath.lineJoinStyle = kCGLineJoinRound;
-    arrowPath.lineCapStyle = kCGLineJoinRound;
+    arrowPath.lineCapStyle = kCGLineCapRound;
     arrowLayer.fillColor = self.configurations.dropdownBackgroundColor.CGColor;
     
     arrowLayer.path = arrowPath.CGPath;
